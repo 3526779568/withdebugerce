@@ -1,0 +1,1046 @@
+object frmTrainerGenerator: TfrmTrainerGenerator
+  Left = 819
+  Height = 412
+  Top = 152
+  Width = 778
+  AutoSize = True
+  Caption = 'Trainer generator'
+  ClientHeight = 412
+  ClientWidth = 778
+  Constraints.MinHeight = 310
+  Constraints.MinWidth = 690
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PopupMode = pmAuto
+  Position = poScreenCenter
+  LCLVersion = '1.6.0.4'
+  object Panel2: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Panel1
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 412
+    Top = 0
+    Width = 285
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = True
+    ClientHeight = 412
+    ClientWidth = 285
+    TabOrder = 0
+    OnResize = Panel2Resize
+    object lvCheats: TListView
+      AnchorSideRight.Control = Panel4
+      AnchorSideBottom.Control = Panel4
+      AnchorSideBottom.Side = asrBottom
+      Left = 1
+      Height = 377
+      Top = 1
+      Width = 261
+      Align = alCustom
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Columns = <      
+        item
+          Caption = 'Hotkey'
+        end      
+        item
+          Caption = 'Description'
+          Width = 106
+        end>
+      PopupMenu = PopupMenu1
+      ReadOnly = True
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnDblClick = lvCheatsDblClick
+      OnSelectItem = lvCheatsSelectItem
+    end
+    object Panel3: TPanel
+      Left = 1
+      Height = 33
+      Top = 378
+      Width = 283
+      Align = alBottom
+      AutoSize = True
+      ClientHeight = 33
+      ClientWidth = 283
+      TabOrder = 1
+      object btnDelete: TButton
+        AnchorSideLeft.Control = Panel3
+        Left = 3
+        Height = 25
+        Top = 2
+        Width = 100
+        Anchors = [akLeft, akBottom]
+        AutoSize = True
+        BorderSpacing.Left = 2
+        BorderSpacing.Top = 3
+        BorderSpacing.Bottom = 3
+        Caption = 'Delete Hotkey'
+        Constraints.MinWidth = 87
+        Enabled = False
+        OnClick = btnDeleteClick
+        TabOrder = 0
+      end
+      object btnAddHotkey: TButton
+        AnchorSideLeft.Control = btnDelete
+        AnchorSideLeft.Side = asrBottom
+        Left = 107
+        Height = 25
+        Top = 2
+        Width = 89
+        Anchors = [akLeft, akBottom]
+        AutoSize = True
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 3
+        BorderSpacing.Right = 3
+        BorderSpacing.Bottom = 3
+        Caption = 'Add Hotkey'
+        Constraints.MinWidth = 87
+        OnClick = btnAddHotkeyClick
+        TabOrder = 1
+      end
+    end
+    object Panel4: TPanel
+      Left = 262
+      Height = 377
+      Top = 1
+      Width = 22
+      Align = alRight
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 377
+      ClientWidth = 22
+      TabOrder = 2
+      object spbDown: TSpeedButton
+        AnchorSideLeft.Control = Panel4
+        AnchorSideBottom.Control = Panel4
+        AnchorSideBottom.Side = asrBottom
+        Left = 1
+        Height = 27
+        Top = 349
+        Width = 21
+        Anchors = [akLeft, akBottom]
+        BorderSpacing.Left = 1
+        BorderSpacing.Bottom = 1
+        Enabled = False
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333303333
+          333333333337F33333333333333033333333333333373F333333333333090333
+          33333333337F7F33333333333309033333333333337373F33333333330999033
+          3333333337F337F33333333330999033333333333733373F3333333309999903
+          333333337F33337F33333333099999033333333373333373F333333099999990
+          33333337FFFF3FF7F33333300009000033333337777F77773333333333090333
+          33333333337F7F33333333333309033333333333337F7F333333333333090333
+          33333333337F7F33333333333309033333333333337F7F333333333333090333
+          33333333337F7F33333333333300033333333333337773333333
+        }
+        NumGlyphs = 2
+        OnClick = spbDownClick
+      end
+      object spbUp: TSpeedButton
+        AnchorSideLeft.Control = spbDown
+        AnchorSideBottom.Control = spbDown
+        Left = 1
+        Height = 28
+        Top = 321
+        Width = 21
+        Anchors = [akLeft, akBottom]
+        Enabled = False
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000333
+          3333333333777F33333333333309033333333333337F7F333333333333090333
+          33333333337F7F33333333333309033333333333337F7F333333333333090333
+          33333333337F7F33333333333309033333333333FF7F7FFFF333333000090000
+          3333333777737777F333333099999990333333373F3333373333333309999903
+          333333337F33337F33333333099999033333333373F333733333333330999033
+          3333333337F337F3333333333099903333333333373F37333333333333090333
+          33333333337F7F33333333333309033333333333337373333333333333303333
+          333333333337F333333333333330333333333333333733333333
+        }
+        NumGlyphs = 2
+        OnClick = spbUpClick
+      end
+    end
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Panel2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 285
+    Height = 412
+    Top = 0
+    Width = 493
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 412
+    ClientWidth = 493
+    TabOrder = 1
+    object Panel8: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 0
+      Height = 312
+      Top = 0
+      Width = 493
+      AutoSize = True
+      BorderSpacing.Bottom = 2
+      BevelOuter = bvNone
+      ClientHeight = 312
+      ClientWidth = 493
+      TabOrder = 0
+      object Panel5: TPanel
+        AnchorSideLeft.Control = Panel8
+        AnchorSideTop.Control = Panel8
+        Left = 0
+        Height = 312
+        Top = 0
+        Width = 259
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 312
+        ClientWidth = 259
+        TabOrder = 0
+        object comboProcesslist: TComboBox
+          AnchorSideLeft.Control = Label2
+          AnchorSideTop.Control = Label2
+          AnchorSideTop.Side = asrBottom
+          Left = 7
+          Height = 23
+          Top = 34
+          Width = 252
+          ItemHeight = 15
+          TabOrder = 0
+        end
+        object Label2: TLabel
+          AnchorSideLeft.Control = cbSupportCheatEngine
+          AnchorSideTop.Control = cbSupportCheatEngine
+          AnchorSideTop.Side = asrBottom
+          Left = 7
+          Height = 15
+          Top = 19
+          Width = 70
+          Caption = 'Processname'
+          ParentColor = False
+        end
+        object cbPopupOnKeypress: TCheckBox
+          AnchorSideLeft.Control = comboProcesslist
+          AnchorSideTop.Control = comboProcesslist
+          AnchorSideTop.Side = asrBottom
+          Left = 7
+          Height = 19
+          Top = 57
+          Width = 157
+          Caption = 'Popup trainer on keypress'
+          TabOrder = 1
+        end
+        object edtPopupHotkey: TEdit
+          AnchorSideLeft.Control = Label2
+          AnchorSideTop.Control = cbPopupOnKeypress
+          AnchorSideTop.Side = asrBottom
+          Left = 7
+          Height = 23
+          Top = 76
+          Width = 175
+          OnKeyDown = edtPopupHotkeyKeyDown
+          ReadOnly = True
+          TabOrder = 2
+        end
+        object Button3: TButton
+          AnchorSideLeft.Control = edtPopupHotkey
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = edtPopupHotkey
+          AnchorSideTop.Side = asrCenter
+          Left = 184
+          Height = 25
+          Top = 75
+          Width = 75
+          AutoSize = True
+          BorderSpacing.Left = 2
+          Caption = 'Clear'
+          Constraints.MinWidth = 75
+          OnClick = Button3Click
+          TabOrder = 3
+        end
+        object cbSupportCheatEngine: TCheckBox
+          AnchorSideLeft.Control = Panel5
+          AnchorSideTop.Control = Panel5
+          Left = 7
+          Height = 19
+          Top = 0
+          Width = 233
+          BorderSpacing.Left = 7
+          Caption = 'Don''t support Cheat Engine (or yourself)'
+          Checked = True
+          OnChange = cbSupportCheatEngineChange
+          State = cbChecked
+          TabOrder = 4
+        end
+        object GroupBox2: TGroupBox
+          AnchorSideLeft.Control = cbPopupOnKeypress
+          AnchorSideTop.Control = edtPopupHotkey
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = Panel5
+          AnchorSideRight.Side = asrBottom
+          Left = 7
+          Height = 169
+          Top = 99
+          Width = 252
+          Anchors = [akTop, akLeft, akRight]
+          AutoSize = True
+          Caption = 'Automated gui config options'
+          ClientHeight = 149
+          ClientWidth = 248
+          TabOrder = 5
+          object cbCanResize: TCheckBox
+            AnchorSideLeft.Control = Button1
+            AnchorSideTop.Control = Button1
+            AnchorSideTop.Side = asrBottom
+            Left = 6
+            Height = 19
+            Top = 130
+            Width = 142
+            Caption = 'User can resize window'
+            Checked = True
+            OnChange = cbCanResizeChange
+            State = cbChecked
+            TabOrder = 0
+          end
+          object mAbout: TMemo
+            AnchorSideLeft.Control = Label3
+            AnchorSideTop.Control = Label3
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = GroupBox2
+            AnchorSideRight.Side = asrBottom
+            Left = 6
+            Height = 50
+            Top = 53
+            Width = 234
+            Anchors = [akTop, akLeft, akRight]
+            BorderSpacing.Right = 8
+            Lines.Strings = (
+              'This trainer was made by Cheat Engine'
+              'www.cheatengine.org'
+            )
+            ScrollBars = ssVertical
+            TabOrder = 1
+          end
+          object Label3: TLabel
+            AnchorSideLeft.Control = edtCaption
+            AnchorSideTop.Control = edtCaption
+            AnchorSideTop.Side = asrBottom
+            Left = 6
+            Height = 15
+            Top = 38
+            Width = 58
+            Caption = 'About text:'
+            ParentColor = False
+          end
+          object Button1: TButton
+            AnchorSideLeft.Control = mAbout
+            AnchorSideTop.Control = mAbout
+            AnchorSideTop.Side = asrBottom
+            Left = 6
+            Height = 25
+            Top = 105
+            Width = 68
+            AutoSize = True
+            BorderSpacing.Top = 2
+            Caption = 'Set Icon'
+            OnClick = Button1Click
+            TabOrder = 2
+          end
+          object Button2: TButton
+            AnchorSideLeft.Control = Button1
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = Button1
+            Left = 77
+            Height = 25
+            Top = 105
+            Width = 103
+            AutoSize = True
+            BorderSpacing.Left = 3
+            Caption = 'Set Side Image'
+            OnClick = Button2Click
+            TabOrder = 3
+          end
+          object edtCaption: TEdit
+            AnchorSideLeft.Control = Label4
+            AnchorSideTop.Control = Label4
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = GroupBox2
+            AnchorSideRight.Side = asrBottom
+            Left = 6
+            Height = 23
+            Top = 15
+            Width = 234
+            Anchors = [akTop, akLeft, akRight]
+            BorderSpacing.Right = 8
+            OnChange = edtCaptionChange
+            TabOrder = 4
+            Text = 'My trainer'
+          end
+          object Label4: TLabel
+            AnchorSideLeft.Control = GroupBox2
+            AnchorSideTop.Control = GroupBox2
+            Left = 6
+            Height = 15
+            Top = 0
+            Width = 23
+            BorderSpacing.Left = 6
+            Caption = 'Title'
+            ParentColor = False
+          end
+        end
+        object cbPlayXM: TCheckBox
+          AnchorSideLeft.Control = GroupBox2
+          AnchorSideTop.Control = GroupBox2
+          AnchorSideTop.Side = asrBottom
+          Left = 7
+          Height = 19
+          Top = 268
+          Width = 124
+          Caption = 'Play mod music file'
+          OnChange = cbPlayXMChange
+          TabOrder = 6
+        end
+        object fnXM: TFileNameEdit
+          AnchorSideLeft.Control = cbPlayXM
+          AnchorSideTop.Control = cbPlayXM
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = sbPlayStopXM
+          Left = 7
+          Height = 23
+          Top = 287
+          Width = 225
+          DialogOptions = []
+          Filter = 'Module files|*.669;*.amf;*.dsm;*.far;*.gdm;*.imf;*.it;*.med;*.m15;*.mod;*.mtm;*.okt;*.stm;*.stx;*.s3m;*.ult;*.uni;*.xm'
+          FilterIndex = 0
+          HideDirectories = False
+          ButtonWidth = 23
+          NumGlyphs = 1
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Right = 4
+          BorderSpacing.Bottom = 2
+          Enabled = False
+          MaxLength = 0
+          TabOrder = 7
+        end
+        object sbPlayStopXM: TSpeedButton
+          AnchorSideLeft.Control = fnXM
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = fnXM
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = GroupBox2
+          AnchorSideRight.Side = asrBottom
+          Left = 236
+          Height = 22
+          Top = 287
+          Width = 23
+          Anchors = [akTop, akRight]
+          Enabled = False
+          OnClick = sbPlayStopXMClick
+        end
+      end
+      object Panel7: TPanel
+        AnchorSideLeft.Control = Panel5
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel8
+        AnchorSideRight.Control = Panel8
+        AnchorSideRight.Side = asrBottom
+        Left = 259
+        Height = 285
+        Top = 0
+        Width = 234
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 285
+        ClientWidth = 234
+        TabOrder = 1
+        object Label1: TLabel
+          AnchorSideLeft.Control = cbProtect
+          AnchorSideTop.Control = cbProtect
+          AnchorSideTop.Side = asrBottom
+          Left = 8
+          Height = 15
+          Top = 173
+          Width = 165
+          Caption = 'Freeze interval (in milliseconds)'
+          ParentColor = False
+        end
+        object edtFreezeInterval: TEdit
+          AnchorSideLeft.Control = Label1
+          AnchorSideTop.Control = Label1
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = Panel7
+          AnchorSideRight.Side = asrBottom
+          Left = 8
+          Height = 23
+          Top = 188
+          Width = 223
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Right = 3
+          TabOrder = 0
+          Text = '250'
+        end
+        object cbPlaySoundOnAction: TCheckBox
+          AnchorSideLeft.Control = cbStopPlaying
+          AnchorSideTop.Control = rbStopWhenFocusLost
+          AnchorSideTop.Side = asrBottom
+          Left = 8
+          Height = 19
+          Top = 57
+          Width = 198
+          Caption = 'Play sound on activate/deactivate'
+          OnChange = cbPlaySoundOnActionChange
+          TabOrder = 1
+        end
+        object btnDesignForm: TButton
+          AnchorSideLeft.Control = Panel7
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = cbConfigD3DHook
+          AnchorSideTop.Side = asrBottom
+          Left = 25
+          Height = 25
+          Top = 260
+          Width = 185
+          AutoSize = True
+          BorderSpacing.Top = 5
+          Caption = 'Design userinterface manually'
+          OnClick = btnDesignFormClick
+          TabOrder = 2
+        end
+        object cbProtect: TCheckBox
+          AnchorSideLeft.Control = Panel6
+          AnchorSideTop.Control = btnAddSounds
+          AnchorSideTop.Side = asrBottom
+          Left = 8
+          Height = 19
+          Hint = 'Will encrypt the generated cetrainer file and when Cheat Engine loads this file back it will destroy the main form preventing the user from doing anything with it.'#13#10'Does not affect the standalone trainer because that one is protected by default'
+          Top = 154
+          Width = 209
+          BorderSpacing.Top = 3
+          Caption = 'Protect trainer from editing/reading'
+          Checked = True
+          Enabled = False
+          ParentShowHint = False
+          ShowHint = True
+          State = cbChecked
+          TabOrder = 3
+        end
+        object cbStopPlaying: TCheckBox
+          AnchorSideLeft.Control = Panel7
+          AnchorSideTop.Control = Panel7
+          Left = 8
+          Height = 19
+          Top = 0
+          Width = 118
+          BorderSpacing.Left = 8
+          Caption = 'Stop playing when'
+          Checked = True
+          Enabled = False
+          OnChange = cbStopPlayingChange
+          State = cbChecked
+          TabOrder = 4
+        end
+        object rbStopWhenAttached: TRadioButton
+          AnchorSideLeft.Control = cbStopPlaying
+          AnchorSideTop.Control = cbStopPlaying
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 19
+          Top = 19
+          Width = 150
+          BorderSpacing.Left = 16
+          Caption = 'Game has been attached'
+          Checked = True
+          Enabled = False
+          TabOrder = 5
+          TabStop = True
+        end
+        object rbStopWhenFocusLost: TRadioButton
+          AnchorSideLeft.Control = rbStopWhenAttached
+          AnchorSideTop.Control = rbStopWhenAttached
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 19
+          Top = 38
+          Width = 118
+          Caption = 'Trainer loses focus'
+          Enabled = False
+          TabOrder = 6
+        end
+        object cbUseD3DHook: TCheckBox
+          AnchorSideLeft.Control = edtFreezeInterval
+          AnchorSideTop.Control = edtFreezeInterval
+          AnchorSideTop.Side = asrBottom
+          Left = 8
+          Height = 19
+          Top = 211
+          Width = 119
+          Caption = 'Use Direct3D Hook'
+          OnChange = cbUseD3DHookChange
+          TabOrder = 7
+        end
+        object cbConfigD3DHook: TButton
+          AnchorSideLeft.Control = cbUseD3DHook
+          AnchorSideTop.Control = cbUseD3DHook
+          AnchorSideTop.Side = asrBottom
+          Left = 8
+          Height = 25
+          Top = 230
+          Width = 79
+          AutoSize = True
+          Caption = 'Configure'
+          Enabled = False
+          OnClick = cbConfigD3DHookClick
+          TabOrder = 8
+        end
+        object btnAddSounds: TButton
+          AnchorSideLeft.Control = Panel6
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = Panel6
+          AnchorSideTop.Side = asrBottom
+          Left = 73
+          Height = 25
+          Top = 126
+          Width = 97
+          AutoSize = True
+          BorderSpacing.Top = 2
+          Caption = 'Add sound(s)'
+          Enabled = False
+          OnClick = btnAddSoundsClick
+          TabOrder = 9
+        end
+        object Panel6: TPanel
+          AnchorSideLeft.Control = cbPlaySoundOnAction
+          AnchorSideTop.Control = cbPlaySoundOnAction
+          AnchorSideTop.Side = asrBottom
+          Left = 8
+          Height = 48
+          Top = 76
+          Width = 226
+          AutoSize = True
+          BevelOuter = bvNone
+          ClientHeight = 48
+          ClientWidth = 226
+          TabOrder = 10
+          object lblActivateSound: TLabel
+            AnchorSideTop.Control = cbActivateSound
+            AnchorSideTop.Side = asrCenter
+            AnchorSideRight.Control = cbActivateSound
+            Left = 12
+            Height = 15
+            Top = 4
+            Width = 43
+            Anchors = [akTop, akRight]
+            BorderSpacing.Right = 3
+            Caption = 'Activate'
+            Enabled = False
+            ParentColor = False
+          end
+          object lblDeactivateSound: TLabel
+            AnchorSideTop.Control = cbDeactivateSound
+            AnchorSideTop.Side = asrCenter
+            AnchorSideRight.Control = cbDeactivateSound
+            Left = 0
+            Height = 15
+            Top = 29
+            Width = 55
+            Anchors = [akTop, akRight]
+            BorderSpacing.Right = 3
+            Caption = 'Deactivate'
+            Enabled = False
+            ParentColor = False
+          end
+          object cbDeactivateSound: TComboBox
+            AnchorSideLeft.Control = cbActivateSound
+            AnchorSideTop.Control = cbActivateSound
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = sbPlayDeactivate
+            Left = 58
+            Height = 23
+            Top = 25
+            Width = 142
+            Anchors = [akTop, akLeft, akRight]
+            BorderSpacing.Top = 2
+            Enabled = False
+            ItemHeight = 15
+            ItemIndex = 0
+            Items.Strings = (
+              'Deactivate'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = 'Deactivate'
+          end
+          object cbActivateSound: TComboBox
+            AnchorSideTop.Control = Panel6
+            AnchorSideRight.Control = sbPlayActivate
+            Left = 58
+            Height = 23
+            Top = 0
+            Width = 142
+            Anchors = [akTop, akRight]
+            Enabled = False
+            ItemHeight = 15
+            ItemIndex = 0
+            Items.Strings = (
+              'Activate'
+            )
+            Style = csDropDownList
+            TabOrder = 1
+            Text = 'Activate'
+          end
+          object sbPlayActivate: TSpeedButton
+            AnchorSideTop.Control = cbActivateSound
+            AnchorSideTop.Side = asrCenter
+            AnchorSideRight.Control = Panel6
+            AnchorSideRight.Side = asrBottom
+            Left = 200
+            Height = 22
+            Top = 0
+            Width = 23
+            Anchors = [akTop, akRight]
+            BorderSpacing.Right = 3
+            Enabled = False
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000064000000640000000000000000000000000000000000
+              000004733AFF21824FFF638272FF000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+              A3FF000000000000000000000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+              47FF889C92FF0000000000000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+              9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+              77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+              000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+              78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+              000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+              9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+              49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+              C3FF000000000000000000000000000000000000000000000000000000000000
+              000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000
+            }
+            OnClick = sbPlayActivateClick
+          end
+          object sbPlayDeactivate: TSpeedButton
+            AnchorSideTop.Control = cbDeactivateSound
+            AnchorSideTop.Side = asrCenter
+            AnchorSideRight.Control = Panel6
+            AnchorSideRight.Side = asrBottom
+            Left = 200
+            Height = 22
+            Top = 25
+            Width = 23
+            Anchors = [akTop, akRight]
+            BorderSpacing.Right = 3
+            Enabled = False
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000064000000640000000000000000000000000000000000
+              000004733AFF21824FFF638272FF000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+              A3FF000000000000000000000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+              47FF889C92FF0000000000000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+              9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+              77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+              000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+              78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+              000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+              9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+              49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+              C3FF000000000000000000000000000000000000000000000000000000000000
+              000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000
+            }
+            OnClick = sbPlayDeactivateClick
+          end
+        end
+      end
+    end
+    object Panel9: TPanel
+      AnchorSideLeft.Control = Panel8
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel8
+      AnchorSideTop.Side = asrBottom
+      Left = 146
+      Height = 44
+      Top = 314
+      Width = 201
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 44
+      ClientWidth = 201
+      TabOrder = 1
+      object Label5: TLabel
+        AnchorSideLeft.Control = cbOutput
+        AnchorSideTop.Control = Panel9
+        Left = 115
+        Height = 15
+        Top = 4
+        Width = 38
+        BorderSpacing.Top = 4
+        Caption = 'Output'
+        ParentColor = False
+      end
+      object cbOutput: TComboBox
+        AnchorSideLeft.Control = Button5
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Label5
+        AnchorSideTop.Side = asrBottom
+        Left = 115
+        Height = 23
+        Top = 19
+        Width = 86
+        BorderSpacing.Left = 5
+        ItemHeight = 15
+        ItemIndex = 1
+        Items.Strings = (
+          'Script only'
+          'EXE'
+          'CETRAINER'
+          'CT'
+        )
+        OnSelect = cbOutputSelect
+        Style = csDropDownList
+        TabOrder = 0
+        Text = 'EXE'
+      end
+      object Button5: TButton
+        AnchorSideLeft.Control = Panel9
+        AnchorSideTop.Control = cbOutput
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 25
+        Hint = 'Generates the trainer script and saves the current table as a .CETRAINER'
+        Top = 19
+        Width = 110
+        AutoSize = True
+        BorderSpacing.Right = 5
+        Caption = 'Generate trainer'
+        Default = True
+        OnClick = Button5Click
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+      end
+    end
+    object Panel10: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel9
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 260
+      Height = 0
+      Top = 412
+      Width = 0
+      Anchors = [akBottom]
+      AutoSize = True
+      BorderSpacing.Top = 5
+      BevelOuter = bvNone
+      TabOrder = 2
+    end
+    object Label6: TLabel
+      Left = 0
+      Height = 30
+      Top = 382
+      Width = 493
+      Align = alBottom
+      Caption = 'Tip: The trainer generator is a tool for beginners. It is recommended to learn lua and the formdesigner and save as .exe manually to experience the full power of a Cheat Engine trainer'
+      Layout = tlBottom
+      ParentColor = False
+      WordWrap = True
+    end
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 40
+    top = 40
+  end
+  object OpenDialog1: TOpenDialog
+    left = 40
+    top = 144
+  end
+  object CETRAINERSaveDialog: TSaveDialog
+    Title = 'Save script as'
+    DefaultExt = '.CETRAINER'
+    Filter = 'Cheat Engine Table Trainer (*.CETRAINER)|*.CETRAINER'
+    Options = [ofReadOnly, ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]
+    left = 48
+    top = 304
+  end
+  object EXESaveDialog: TSaveDialog
+    Title = 'Save script as'
+    DefaultExt = '.EXE'
+    Filter = 'Cheat Engine EXE Trainer (*.EXE)|*.EXE'
+    Options = [ofReadOnly, ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]
+    left = 48
+    top = 288
+  end
+  object OpenDialog2: TOpenDialog
+    Title = 'Open icon file'
+    Filter = 'Icon files (.exe; *.dll; *.ico)|*.exe;*.dll;*.ico'
+    left = 128
+    top = 144
+  end
+  object CTSaveDialog: TSaveDialog
+    Title = 'Save script as'
+    DefaultExt = '.CT'
+    Filter = 'Cheat Engine Table (*.CT)|*.CT'
+    Options = [ofReadOnly, ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]
+    left = 48
+    top = 272
+  end
+  object PopupMenu1: TPopupMenu
+    left = 40
+    top = 216
+    object miEditHotkey: TMenuItem
+      Caption = 'Edit'
+      Default = True
+      OnClick = miEditHotkeyClick
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Rebuild Trainer Cheatlist'
+      OnClick = MenuItem1Click
+    end
+  end
+  object ImageList1: TImageList
+    left = 40
+    top = 95
+    Bitmap = {
+      4C69020000001000000010000000000000000000000004733AFF2D8859FF859C
+      90FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000004733AFFA4D9BEFF3D93
+      66FF5F8873FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000004733AFFA9DCC1FF9BD5
+      B7FF4C9F73FF3D7D5CFF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000004733AFFA5DABFFF57BB
+      87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000000000000000000000000000
+      0000000000000000000000000000000000000000000004733AFFA9DCC1FF45B4
+      7BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5C3FF00000000000000000000
+      0000000000000000000000000000000000000000000004733AFFA9DCC1FF3EB1
+      76FF3AAF73FF36AE70FF6FC598FF71BF97FF187B49FFA6B0ABFF000000000000
+      0000000000000000000000000000000000000000000004733AFFA9DCC1FF36AD
+      70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C59DFF1F804EFF839A8EFF0000
+      0000000000000000000000000000000000000000000004733AFFA9DCC1FF2EAD
+      6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B278FF78C69FFF298858FF678C
+      79FF000000000000000000000000000000000000000004733AFFA9DCC1FF0CAA
+      58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB677FF75C79DFF288957FF4E83
+      67FF000000000000000000000000000000000000000004733AFFA9DCC1FF0DB3
+      5EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA9CFF1D824DFF678C79FF0000
+      0000000000000000000000000000000000000000000004733AFFA9DCC1FF10BD
+      65FF11C167FF13C269FF59D395FF67C998FF167C47FF889C92FF000000000000
+      0000000000000000000000000000000000000000000004733AFF83DCAFFF11C3
+      69FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7A3FF00000000000000000000
+      0000000000000000000000000000000000000000000009773FFF83DBAEFF1FC6
+      71FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000000000000000000000000000
+      0000000000000000000000000000000000000000000004733AFF82D8ACFF76D6
+      A6FF3C9D6AFF27744CFFACAEADFF000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000004733AFF7ACFA4FF2C8C
+      5AFF3D7659FFAEAEAEFF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000004733AFF21824FFF6382
+      72FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE64550BFE64550
+      BFE64550BFE64550BFE64550BFE64550BFE64550BFE64550BFE64550BFE64550
+      BFE64550BFE6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6D1D4F1FFCCD0
+      F2FFC6CBF2FFBFC5F2FFB7BEF3FFAEB8F3FFA5AFF4FF9BA8F4FF919FF5FF8795
+      F6FF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6CCD0F1FFC6CB
+      F1FFBFC5F2FFB7BFF3FFAFB7F4FFA6AFF5FF9BA8F5FF919FF6FF8796F6FF7D8D
+      F7FF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6C7CAF1FFBFC5
+      F3FFB7BEF3FFAEB7F4FFA6AFF4FF9BA7F5FF929FF6FF8796F6FF7C8DF7FF7284
+      F7FF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6BFC5F2FFB7BE
+      F3FFAFB7F4FFA5AFF4FF9CA7F5FF929FF6FF8795F6FF7D8DF7FF7284F8FF687C
+      F8FF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6B7BEF3FFAFB7
+      F4FFA6B0F4FF9BA8F5FF929FF6FF8796F6FF7C8DF7FF7284F8FF677BF8FF5D73
+      F9FF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6AEB7F3FFA5AF
+      F5FF9CA7F5FF919FF5FF8796F7FF7C8DF7FF7284F8FF687BF9FF5D73F9FF536B
+      FAFF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6A6AFF4FF9CA7
+      F5FF919FF5FF8796F6FF7D8DF7FF7184F7FF687CF8FF5D73F9FF546AFAFF4A63
+      FBFF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE69BA7F5FF929F
+      F5FF8796F7FF7C8DF7FF7284F8FF677CF8FF5E73F9FF546BFAFF4A63FBFF415C
+      FBFF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6929EF5FF8796
+      F6FF7C8DF7FF7285F8FF687CF9FF5E73F9FF546BFAFF4B63FBFF425CFBFF3955
+      FCFF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE68796F6FF7C8D
+      F7FF7284F8FF687CF8FF5E73FAFF536AFAFF4A63FAFF425CFBFF3A55FCFF334F
+      FCFF393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF004550BFE6393986E63939
+      86E6393986E6393986E6393986E6393986E6393986E6393986E6393986E63939
+      86E6393986E6FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00
+    }
+  end
+  object PopupMenu2: TPopupMenu
+    left = 696
+    top = 264
+    object MenuItem2: TMenuItem
+      Caption = 'Only generate the script'
+      OnClick = MenuItem2Click
+    end
+  end
+  object odWave: TOpenDialog
+    DefaultExt = '.WAV'
+    Filter = 'All files (*.*)|*.*|Wave files|*.WAV'
+    FilterIndex = 2
+    Options = [ofAllowMultiSelect, ofPathMustExist, ofEnableSizing, ofViewDetail]
+    left = 448
+    top = 240
+  end
+end

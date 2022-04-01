@@ -1,0 +1,26 @@
+LazarusResources.Add('TfrmThreadlist','FORMDATA',[
+  'TPF0'#14'TfrmThreadlist'#13'frmThreadlist'#4'Left'#3#145#2#6'Height'#3#187#0
+  +#3'Top'#3#194#0#5'Width'#3'9'#1#11'BorderStyle'#7#13'bsSizeToolWin'#7'Captio'
+  +'n'#6#10'Threadlist'#12'ClientHeight'#3#187#0#11'ClientWidth'#3'9'#1#7'OnClo'
+  +'se'#7#9'FormClose'#8'OnCreate'#7#10'FormCreate'#6'OnShow'#7#8'FormShow'#9'P'
+  +'opupMode'#7#6'pmAuto'#8'Position'#7#17'poOwnerFormCenter'#10'LCLVersion'#6#7
+  +'1.6.0.4'#0#9'TTreeView'#14'threadTreeview'#4'Left'#2#0#6'Height'#3#172#0#3
+  +'Top'#2#0#5'Width'#3'9'#1#5'Align'#7#8'alClient'#17'DefaultItemHeight'#2#18
+  +#11'MultiSelect'#9#16'MultiSelectStyle'#11#15'msControlSelect'#13'msVisibleO'
+  +'nly'#13'msSiblingOnly'#0#9'PopupMenu'#7#10'PopupMenu1'#8'ReadOnly'#9#9'RowS'
+  +'elect'#9#8'TabOrder'#2#0#10'OnDblClick'#7#22'threadTreeviewDblClick'#11'OnE'
+  +'xpanding'#7#23'threadTreeviewExpanding'#7'Options'#11#19'tvoAllowMultiselec'
+  +'t'#17'tvoAutoItemHeight'#16'tvoHideSelection'#21'tvoKeepCollapsedNodes'#11
+  +'tvoReadOnly'#12'tvoRowSelect'#14'tvoShowButtons'#12'tvoShowLines'#11'tvoSho'
+  +'wRoot'#11'tvoToolTips'#13'tvoThemedDraw'#0#0#0#6'TLabel'#10'lblIsWOW64'#4'L'
+  +'eft'#2#0#6'Height'#2#15#3'Top'#3#172#0#5'Width'#3'9'#1#5'Align'#7#8'alBotto'
+  +'m'#7'Caption'#6'>Hold ctrl when expanding to see the 32-bit context of a th'
+  +'read'#11'ParentColor'#8#7'Visible'#8#0#0#10'TPopupMenu'#10'PopupMenu1'#4'le'
+  +'ft'#2'P'#3'top'#2'('#0#9'TMenuItem'#7'miBreak'#7'Caption'#6#5'Break'#7'OnCl'
+  +'ick'#7#12'miBreakClick'#0#0#9'TMenuItem'#21'miClearDebugRegisters'#7'Captio'
+  +'n'#6#21'Clear debug registers'#7'OnClick'#7#26'miClearDebugRegistersClick'#0
+  +#0#9'TMenuItem'#14'miFreezeThread'#7'Caption'#6#13'Freeze thread'#7'OnClick'
+  +#7#19'miFreezeThreadClick'#0#0#9'TMenuItem'#14'miResumeThread'#7'Caption'#6
+  +#13'Resume thread'#7'OnClick'#7#19'miResumeThreadClick'#0#0#9'TMenuItem'#9'M'
+  +'enuItem1'#7'Caption'#6#9'Stackview'#7'OnClick'#7#14'MenuItem1Click'#0#0#0#0
+]);

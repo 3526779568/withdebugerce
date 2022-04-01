@@ -1,0 +1,5 @@
+{"version":1,"strings":[
+{"hash":55393763,"name":"frmmemoryviewexunit.rsgotoaddress","sourcebytes":[71,111,116,111,32,65,100,100,114,101,115,115],"value":"Goto Address"},
+{"hash":59152975,"name":"frmmemoryviewexunit.rsfillintheaddressyouwanttogoto","sourcebytes":[70,105,108,108,32,105,110,32,116,104,101,32,97,100,100,114,101,115,115,32,121,111,117,32,119,97,110,116,32,116,111,32,103,111,32,116,111],"value":"Fill in the address you want to go to"},
+{"hash":267954419,"name":"frmmemoryviewexunit.rsaddresszoom","sourcebytes":[65,100,100,114,101,115,115,32,58,32,37,115,32,122,111,111,109,32,58,32,37,115],"value":"Address : %s zoom : %s"}
+]}

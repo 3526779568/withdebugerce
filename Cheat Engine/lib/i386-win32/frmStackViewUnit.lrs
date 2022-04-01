@@ -1,0 +1,50 @@
+LazarusResources.Add('TfrmStackView','FORMDATA',[
+  'TPF0'#13'TfrmStackView'#12'frmStackView'#4'Left'#3'p'#1#6'Height'#3#211#0#3
+  +'Top'#3#10#2#5'Width'#3'v'#1#11'BorderStyle'#7#13'bsSizeToolWin'#7'Caption'#6
+  +#10'Stack View'#12'ClientHeight'#3#211#0#11'ClientWidth'#3'v'#1#7'OnClose'#7
+  +#9'FormClose'#12'OnCloseQuery'#7#14'FormCloseQuery'#8'OnCreate'#7#10'FormCre'
+  +'ate'#9'OnDestroy'#7#11'FormDestroy'#6'OnShow'#7#8'FormShow'#9'PopupMode'#7#6
+  +'pmAuto'#10'LCLVersion'#6#7'1.6.4.0'#0#9'TListView'#7'lvStack'#4'Left'#2#0#6
+  +'Height'#3#211#0#3'Top'#2#0#5'Width'#3'v'#1#5'Align'#7#8'alClient'#19'AutoWi'
+  +'dthLastColumn'#9#7'Columns'#14#1#7'Caption'#6#7'Address'#8'MinWidth'#2#2#5
+  +'Width'#2'F'#0#1#7'Caption'#6#5'Value'#8'MinWidth'#2#2#5'Width'#2'Z'#0#1#7'C'
+  +'aption'#6#9'Secondary'#5'Width'#3#210#0#0#0#13'HideSelection'#8#11'MultiSel'
+  +'ect'#9#9'PopupMenu'#7#10'PopupMenu1'#8'ReadOnly'#9#9'RowSelect'#9#8'TabOrde'
+  +'r'#2#0#9'ViewStyle'#7#8'vsReport'#16'OnCustomDrawItem'#7#21'lvStackCustomDr'
+  +'awItem'#10'OnDblClick'#7#15'lvStackDblClick'#0#0#10'TPopupMenu'#10'PopupMen'
+  +'u1'#7'OnPopup'#7#15'PopupMenu1Popup'#4'left'#2'l'#3'top'#2'T'#0#9'TMenuItem'
+  +#8'miAddESP'#9'AutoCheck'#9#7'Caption'#6#7'(esp+*)'#10'GroupIndex'#2#1#9'Rad'
+  +'ioItem'#9#7'OnClick'#7#13'miAddESPClick'#0#0#9'TMenuItem'#8'miAddEBP'#9'Aut'
+  +'oCheck'#9#7'Caption'#6#7'(ebp+*)'#7'Checked'#9#10'GroupIndex'#2#1#9'RadioIt'
+  +'em'#9#7'OnClick'#7#13'miAddESPClick'#0#0#9'TMenuItem'#8'miAddRef'#7'Caption'
+  +#6#22'(ref+*) Ref will be %x'#10'GroupIndex'#2#1#9'RadioItem'#9#8'ShortCut'#2
+  +' '#7'OnClick'#7#13'miAddRefClick'#0#0#9'TMenuItem'#9'MenuItem1'#7'Caption'#6
+  +#1'-'#0#0#9'TMenuItem'#13'miCopyAddress'#7'Caption'#6#12'Copy Address'#8'Sho'
+  +'rtCut'#3'C`'#7'OnClick'#7#18'miCopyAddressClick'#0#0#9'TMenuItem'#11'miCopy'
+  +'Value'#3'Tag'#2#1#7'Caption'#6#10'Copy Value'#8'ShortCut'#3'C@'#7'OnClick'#7
+  +#18'miCopyAddressClick'#0#0#9'TMenuItem'#15'miCopySecondary'#3'Tag'#2#2#7'Ca'
+  +'ption'#6#14'Copy Secondary'#8'ShortCut'#4'C'#224#0#0#7'OnClick'#7#18'miCopy'
+  +'AddressClick'#0#0#9'TMenuItem'#9'MenuItem6'#3'Tag'#2#3#7'Caption'#6#9'Copy '
+  +'Line'#8'ShortCut'#4'C'#192#0#0#7'OnClick'#7#18'miCopyAddressClick'#0#0#9'TM'
+  +'enuItem'#9'MenuItem4'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#6'miFind'#7'Captio'
+  +'n'#6#4'Find'#8'ShortCut'#3'F@'#7'OnClick'#7#11'miFindClick'#0#0#9'TMenuItem'
+  +#10'miFindNext'#7'Caption'#6#12'Find Next...'#7'Enabled'#8#8'ShortCut'#2'r'#7
+  +'Visible'#8#7'OnClick'#7#15'FindDialog1Find'#0#0#9'TMenuItem'#9'MenuItem5'#7
+  +'Caption'#6#1'-'#0#0#9'TMenuItem'#10'miSetColor'#7'Caption'#6#31'Set backgro'
+  +'und color to address'#7'OnClick'#7#15'miSetColorClick'#0#0#9'TMenuItem'#9'M'
+  +'enuItem2'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#9'MenuItem3'#7'Caption'#6'4Loc'
+  +'k and add this view to a structure dissect window'#7'OnClick'#7#14'MenuItem'
+  +'3Click'#0#0#9'TMenuItem'#14'miLockAndTrace'#7'Caption'#6#29'Lock and do man'
+  +'ual stacktrace'#7'OnClick'#7#19'miLockAndTraceClick'#0#0#0#11'TFindDialog'
+  +#11'FindDialog1'#5'Width'#3#224#1#6'Height'#3#136#0#7'Options'#11#6'frDown'
+  +#15'frHideMatchCase'#15'frHideWholeWord'#12'frHideUpDown'#17'frHideEntireSco'
+  +'pe'#21'frHidePromptOnReplace'#0#6'OnFind'#7#15'FindDialog1Find'#4'left'#3
+  +#208#0#3'top'#2'X'#0#0#12'TColorDialog'#12'ColorDialog1'#5'Color'#7#7'clWhit'
+  +'e'#20'CustomColors.Strings'#1#6#13'ColorA=000000'#6#13'ColorB=000080'#6#13
+  +'ColorC=008000'#6#13'ColorD=008080'#6#13'ColorE=800000'#6#13'ColorF=800080'#6
+  +#13'ColorG=808000'#6#13'ColorH=808080'#6#13'ColorI=C0C0C0'#6#13'ColorJ=0000F'
+  +'F'#6#13'ColorK=00FF00'#6#13'ColorL=00FFFF'#6#13'ColorM=FF0000'#6#13'ColorN='
+  +'FF00FF'#6#13'ColorO=FFFF00'#6#13'ColorP=FFFFFF'#6#13'ColorQ=C0DCC0'#6#13'Co'
+  +'lorR=F0CAA6'#6#13'ColorS=F0FBFF'#6#13'ColorT=A4A0A0'#0#4'left'#2'h'#3'top'#3
+  +#152#0#0#0#0
+]);

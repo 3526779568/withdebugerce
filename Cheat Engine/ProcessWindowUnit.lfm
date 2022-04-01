@@ -1,0 +1,252 @@
+object ProcessWindow: TProcessWindow
+  Left = 320
+  Height = 443
+  Top = 379
+  Width = 293
+  HelpContext = 4
+  AutoSize = True
+  BorderIcons = [biSystemMenu]
+  Caption = 'Process List'
+  ClientHeight = 423
+  ClientWidth = 293
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PopupMode = pmAuto
+  Position = poMainFormCenter
+  LCLVersion = '1.6.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 112
+    Top = 311
+    Width = 293
+    Align = alBottom
+    AutoSize = True
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    ClientHeight = 112
+    ClientWidth = 293
+    TabOrder = 0
+    object Panel5: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Side = asrCenter
+      Left = 59
+      Height = 98
+      Top = 7
+      Width = 175
+      AutoSize = True
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      BevelOuter = bvNone
+      ClientHeight = 98
+      ClientWidth = 175
+      Constraints.MinWidth = 175
+      TabOrder = 0
+      object Panel3: TPanel
+        AnchorSideLeft.Control = Panel5
+        AnchorSideTop.Control = Panel5
+        AnchorSideRight.Control = Panel5
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 30
+        Top = 4
+        Width = 175
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 4
+        BevelOuter = bvNone
+        ChildSizing.HorizontalSpacing = 8
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 2
+        ClientHeight = 30
+        ClientWidth = 175
+        TabOrder = 0
+        object OKButton: TButton
+          Left = 0
+          Height = 30
+          Top = 0
+          Width = 84
+          AutoSize = True
+          Caption = 'Open'
+          Constraints.MinHeight = 30
+          Constraints.MinWidth = 75
+          Default = True
+          OnClick = OKButtonClick
+          TabOrder = 0
+        end
+        object CancelButton: TButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideRight.Control = Panel3
+          AnchorSideRight.Side = asrBottom
+          Left = 92
+          Height = 30
+          Top = 0
+          Width = 83
+          Cancel = True
+          Caption = 'Cancel'
+          Constraints.MinHeight = 30
+          Constraints.MinWidth = 75
+          OnClick = CancelButtonClick
+          TabOrder = 1
+        end
+      end
+      object Button4: TButton
+        AnchorSideLeft.Control = Panel5
+        AnchorSideTop.Control = Panel3
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 25
+        Top = 43
+        Width = 175
+        AutoSize = True
+        BorderSpacing.Top = 9
+        Caption = 'Attach debugger to process'
+        Constraints.MinWidth = 175
+        OnClick = Button4Click
+        TabOrder = 1
+      end
+      object btnNetwork: TButton
+        AnchorSideLeft.Control = Button4
+        AnchorSideTop.Control = Button4
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Button4
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 25
+        Top = 73
+        Width = 175
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 5
+        Caption = 'Network'
+        OnClick = btnNetworkClick
+        TabOrder = 2
+      end
+    end
+  end
+  object TabControl1: TTabControl
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Panel1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Panel1
+    Left = 0
+    Height = 311
+    Top = 0
+    Width = 293
+    OnChange = TabControl1Change
+    TabIndex = 0
+    Tabs.Strings = (
+      'Applications'
+      'Processes'
+      'Windows'
+    )
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabOrder = 1
+    object ProcessList: TListBox
+      Left = 2
+      Height = 286
+      Top = 23
+      Width = 289
+      Align = alClient
+      ItemHeight = 0
+      OnDblClick = OKButtonClick
+      OnDrawItem = ProcessListDrawItem
+      OnKeyPress = ProcessListKeyPress
+      PopupMenu = PopupMenu1
+      Style = lbOwnerDrawFixed
+      TabOrder = 1
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.EXE'
+    Filter = 'EXE files|*.exe'
+  end
+  object OpenDialog2: TOpenDialog
+    Filter = 'All files (*.*)|*.*'
+    left = 224
+  end
+  object PopupMenu1: TPopupMenu
+    OnPopup = PopupMenu1Popup
+    left = 112
+    top = 56
+    object InputPIDmanually1: TMenuItem
+      Caption = 'Input PID manually'
+      ShortCut = 16464
+      OnClick = InputPIDmanually1Click
+    end
+    object Filter1: TMenuItem
+      Caption = 'Filter'
+      ShortCut = 16454
+      OnClick = Filter1Click
+    end
+    object miShowInvisibleItems: TMenuItem
+      AutoCheck = True
+      Caption = 'Show invisible windows'
+      ShortCut = 16457
+      OnClick = miShowInvisibleItemsClick
+    end
+    object miOwnProcessesOnly: TMenuItem
+      AutoCheck = True
+      Caption = 'Only show processes of the current user'
+      OnClick = miOwnProcessesOnlyClick
+    end
+    object miSkipSystemProcesses: TMenuItem
+      AutoCheck = True
+      Caption = 'Only show non-system processes'
+      OnClick = miOwnProcessesOnlyClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object miProcessListLong: TMenuItem
+      Caption = 'Process List (Long)'
+      OnClick = miProcessListLongClick
+    end
+    object N2: TMenuItem
+      Caption = '-'
+    end
+    object miChangeFont: TMenuItem
+      Caption = 'Change font'
+      OnClick = miChangeFontClick
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 53
+    top = 109
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object miCreateProcess: TMenuItem
+        Caption = 'Create Process'
+        OnClick = btnCreateThreadClick
+      end
+      object miOpenFile: TMenuItem
+        Caption = 'Open File'
+        OnClick = btnOpenFileClick
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'View'
+      Visible = False
+      object MenuItem5: TMenuItem
+        Caption = 'Preferences'
+        OnClick = MenuItem5Click
+      end
+    end
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 192
+    top = 107
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    left = 86
+    top = 205
+  end
+end

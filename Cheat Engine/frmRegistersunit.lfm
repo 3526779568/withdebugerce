@@ -1,0 +1,262 @@
+object Registers: TRegisters
+  Left = 396
+  Height = 303
+  Top = 134
+  Width = 212
+  AutoSize = True
+  Caption = 'Registers'
+  ClientHeight = 303
+  ClientWidth = 212
+  OnClose = FormClose
+  OnResize = FormResize
+  OnShow = FormShow
+  PopupMode = pmAuto
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Panel2
+    AnchorSideBottom.Control = Owner
+    Left = 0
+    Height = 250
+    Top = 0
+    Width = 189
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 250
+    ClientWidth = 189
+    PopupMenu = PopupMenu1
+    TabOrder = 0
+    object Label14: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 8
+      Height = 15
+      Top = 0
+      Width = 50
+      BorderSpacing.Left = 8
+      Caption = 'Registers:'
+      ParentColor = False
+    end
+    object Shape1: TShape
+      AnchorSideLeft.Control = Label14
+      AnchorSideTop.Control = Label14
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Label14
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 2
+      Top = 15
+      Width = 50
+      Anchors = [akTop, akLeft, akRight]
+      Brush.Color = clBlack
+    end
+    object Panel3: TPanel
+      AnchorSideLeft.Control = Shape1
+      AnchorSideTop.Control = Shape1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 8
+      Height = 218
+      Top = 26
+      Width = 200
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Top = 9
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 6
+      BevelOuter = bvNone
+      ChildSizing.VerticalSpacing = 7
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 218
+      ClientWidth = 200
+      Font.Name = 'Courier New'
+      ParentFont = False
+      TabOrder = 0
+      object EAXLabel: TLabel
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 0
+        Width = 200
+        Caption = 'EAX 00000000FFFFFFFF'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EBXlabel: TLabel
+        Tag = 1
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 25
+        Width = 200
+        Caption = 'EBX 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object ECXlabel: TLabel
+        Tag = 2
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 50
+        Width = 200
+        Caption = 'ECX 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EDXlabel: TLabel
+        Tag = 3
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 75
+        Width = 200
+        Caption = 'EDX 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object ESIlabel: TLabel
+        Tag = 4
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 100
+        Width = 200
+        Caption = 'ESI 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EDIlabel: TLabel
+        Tag = 5
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 125
+        Width = 200
+        Caption = 'EDI 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EBPlabel: TLabel
+        Tag = 6
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 150
+        Width = 200
+        Caption = 'EBP 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object ESPlabel: TLabel
+        Tag = 7
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 175
+        Width = 200
+        Caption = 'ESP 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+      object EIPlabel: TLabel
+        Tag = 8
+        Cursor = crHandPoint
+        Left = 0
+        Height = 18
+        Top = 200
+        Width = 200
+        Caption = 'EIP 00000000'
+        ParentColor = False
+        OnDblClick = EAXLabelDblClick
+        OnMouseDown = RegisterMouseDown
+      end
+    end
+  end
+  object Panel2: TPanel
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 189
+    Height = 303
+    Top = 0
+    Width = 23
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    ClientHeight = 303
+    ClientWidth = 23
+    TabOrder = 1
+    object Panel4: TPanel
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = Panel2
+      AnchorSideTop.Side = asrCenter
+      Left = 1
+      Height = 60
+      Top = 121
+      Width = 21
+      AutoSize = True
+      BevelOuter = bvNone
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 60
+      ClientWidth = 21
+      TabOrder = 0
+      object sbShowStack: TSpeedButton
+        Left = 0
+        Height = 30
+        Hint = 'Stack view'
+        Top = 0
+        Width = 21
+        AutoSize = True
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 21
+        Caption = 'S'
+        OnClick = sbShowStackClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object sbShowFloats: TSpeedButton
+        Left = 0
+        Height = 30
+        Hint = 'Floating point registers'
+        Top = 30
+        Width = 21
+        AutoSize = True
+        Constraints.MinHeight = 30
+        Constraints.MinWidth = 21
+        Caption = 'F'
+        OnClick = sbShowFloatsClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    left = 117
+    object MenuItem1: TMenuItem
+      Caption = 'Copy registers to clipboard'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Copy full context block to clipboard'
+      Visible = False
+    end
+  end
+end

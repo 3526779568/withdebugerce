@@ -1,0 +1,470 @@
+LazarusResources.Add('TfrmTrainerGenerator','FORMDATA',[
+  'TPF0'#20'TfrmTrainerGenerator'#19'frmTrainerGenerator'#4'Left'#3'3'#3#6'Heig'
+  +'ht'#3#156#1#3'Top'#3#152#0#5'Width'#3#10#3#8'AutoSize'#9#7'Caption'#6#17'Tr'
+  +'ainer generator'#12'ClientHeight'#3#156#1#11'ClientWidth'#3#10#3#21'Constra'
+  +'ints.MinHeight'#3'6'#1#20'Constraints.MinWidth'#3#178#2#7'OnClose'#7#9'Form'
+  +'Close'#8'OnCreate'#7#10'FormCreate'#6'OnShow'#7#8'FormShow'#9'PopupMode'#7#6
+  +'pmAuto'#8'Position'#7#14'poScreenCenter'#10'LCLVersion'#6#7'1.6.0.4'#0#6'TP'
+  +'anel'#6'Panel2'#22'AnchorSideLeft.Control'#7#5'Owner'#21'AnchorSideTop.Cont'
+  +'rol'#7#5'Owner'#23'AnchorSideRight.Control'#7#6'Panel1'#24'AnchorSideBottom'
+  +'.Control'#7#5'Owner'#21'AnchorSideBottom.Side'#7#9'asrBottom'#4'Left'#2#0#6
+  +'Height'#3#156#1#3'Top'#2#0#5'Width'#3#29#1#7'Anchors'#11#5'akTop'#6'akLeft'
+  +#7'akRight'#8'akBottom'#0#8'AutoSize'#9#12'ClientHeight'#3#156#1#11'ClientWi'
+  +'dth'#3#29#1#8'TabOrder'#2#0#8'OnResize'#7#12'Panel2Resize'#0#9'TListView'#8
+  +'lvCheats'#23'AnchorSideRight.Control'#7#6'Panel4'#24'AnchorSideBottom.Contr'
+  +'ol'#7#6'Panel4'#21'AnchorSideBottom.Side'#7#9'asrBottom'#4'Left'#2#1#6'Heig'
+  +'ht'#3'y'#1#3'Top'#2#1#5'Width'#3#5#1#5'Align'#7#8'alCustom'#7'Anchors'#11#5
+  +'akTop'#6'akLeft'#7'akRight'#8'akBottom'#0#7'Columns'#14#1#7'Caption'#6#6'Ho'
+  +'tkey'#0#1#7'Caption'#6#11'Description'#5'Width'#2'j'#0#0#9'PopupMenu'#7#10
+  +'PopupMenu1'#8'ReadOnly'#9#9'RowSelect'#9#8'TabOrder'#2#0#9'ViewStyle'#7#8'v'
+  +'sReport'#10'OnDblClick'#7#16'lvCheatsDblClick'#12'OnSelectItem'#7#18'lvChea'
+  +'tsSelectItem'#0#0#6'TPanel'#6'Panel3'#4'Left'#2#1#6'Height'#2'!'#3'Top'#3'z'
+  +#1#5'Width'#3#27#1#5'Align'#7#8'alBottom'#8'AutoSize'#9#12'ClientHeight'#2'!'
+  +#11'ClientWidth'#3#27#1#8'TabOrder'#2#1#0#7'TButton'#9'btnDelete'#22'AnchorS'
+  +'ideLeft.Control'#7#6'Panel3'#4'Left'#2#3#6'Height'#2#25#3'Top'#2#2#5'Width'
+  +#2'd'#7'Anchors'#11#6'akLeft'#8'akBottom'#0#8'AutoSize'#9#18'BorderSpacing.L'
+  +'eft'#2#2#17'BorderSpacing.Top'#2#3#20'BorderSpacing.Bottom'#2#3#7'Caption'#6
+  +#13'Delete Hotkey'#20'Constraints.MinWidth'#2'W'#7'Enabled'#8#7'OnClick'#7#14
+  +'btnDeleteClick'#8'TabOrder'#2#0#0#0#7'TButton'#12'btnAddHotkey'#22'AnchorSi'
+  +'deLeft.Control'#7#9'btnDelete'#19'AnchorSideLeft.Side'#7#9'asrBottom'#4'Lef'
+  +'t'#2'k'#6'Height'#2#25#3'Top'#2#2#5'Width'#2'Y'#7'Anchors'#11#6'akLeft'#8'a'
+  +'kBottom'#0#8'AutoSize'#9#18'BorderSpacing.Left'#2#4#17'BorderSpacing.Top'#2
+  +#3#19'BorderSpacing.Right'#2#3#20'BorderSpacing.Bottom'#2#3#7'Caption'#6#10
+  +'Add Hotkey'#20'Constraints.MinWidth'#2'W'#7'OnClick'#7#17'btnAddHotkeyClick'
+  +#8'TabOrder'#2#1#0#0#0#6'TPanel'#6'Panel4'#4'Left'#3#6#1#6'Height'#3'y'#1#3
+  +'Top'#2#1#5'Width'#2#22#5'Align'#7#7'alRight'#8'AutoSize'#9#10'BevelOuter'#7
+  +#6'bvNone'#12'ClientHeight'#3'y'#1#11'ClientWidth'#2#22#8'TabOrder'#2#2#0#12
+  +'TSpeedButton'#7'spbDown'#22'AnchorSideLeft.Control'#7#6'Panel4'#24'AnchorSi'
+  +'deBottom.Control'#7#6'Panel4'#21'AnchorSideBottom.Side'#7#9'asrBottom'#4'Le'
+  +'ft'#2#1#6'Height'#2#27#3'Top'#3']'#1#5'Width'#2#21#7'Anchors'#11#6'akLeft'#8
+  +'akBottom'#0#18'BorderSpacing.Left'#2#1#20'BorderSpacing.Bottom'#2#1#7'Enabl'
+  +'ed'#8#10'Glyph.Data'#10'z'#1#0#0'v'#1#0#0'BMv'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0
+  +#0' '#0#0#0#16#0#0#0#1#0#4#0#0#0#0#0#0#1#0#0#18#11#0#0#18#11#0#0#16#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#128#0#0#128#0#0#0#128#128#0#128#0#0#0#128#0#128#0#128#128#0
+  +#0#127#127#127#0#191#191#191#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255
+  +#0#255#0#255#255#0#0#255#255#255#0'333033333337'#243'333333033333337?333333'
+  +#9#3'333333'#127#127'333333'#9#3'333333ss'#243'33330'#153#144'333337'#243'7'
+  +#243'33330'#153#144'33333737?3333'#9#153#153#3'3333'#127'33'#127'3333'#9#153
+  +#153#3'3333s33s'#243'330'#153#153#153#144'3337'#255#255'?'#247#243'330'#0#9#0
+  +#0'3337w'#127'ww33333'#9#3'333333'#127#127'333333'#9#3'333333'#127#127'33333'
+  +'3'#9#3'333333'#127#127'333333'#9#3'333333'#127#127'333333'#9#3'333333'#127
+  +#127'333333'#0#3'333333ws333'#9'NumGlyphs'#2#2#7'OnClick'#7#12'spbDownClick'
+  +#0#0#12'TSpeedButton'#5'spbUp'#22'AnchorSideLeft.Control'#7#7'spbDown'#24'An'
+  +'chorSideBottom.Control'#7#7'spbDown'#4'Left'#2#1#6'Height'#2#28#3'Top'#3'A'
+  +#1#5'Width'#2#21#7'Anchors'#11#6'akLeft'#8'akBottom'#0#7'Enabled'#8#10'Glyph'
+  +'.Data'#10'z'#1#0#0'v'#1#0#0'BMv'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0' '#0#0#0#16
+  +#0#0#0#1#0#4#0#0#0#0#0#0#1#0#0#18#11#0#0#18#11#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#128#0#0#128#0#0#0#128#128#0#128#0#0#0#128#0#128#0#128#128#0#0#127#127#127
+  +#0#191#191#191#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255
+  +#255#0#0#255#255#255#0'333'#0#3'333333w'#127'333333'#9#3'333333'#127#127'333'
+  +'333'#9#3'333333'#127#127'333333'#9#3'333333'#127#127'333333'#9#3'333333'#127
+  +#127'333333'#9#3'33333'#255#127#127#255#243'330'#0#9#0#0'3337wsww'#243'330'
+  +#153#153#153#144'3337?3373333'#9#153#153#3'3333'#127'33'#127'3333'#9#153#153
+  +#3'3333s'#243'3s33330'#153#144'333337'#243'7'#243'33330'#153#144'333337?7333'
+  +'333'#9#3'333333'#127#127'333333'#9#3'333333ss333333033333337'#243'333333033'
+  +'3333373333'#9'NumGlyphs'#2#2#7'OnClick'#7#10'spbUpClick'#0#0#0#0#6'TPanel'#6
+  ,'Panel1'#22'AnchorSideLeft.Control'#7#6'Panel2'#19'AnchorSideLeft.Side'#7#9
+  +'asrBottom'#23'AnchorSideRight.Control'#7#5'Owner'#20'AnchorSideRight.Side'#7
+  +#9'asrBottom'#24'AnchorSideBottom.Control'#7#5'Owner'#21'AnchorSideBottom.Si'
+  +'de'#7#9'asrBottom'#4'Left'#3#29#1#6'Height'#3#156#1#3'Top'#2#0#5'Width'#3
+  +#237#1#7'Anchors'#11#5'akTop'#7'akRight'#8'akBottom'#0#8'AutoSize'#9#10'Beve'
+  +'lOuter'#7#6'bvNone'#12'ClientHeight'#3#156#1#11'ClientWidth'#3#237#1#8'TabO'
+  +'rder'#2#1#0#6'TPanel'#6'Panel8'#22'AnchorSideLeft.Control'#7#6'Panel1'#21'A'
+  +'nchorSideTop.Control'#7#6'Panel1'#4'Left'#2#0#6'Height'#3'8'#1#3'Top'#2#0#5
+  +'Width'#3#237#1#8'AutoSize'#9#20'BorderSpacing.Bottom'#2#2#10'BevelOuter'#7#6
+  +'bvNone'#12'ClientHeight'#3'8'#1#11'ClientWidth'#3#237#1#8'TabOrder'#2#0#0#6
+  +'TPanel'#6'Panel5'#22'AnchorSideLeft.Control'#7#6'Panel8'#21'AnchorSideTop.C'
+  +'ontrol'#7#6'Panel8'#4'Left'#2#0#6'Height'#3'8'#1#3'Top'#2#0#5'Width'#3#3#1#8
+  +'AutoSize'#9#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3'8'#1#11'ClientWid'
+  +'th'#3#3#1#8'TabOrder'#2#0#0#9'TComboBox'#16'comboProcesslist'#22'AnchorSide'
+  +'Left.Control'#7#6'Label2'#21'AnchorSideTop.Control'#7#6'Label2'#18'AnchorSi'
+  +'deTop.Side'#7#9'asrBottom'#4'Left'#2#7#6'Height'#2#23#3'Top'#2'"'#5'Width'#3
+  +#252#0#10'ItemHeight'#2#15#8'TabOrder'#2#0#0#0#6'TLabel'#6'Label2'#22'Anchor'
+  +'SideLeft.Control'#7#20'cbSupportCheatEngine'#21'AnchorSideTop.Control'#7#20
+  +'cbSupportCheatEngine'#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#7#6'H'
+  +'eight'#2#15#3'Top'#2#19#5'Width'#2'F'#7'Caption'#6#11'Processname'#11'Paren'
+  +'tColor'#8#0#0#9'TCheckBox'#17'cbPopupOnKeypress'#22'AnchorSideLeft.Control'
+  +#7#16'comboProcesslist'#21'AnchorSideTop.Control'#7#16'comboProcesslist'#18
+  +'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#7#6'Height'#2#19#3'Top'#2'9'#5
+  +'Width'#3#157#0#7'Caption'#6#25'Popup trainer on keypress'#8'TabOrder'#2#1#0
+  +#0#5'TEdit'#14'edtPopupHotkey'#22'AnchorSideLeft.Control'#7#6'Label2'#21'Anc'
+  +'horSideTop.Control'#7#17'cbPopupOnKeypress'#18'AnchorSideTop.Side'#7#9'asrB'
+  +'ottom'#4'Left'#2#7#6'Height'#2#23#3'Top'#2'L'#5'Width'#3#175#0#9'OnKeyDown'
+  +#7#21'edtPopupHotkeyKeyDown'#8'ReadOnly'#9#8'TabOrder'#2#2#0#0#7'TButton'#7
+  +'Button3'#22'AnchorSideLeft.Control'#7#14'edtPopupHotkey'#19'AnchorSideLeft.'
+  +'Side'#7#9'asrBottom'#21'AnchorSideTop.Control'#7#14'edtPopupHotkey'#18'Anch'
+  +'orSideTop.Side'#7#9'asrCenter'#4'Left'#3#184#0#6'Height'#2#25#3'Top'#2'K'#5
+  +'Width'#2'K'#8'AutoSize'#9#18'BorderSpacing.Left'#2#2#7'Caption'#6#5'Clear'
+  +#20'Constraints.MinWidth'#2'K'#7'OnClick'#7#12'Button3Click'#8'TabOrder'#2#3
+  +#0#0#9'TCheckBox'#20'cbSupportCheatEngine'#22'AnchorSideLeft.Control'#7#6'Pa'
+  +'nel5'#21'AnchorSideTop.Control'#7#6'Panel5'#4'Left'#2#7#6'Height'#2#19#3'To'
+  +'p'#2#0#5'Width'#3#233#0#18'BorderSpacing.Left'#2#7#7'Caption'#6'(Don''t sup'
+  +'port Cheat Engine (or yourself)'#7'Checked'#9#8'OnChange'#7#26'cbSupportChe'
+  +'atEngineChange'#5'State'#7#9'cbChecked'#8'TabOrder'#2#4#0#0#9'TGroupBox'#9
+  +'GroupBox2'#22'AnchorSideLeft.Control'#7#17'cbPopupOnKeypress'#21'AnchorSide'
+  +'Top.Control'#7#14'edtPopupHotkey'#18'AnchorSideTop.Side'#7#9'asrBottom'#23
+  +'AnchorSideRight.Control'#7#6'Panel5'#20'AnchorSideRight.Side'#7#9'asrBottom'
+  +#4'Left'#2#7#6'Height'#3#169#0#3'Top'#2'c'#5'Width'#3#252#0#7'Anchors'#11#5
+  +'akTop'#6'akLeft'#7'akRight'#0#8'AutoSize'#9#7'Caption'#6#28'Automated gui c'
+  +'onfig options'#12'ClientHeight'#3#149#0#11'ClientWidth'#3#248#0#8'TabOrder'
+  +#2#5#0#9'TCheckBox'#11'cbCanResize'#22'AnchorSideLeft.Control'#7#7'Button1'
+  +#21'AnchorSideTop.Control'#7#7'Button1'#18'AnchorSideTop.Side'#7#9'asrBottom'
+  +#4'Left'#2#6#6'Height'#2#19#3'Top'#3#130#0#5'Width'#3#142#0#7'Caption'#6#22
+  +'User can resize window'#7'Checked'#9#8'OnChange'#7#17'cbCanResizeChange'#5
+  +'State'#7#9'cbChecked'#8'TabOrder'#2#0#0#0#5'TMemo'#6'mAbout'#22'AnchorSideL'
+  +'eft.Control'#7#6'Label3'#21'AnchorSideTop.Control'#7#6'Label3'#18'AnchorSid'
+  +'eTop.Side'#7#9'asrBottom'#23'AnchorSideRight.Control'#7#9'GroupBox2'#20'Anc'
+  +'horSideRight.Side'#7#9'asrBottom'#4'Left'#2#6#6'Height'#2'2'#3'Top'#2'5'#5
+  +'Width'#3#234#0#7'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#0#19'BorderSpaci'
+  +'ng.Right'#2#8#13'Lines.Strings'#1#6'%This trainer was made by Cheat Engine'
+  +#6#19'www.cheatengine.org'#0#10'ScrollBars'#7#10'ssVertical'#8'TabOrder'#2#1
+  +#0#0#6'TLabel'#6'Label3'#22'AnchorSideLeft.Control'#7#10'edtCaption'#21'Anch'
+  +'orSideTop.Control'#7#10'edtCaption'#18'AnchorSideTop.Side'#7#9'asrBottom'#4
+  +'Left'#2#6#6'Height'#2#15#3'Top'#2'&'#5'Width'#2':'#7'Caption'#6#11'About te'
+  +'xt:'#11'ParentColor'#8#0#0#7'TButton'#7'Button1'#22'AnchorSideLeft.Control'
+  +#7#6'mAbout'#21'AnchorSideTop.Control'#7#6'mAbout'#18'AnchorSideTop.Side'#7#9
+  +'asrBottom'#4'Left'#2#6#6'Height'#2#25#3'Top'#2'i'#5'Width'#2'D'#8'AutoSize'
+  +#9#17'BorderSpacing.Top'#2#2#7'Caption'#6#8'Set Icon'#7'OnClick'#7#12'Button'
+  +'1Click'#8'TabOrder'#2#2#0#0#7'TButton'#7'Button2'#22'AnchorSideLeft.Control'
+  +#7#7'Button1'#19'AnchorSideLeft.Side'#7#9'asrBottom'#21'AnchorSideTop.Contro'
+  ,'l'#7#7'Button1'#4'Left'#2'M'#6'Height'#2#25#3'Top'#2'i'#5'Width'#2'g'#8'Aut'
+  +'oSize'#9#18'BorderSpacing.Left'#2#3#7'Caption'#6#14'Set Side Image'#7'OnCli'
+  +'ck'#7#12'Button2Click'#8'TabOrder'#2#3#0#0#5'TEdit'#10'edtCaption'#22'Ancho'
+  +'rSideLeft.Control'#7#6'Label4'#21'AnchorSideTop.Control'#7#6'Label4'#18'Anc'
+  +'horSideTop.Side'#7#9'asrBottom'#23'AnchorSideRight.Control'#7#9'GroupBox2'
+  +#20'AnchorSideRight.Side'#7#9'asrBottom'#4'Left'#2#6#6'Height'#2#23#3'Top'#2
+  +#15#5'Width'#3#234#0#7'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#0#19'Border'
+  +'Spacing.Right'#2#8#8'OnChange'#7#16'edtCaptionChange'#8'TabOrder'#2#4#4'Tex'
+  +'t'#6#10'My trainer'#0#0#6'TLabel'#6'Label4'#22'AnchorSideLeft.Control'#7#9
+  +'GroupBox2'#21'AnchorSideTop.Control'#7#9'GroupBox2'#4'Left'#2#6#6'Height'#2
+  +#15#3'Top'#2#0#5'Width'#2#23#18'BorderSpacing.Left'#2#6#7'Caption'#6#5'Title'
+  +#11'ParentColor'#8#0#0#0#9'TCheckBox'#8'cbPlayXM'#22'AnchorSideLeft.Control'
+  +#7#9'GroupBox2'#21'AnchorSideTop.Control'#7#9'GroupBox2'#18'AnchorSideTop.Si'
+  +'de'#7#9'asrBottom'#4'Left'#2#7#6'Height'#2#19#3'Top'#3#12#1#5'Width'#2'|'#7
+  +'Caption'#6#19'Play mod music file'#8'OnChange'#7#14'cbPlayXMChange'#8'TabOr'
+  +'der'#2#6#0#0#13'TFileNameEdit'#4'fnXM'#22'AnchorSideLeft.Control'#7#8'cbPla'
+  +'yXM'#21'AnchorSideTop.Control'#7#8'cbPlayXM'#18'AnchorSideTop.Side'#7#9'asr'
+  +'Bottom'#23'AnchorSideRight.Control'#7#12'sbPlayStopXM'#4'Left'#2#7#6'Height'
+  +#2#23#3'Top'#3#31#1#5'Width'#3#225#0#13'DialogOptions'#11#0#6'Filter'#6'vMod'
+  +'ule files|*.669;*.amf;*.dsm;*.far;*.gdm;*.imf;*.it;*.med;*.m15;*.mod;*.mtm;'
+  +'*.okt;*.stm;*.stx;*.s3m;*.ult;*.uni;*.xm'#11'FilterIndex'#2#0#15'HideDirect'
+  +'ories'#8#11'ButtonWidth'#2#23#9'NumGlyphs'#2#1#7'Anchors'#11#5'akTop'#6'akL'
+  +'eft'#7'akRight'#0#19'BorderSpacing.Right'#2#4#20'BorderSpacing.Bottom'#2#2#7
+  +'Enabled'#8#9'MaxLength'#2#0#8'TabOrder'#2#7#0#0#12'TSpeedButton'#12'sbPlayS'
+  +'topXM'#22'AnchorSideLeft.Control'#7#4'fnXM'#19'AnchorSideLeft.Side'#7#9'asr'
+  +'Bottom'#21'AnchorSideTop.Control'#7#4'fnXM'#18'AnchorSideTop.Side'#7#9'asrC'
+  +'enter'#23'AnchorSideRight.Control'#7#9'GroupBox2'#20'AnchorSideRight.Side'#7
+  +#9'asrBottom'#4'Left'#3#236#0#6'Height'#2#22#3'Top'#3#31#1#5'Width'#2#23#7'A'
+  +'nchors'#11#5'akTop'#7'akRight'#0#7'Enabled'#8#7'OnClick'#7#17'sbPlayStopXMC'
+  +'lick'#0#0#0#6'TPanel'#6'Panel7'#22'AnchorSideLeft.Control'#7#6'Panel5'#19'A'
+  +'nchorSideLeft.Side'#7#9'asrBottom'#21'AnchorSideTop.Control'#7#6'Panel8'#23
+  +'AnchorSideRight.Control'#7#6'Panel8'#20'AnchorSideRight.Side'#7#9'asrBottom'
+  +#4'Left'#3#3#1#6'Height'#3#29#1#3'Top'#2#0#5'Width'#3#234#0#7'Anchors'#11#5
+  +'akTop'#6'akLeft'#7'akRight'#0#8'AutoSize'#9#10'BevelOuter'#7#6'bvNone'#12'C'
+  +'lientHeight'#3#29#1#11'ClientWidth'#3#234#0#8'TabOrder'#2#1#0#6'TLabel'#6'L'
+  +'abel1'#22'AnchorSideLeft.Control'#7#9'cbProtect'#21'AnchorSideTop.Control'#7
+  +#9'cbProtect'#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#8#6'Height'#2
+  +#15#3'Top'#3#173#0#5'Width'#3#165#0#7'Caption'#6'!Freeze interval (in millis'
+  +'econds)'#11'ParentColor'#8#0#0#5'TEdit'#17'edtFreezeInterval'#22'AnchorSide'
+  +'Left.Control'#7#6'Label1'#21'AnchorSideTop.Control'#7#6'Label1'#18'AnchorSi'
+  +'deTop.Side'#7#9'asrBottom'#23'AnchorSideRight.Control'#7#6'Panel7'#20'Ancho'
+  +'rSideRight.Side'#7#9'asrBottom'#4'Left'#2#8#6'Height'#2#23#3'Top'#3#188#0#5
+  +'Width'#3#223#0#7'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#0#19'BorderSpaci'
+  +'ng.Right'#2#3#8'TabOrder'#2#0#4'Text'#6#3'250'#0#0#9'TCheckBox'#19'cbPlaySo'
+  +'undOnAction'#22'AnchorSideLeft.Control'#7#13'cbStopPlaying'#21'AnchorSideTo'
+  +'p.Control'#7#19'rbStopWhenFocusLost'#18'AnchorSideTop.Side'#7#9'asrBottom'#4
+  +'Left'#2#8#6'Height'#2#19#3'Top'#2'9'#5'Width'#3#198#0#7'Caption'#6'!Play so'
+  +'und on activate/deactivate'#8'OnChange'#7#25'cbPlaySoundOnActionChange'#8'T'
+  +'abOrder'#2#1#0#0#7'TButton'#13'btnDesignForm'#22'AnchorSideLeft.Control'#7#6
+  +'Panel7'#19'AnchorSideLeft.Side'#7#9'asrCenter'#21'AnchorSideTop.Control'#7
+  +#15'cbConfigD3DHook'#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#25#6'He'
+  +'ight'#2#25#3'Top'#3#4#1#5'Width'#3#185#0#8'AutoSize'#9#17'BorderSpacing.Top'
+  +#2#5#7'Caption'#6#29'Design userinterface manually'#7'OnClick'#7#18'btnDesig'
+  +'nFormClick'#8'TabOrder'#2#2#0#0#9'TCheckBox'#9'cbProtect'#22'AnchorSideLeft'
+  +'.Control'#7#6'Panel6'#21'AnchorSideTop.Control'#7#12'btnAddSounds'#18'Ancho'
+  +'rSideTop.Side'#7#9'asrBottom'#4'Left'#2#8#6'Height'#2#19#4'Hint'#6#244'Will'
+  +' encrypt the generated cetrainer file and when Cheat Engine loads this file'
+  +' back it will destroy the main form preventing the user from doing anything'
+  +' with it.'#13#10'Does not affect the standalone trainer because that one is'
+  +' protected by default'#3'Top'#3#154#0#5'Width'#3#209#0#17'BorderSpacing.Top'
+  +#2#3#7'Caption'#6'$Protect trainer from editing/reading'#7'Checked'#9#7'Enab'
+  +'led'#8#14'ParentShowHint'#8#8'ShowHint'#9#5'State'#7#9'cbChecked'#8'TabOrde'
+  +'r'#2#3#0#0#9'TCheckBox'#13'cbStopPlaying'#22'AnchorSideLeft.Control'#7#6'Pa'
+  +'nel7'#21'AnchorSideTop.Control'#7#6'Panel7'#4'Left'#2#8#6'Height'#2#19#3'To'
+  ,'p'#2#0#5'Width'#2'v'#18'BorderSpacing.Left'#2#8#7'Caption'#6#17'Stop playin'
+  +'g when'#7'Checked'#9#7'Enabled'#8#8'OnChange'#7#19'cbStopPlayingChange'#5'S'
+  +'tate'#7#9'cbChecked'#8'TabOrder'#2#4#0#0#12'TRadioButton'#18'rbStopWhenAtta'
+  +'ched'#22'AnchorSideLeft.Control'#7#13'cbStopPlaying'#21'AnchorSideTop.Contr'
+  +'ol'#7#13'cbStopPlaying'#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#24#6
+  +'Height'#2#19#3'Top'#2#19#5'Width'#3#150#0#18'BorderSpacing.Left'#2#16#7'Cap'
+  +'tion'#6#22'Game has been attached'#7'Checked'#9#7'Enabled'#8#8'TabOrder'#2#5
+  +#7'TabStop'#9#0#0#12'TRadioButton'#19'rbStopWhenFocusLost'#22'AnchorSideLeft'
+  +'.Control'#7#18'rbStopWhenAttached'#21'AnchorSideTop.Control'#7#18'rbStopWhe'
+  +'nAttached'#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#24#6'Height'#2#19
+  +#3'Top'#2'&'#5'Width'#2'v'#7'Caption'#6#19'Trainer loses focus'#7'Enabled'#8
+  +#8'TabOrder'#2#6#0#0#9'TCheckBox'#12'cbUseD3DHook'#22'AnchorSideLeft.Control'
+  +#7#17'edtFreezeInterval'#21'AnchorSideTop.Control'#7#17'edtFreezeInterval'#18
+  +'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#8#6'Height'#2#19#3'Top'#3#211#0
+  +#5'Width'#2'w'#7'Caption'#6#17'Use Direct3D Hook'#8'OnChange'#7#18'cbUseD3DH'
+  +'ookChange'#8'TabOrder'#2#7#0#0#7'TButton'#15'cbConfigD3DHook'#22'AnchorSide'
+  +'Left.Control'#7#12'cbUseD3DHook'#21'AnchorSideTop.Control'#7#12'cbUseD3DHoo'
+  +'k'#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#8#6'Height'#2#25#3'Top'#3
+  +#230#0#5'Width'#2'O'#8'AutoSize'#9#7'Caption'#6#9'Configure'#7'Enabled'#8#7
+  +'OnClick'#7#20'cbConfigD3DHookClick'#8'TabOrder'#2#8#0#0#7'TButton'#12'btnAd'
+  +'dSounds'#22'AnchorSideLeft.Control'#7#6'Panel6'#19'AnchorSideLeft.Side'#7#9
+  +'asrCenter'#21'AnchorSideTop.Control'#7#6'Panel6'#18'AnchorSideTop.Side'#7#9
+  +'asrBottom'#4'Left'#2'I'#6'Height'#2#25#3'Top'#2'~'#5'Width'#2'a'#8'AutoSize'
+  +#9#17'BorderSpacing.Top'#2#2#7'Caption'#6#12'Add sound(s)'#7'Enabled'#8#7'On'
+  +'Click'#7#17'btnAddSoundsClick'#8'TabOrder'#2#9#0#0#6'TPanel'#6'Panel6'#22'A'
+  +'nchorSideLeft.Control'#7#19'cbPlaySoundOnAction'#21'AnchorSideTop.Control'#7
+  +#19'cbPlaySoundOnAction'#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#8#6
+  +'Height'#2'0'#3'Top'#2'L'#5'Width'#3#226#0#8'AutoSize'#9#10'BevelOuter'#7#6
+  +'bvNone'#12'ClientHeight'#2'0'#11'ClientWidth'#3#226#0#8'TabOrder'#2#10#0#6
+  +'TLabel'#16'lblActivateSound'#21'AnchorSideTop.Control'#7#15'cbActivateSound'
+  +#18'AnchorSideTop.Side'#7#9'asrCenter'#23'AnchorSideRight.Control'#7#15'cbAc'
+  +'tivateSound'#4'Left'#2#12#6'Height'#2#15#3'Top'#2#4#5'Width'#2'+'#7'Anchors'
+  +#11#5'akTop'#7'akRight'#0#19'BorderSpacing.Right'#2#3#7'Caption'#6#8'Activat'
+  +'e'#7'Enabled'#8#11'ParentColor'#8#0#0#6'TLabel'#18'lblDeactivateSound'#21'A'
+  +'nchorSideTop.Control'#7#17'cbDeactivateSound'#18'AnchorSideTop.Side'#7#9'as'
+  +'rCenter'#23'AnchorSideRight.Control'#7#17'cbDeactivateSound'#4'Left'#2#0#6
+  +'Height'#2#15#3'Top'#2#29#5'Width'#2'7'#7'Anchors'#11#5'akTop'#7'akRight'#0
+  +#19'BorderSpacing.Right'#2#3#7'Caption'#6#10'Deactivate'#7'Enabled'#8#11'Par'
+  +'entColor'#8#0#0#9'TComboBox'#17'cbDeactivateSound'#22'AnchorSideLeft.Contro'
+  +'l'#7#15'cbActivateSound'#21'AnchorSideTop.Control'#7#15'cbActivateSound'#18
+  +'AnchorSideTop.Side'#7#9'asrBottom'#23'AnchorSideRight.Control'#7#16'sbPlayD'
+  +'eactivate'#4'Left'#2':'#6'Height'#2#23#3'Top'#2#25#5'Width'#3#142#0#7'Ancho'
+  +'rs'#11#5'akTop'#6'akLeft'#7'akRight'#0#17'BorderSpacing.Top'#2#2#7'Enabled'
+  +#8#10'ItemHeight'#2#15#9'ItemIndex'#2#0#13'Items.Strings'#1#6#10'Deactivate'
+  +#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#0#4'Text'#6#10'Deactivate'#0#0
+  +#9'TComboBox'#15'cbActivateSound'#21'AnchorSideTop.Control'#7#6'Panel6'#23'A'
+  +'nchorSideRight.Control'#7#14'sbPlayActivate'#4'Left'#2':'#6'Height'#2#23#3
+  +'Top'#2#0#5'Width'#3#142#0#7'Anchors'#11#5'akTop'#7'akRight'#0#7'Enabled'#8
+  +#10'ItemHeight'#2#15#9'ItemIndex'#2#0#13'Items.Strings'#1#6#8'Activate'#0#5
+  +'Style'#7#14'csDropDownList'#8'TabOrder'#2#1#4'Text'#6#8'Activate'#0#0#12'TS'
+  +'peedButton'#14'sbPlayActivate'#21'AnchorSideTop.Control'#7#15'cbActivateSou'
+  +'nd'#18'AnchorSideTop.Side'#7#9'asrCenter'#23'AnchorSideRight.Control'#7#6'P'
+  +'anel6'#20'AnchorSideRight.Side'#7#9'asrBottom'#4'Left'#3#200#0#6'Height'#2
+  +#22#3'Top'#2#0#5'Width'#2#23#7'Anchors'#11#5'akTop'#7'akRight'#0#19'BorderSp'
+  +'acing.Right'#2#3#7'Enabled'#8#10'Glyph.Data'#10':'#4#0#0'6'#4#0#0'BM6'#4#0#0
+  +#0#0#0#0'6'#0#0#0'('#0#0#0#16#0#0#0#16#0#0#0#1#0' '#0#0#0#0#0#0#4#0#0'd'#0#0
+  +#0'd'#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255'!'#130'O'#255'c'#130'r'
+  +#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255'z'#207#164#255','#140'Z'#255'=vY'
+  +#255#174#174#174#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#130#216#172#255'v'#214#166#255'<'
+  +#157'j'#255'''tL'#255#172#174#173#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#9'w?'#255#131#219#174#255#31#198'q'
+  +#255'r'#222#167#255'K'#178#127#255#23'tE'#255#168#173#170#255#0#0#0#0#0#0#0#0
+  ,#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#131#220
+  +#175#255#17#195'i'#255#26#204's'#255'i'#223#163#255'Z'#194#141#255#19'vC'#255
+  +#158#167#163#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#4's:'#255#169#220#193#255#16#189'e'#255#17#193'g'#255#19#194'i'#255'Y'
+  +#211#149#255'g'#201#152#255#22'|G'#255#136#156#146#255#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255#13#179'^'#255#14
+  +#182'`'#255#14#182'`'#255#13#180'_'#255'G'#196#132#255'p'#202#156#255#29#130
+  +'M'#255'g'#140'y'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'
+  +#255#169#220#193#255#12#170'X'#255#18#174'^'#255#21#175'`'#255#22#173'a'#255
+  +#19#170']'#255':'#182'w'#255'u'#199#157#255'('#137'W'#255'N'#131'g'#255#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255'.'#173'k'#255'+'
+  +#173'j'#255''''#171'h'#255'"'#169'd'#255#28#165'_'#255'A'#178'x'#255'x'#198
+  +#159#255')'#136'X'#255'g'#140'y'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#4's:'#255#169#220#193#255'6'#173'p'#255'2'#172'm'#255'-'#170'j'#255'('#168
+  +'f'#255'X'#188#137#255'x'#197#157#255#31#128'N'#255#131#154#142#255#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255'>'#177'v'
+  +#255':'#175's'#255'6'#174'p'#255'o'#197#152#255'q'#191#151#255#24'{I'#255#166
+  +#176#171#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'
+  +#255#169#220#193#255'E'#180'{'#255'G'#180'|'#255#130#204#166#255'g'#182#140
+  +#255#23'wE'#255#193#197#195#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#4's:'#255#165#218#191#255'W'#187#135#255#144#210#176#255
+  +'['#171#130#255'#wL'#255#212#213#212#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255#155#213#183
+  +#255'L'#159's'#255'=}\'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#164#217#190#255'='#147'f'
+  +#255'_'#136's'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255'-'#136'Y'#255#133#156#144
+  +#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#7'OnClick'#7#19'sbPlayActivateClick'#0#0#12'TSpeedButton'#16
+  +'sbPlayDeactivate'#21'AnchorSideTop.Control'#7#17'cbDeactivateSound'#18'Anch'
+  +'orSideTop.Side'#7#9'asrCenter'#23'AnchorSideRight.Control'#7#6'Panel6'#20'A'
+  +'nchorSideRight.Side'#7#9'asrBottom'#4'Left'#3#200#0#6'Height'#2#22#3'Top'#2
+  +#25#5'Width'#2#23#7'Anchors'#11#5'akTop'#7'akRight'#0#19'BorderSpacing.Right'
+  +#2#3#7'Enabled'#8#10'Glyph.Data'#10':'#4#0#0'6'#4#0#0'BM6'#4#0#0#0#0#0#0'6'#0
+  +#0#0'('#0#0#0#16#0#0#0#16#0#0#0#1#0' '#0#0#0#0#0#0#4#0#0'd'#0#0#0'd'#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255'!'#130'O'#255'c'#130'r'#255#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#4's:'#255'z'#207#164#255','#140'Z'#255'=vY'#255#174#174
+  +#174#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#4's:'#255#130#216#172#255'v'#214#166#255'<'#157'j'#255
+  +'''tL'#255#172#174#173#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#9'w?'#255#131#219#174#255#31#198'q'#255'r'#222
+  +#167#255'K'#178#127#255#23'tE'#255#168#173#170#255#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#131#220#175#255#17
+  +#195'i'#255#26#204's'#255'i'#223#163#255'Z'#194#141#255#19'vC'#255#158#167
+  +#163#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's'
+  +':'#255#169#220#193#255#16#189'e'#255#17#193'g'#255#19#194'i'#255'Y'#211#149
+  +#255'g'#201#152#255#22'|G'#255#136#156#146#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255#13#179'^'#255#14#182'`'
+  +#255#14#182'`'#255#13#180'_'#255'G'#196#132#255'p'#202#156#255#29#130'M'#255
+  +'g'#140'y'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169
+  +#220#193#255#12#170'X'#255#18#174'^'#255#21#175'`'#255#22#173'a'#255#19#170
+  +']'#255':'#182'w'#255'u'#199#157#255'('#137'W'#255'N'#131'g'#255#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255'.'#173'k'#255'+'#173
+  +'j'#255''''#171'h'#255'"'#169'd'#255#28#165'_'#255'A'#178'x'#255'x'#198#159
+  +#255')'#136'X'#255'g'#140'y'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's'
+  +':'#255#169#220#193#255'6'#173'p'#255'2'#172'm'#255'-'#170'j'#255'('#168'f'
+  +#255'X'#188#137#255'x'#197#157#255#31#128'N'#255#131#154#142#255#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255'>'#177'v'#255
+  +':'#175's'#255'6'#174'p'#255'o'#197#152#255'q'#191#151#255#24'{I'#255#166#176
+  +#171#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255
+  +#169#220#193#255'E'#180'{'#255'G'#180'|'#255#130#204#166#255'g'#182#140#255
+  +#23'wE'#255#193#197#195#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#4's:'#255#165#218#191#255'W'#187#135#255#144#210#176#255'['
+  ,#171#130#255'#wL'#255#212#213#212#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255#155#213#183#255'L'
+  +#159's'#255'=}\'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#164#217#190#255'='#147'f'#255'_'
+  +#136's'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255'-'#136'Y'#255#133#156#144#255#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#7'OnClick'#7#21'sbPlayDeactivateClick'#0#0#0#0#0#6'TPanel'#6'Panel9'
+  +#22'AnchorSideLeft.Control'#7#6'Panel8'#19'AnchorSideLeft.Side'#7#9'asrCente'
+  +'r'#21'AnchorSideTop.Control'#7#6'Panel8'#18'AnchorSideTop.Side'#7#9'asrBott'
+  +'om'#4'Left'#3#146#0#6'Height'#2','#3'Top'#3':'#1#5'Width'#3#201#0#8'AutoSiz'
+  +'e'#9#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2','#11'ClientWidth'#3#201
+  +#0#8'TabOrder'#2#1#0#6'TLabel'#6'Label5'#22'AnchorSideLeft.Control'#7#8'cbOu'
+  +'tput'#21'AnchorSideTop.Control'#7#6'Panel9'#4'Left'#2's'#6'Height'#2#15#3'T'
+  +'op'#2#4#5'Width'#2'&'#17'BorderSpacing.Top'#2#4#7'Caption'#6#6'Output'#11'P'
+  +'arentColor'#8#0#0#9'TComboBox'#8'cbOutput'#22'AnchorSideLeft.Control'#7#7'B'
+  +'utton5'#19'AnchorSideLeft.Side'#7#9'asrBottom'#21'AnchorSideTop.Control'#7#6
+  +'Label5'#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2's'#6'Height'#2#23#3
+  +'Top'#2#19#5'Width'#2'V'#18'BorderSpacing.Left'#2#5#10'ItemHeight'#2#15#9'It'
+  +'emIndex'#2#1#13'Items.Strings'#1#6#11'Script only'#6#3'EXE'#6#9'CETRAINER'#6
+  +#2'CT'#0#8'OnSelect'#7#14'cbOutputSelect'#5'Style'#7#14'csDropDownList'#8'Ta'
+  +'bOrder'#2#0#4'Text'#6#3'EXE'#0#0#7'TButton'#7'Button5'#22'AnchorSideLeft.Co'
+  +'ntrol'#7#6'Panel9'#21'AnchorSideTop.Control'#7#8'cbOutput'#20'AnchorSideRig'
+  +'ht.Side'#7#9'asrBottom'#4'Left'#2#0#6'Height'#2#25#4'Hint'#6'HGenerates the'
+  +' trainer script and saves the current table as a .CETRAINER'#3'Top'#2#19#5
+  +'Width'#2'n'#8'AutoSize'#9#19'BorderSpacing.Right'#2#5#7'Caption'#6#16'Gener'
+  +'ate trainer'#7'Default'#9#7'OnClick'#7#12'Button5Click'#14'ParentShowHint'#8
+  +#8'ShowHint'#9#8'TabOrder'#2#1#0#0#0#6'TPanel'#7'Panel10'#22'AnchorSideLeft.'
+  +'Control'#7#6'Panel1'#21'AnchorSideTop.Control'#7#6'Panel9'#18'AnchorSideTop'
+  +'.Side'#7#9'asrBottom'#23'AnchorSideRight.Control'#7#6'Panel1'#20'AnchorSide'
+  +'Right.Side'#7#9'asrBottom'#24'AnchorSideBottom.Control'#7#6'Panel1'#21'Anch'
+  +'orSideBottom.Side'#7#9'asrBottom'#4'Left'#3#4#1#6'Height'#2#0#3'Top'#3#156#1
+  +#5'Width'#2#0#7'Anchors'#11#8'akBottom'#0#8'AutoSize'#9#17'BorderSpacing.Top'
+  +#2#5#10'BevelOuter'#7#6'bvNone'#8'TabOrder'#2#2#0#0#6'TLabel'#6'Label6'#4'Le'
+  +'ft'#2#0#6'Height'#2#30#3'Top'#3'~'#1#5'Width'#3#237#1#5'Align'#7#8'alBottom'
+  +#7'Caption'#6#184'Tip: The trainer generator is a tool for beginners. It is '
+  +'recommended to learn lua and the formdesigner and save as .exe manually to '
+  +'experience the full power of a Cheat Engine trainer'#6'Layout'#7#8'tlBottom'
+  +#11'ParentColor'#8#8'WordWrap'#9#0#0#0#18'TOpenPictureDialog'#18'OpenPicture'
+  +'Dialog1'#4'left'#2'('#3'top'#2'('#0#0#11'TOpenDialog'#11'OpenDialog1'#4'lef'
+  +'t'#2'('#3'top'#3#144#0#0#0#11'TSaveDialog'#19'CETRAINERSaveDialog'#5'Title'
+  +#6#14'Save script as'#10'DefaultExt'#6#10'.CETRAINER'#6'Filter'#6'4Cheat Eng'
+  +'ine Table Trainer (*.CETRAINER)|*.CETRAINER'#7'Options'#11#10'ofReadOnly'#17
+  +'ofOverwritePrompt'#14'ofHideReadOnly'#15'ofPathMustExist'#14'ofEnableSizing'
+  +#0#4'left'#2'0'#3'top'#3'0'#1#0#0#11'TSaveDialog'#13'EXESaveDialog'#5'Title'
+  +#6#14'Save script as'#10'DefaultExt'#6#4'.EXE'#6'Filter'#6'&Cheat Engine EXE'
+  +' Trainer (*.EXE)|*.EXE'#7'Options'#11#10'ofReadOnly'#17'ofOverwritePrompt'
+  +#14'ofHideReadOnly'#15'ofPathMustExist'#14'ofEnableSizing'#0#4'left'#2'0'#3
+  +'top'#3' '#1#0#0#11'TOpenDialog'#11'OpenDialog2'#5'Title'#6#14'Open icon fil'
+  +'e'#6'Filter'#6'1Icon files (.exe; *.dll; *.ico)|*.exe;*.dll;*.ico'#4'left'#3
+  +#128#0#3'top'#3#144#0#0#0#11'TSaveDialog'#12'CTSaveDialog'#5'Title'#6#14'Sav'
+  +'e script as'#10'DefaultExt'#6#3'.CT'#6'Filter'#6#30'Cheat Engine Table (*.C'
+  +'T)|*.CT'#7'Options'#11#10'ofReadOnly'#17'ofOverwritePrompt'#14'ofHideReadOn'
+  +'ly'#15'ofPathMustExist'#14'ofEnableSizing'#0#4'left'#2'0'#3'top'#3#16#1#0#0
+  +#10'TPopupMenu'#10'PopupMenu1'#4'left'#2'('#3'top'#3#216#0#0#9'TMenuItem'#12
+  +'miEditHotkey'#7'Caption'#6#4'Edit'#7'Default'#9#7'OnClick'#7#17'miEditHotke'
+  +'yClick'#0#0#9'TMenuItem'#9'MenuItem1'#7'Caption'#6#25'Rebuild Trainer Cheat'
+  +'list'#7'OnClick'#7#14'MenuItem1Click'#0#0#0#10'TImageList'#10'ImageList1'#4
+  +'left'#2'('#3'top'#2'_'#6'Bitmap'#10#14#8#0#0'Li'#2#0#0#0#16#0#0#0#16#0#0#0#0
+  +#0#0#0#0#0#0#0#4's:'#255'-'#136'Y'#255#133#156#144#255#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#4's:'#255#164#217#190#255'='#147'f'#255'_'#136's'#255#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#4's:'#255#169#220#193#255#155#213#183#255'L'#159's'#255'=}\'#255#0#0#0#0
+  ,#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#4's:'#255#165#218#191#255'W'#187#135#255#144#210#176#255'['#171#130#255
+  +'#wL'#255#212#213#212#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255'E'#180'{'#255'G'#180'|'#255
+  +#130#204#166#255'g'#182#140#255#23'wE'#255#193#197#195#255#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255'>'
+  +#177'v'#255':'#175's'#255'6'#174'p'#255'o'#197#152#255'q'#191#151#255#24'{I'
+  +#255#166#176#171#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#4's:'#255#169#220#193#255'6'#173'p'#255'2'#172'm'#255'-'#170'j'#255'('#168
+  +'f'#255'X'#188#137#255'x'#197#157#255#31#128'N'#255#131#154#142#255#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255'.'#173'k'
+  +#255'+'#173'j'#255''''#171'h'#255'"'#169'd'#255#28#165'_'#255'A'#178'x'#255
+  +'x'#198#159#255')'#136'X'#255'g'#140'y'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#4's:'#255#169#220#193#255#12#170'X'#255#18#174'^'#255#21#175'`'#255#22
+  +#173'a'#255#19#170']'#255':'#182'w'#255'u'#199#157#255'('#137'W'#255'N'#131
+  +'g'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#169#220#193#255#13
+  +#179'^'#255#14#182'`'#255#14#182'`'#255#13#180'_'#255'G'#196#132#255'p'#202
+  +#156#255#29#130'M'#255'g'#140'y'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#4's:'#255#169#220#193#255#16#189'e'#255#17#193'g'#255#19#194'i'#255
+  +'Y'#211#149#255'g'#201#152#255#22'|G'#255#136#156#146#255#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#4's:'#255#131#220#175#255#17#195'i'#255
+  +#26#204's'#255'i'#223#163#255'Z'#194#141#255#19'vC'#255#158#167#163#255#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#9'w?'#255#131#219
+  +#174#255#31#198'q'#255'r'#222#167#255'K'#178#127#255#23'tE'#255#168#173#170
+  +#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#4's:'#255#130#216#172#255'v'#214#166#255'<'#157'j'#255'''tL'#255#172#174#173
+  +#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#4's:'#255'z'#207#164#255','#140'Z'#255'=vY'#255#174#174#174#255#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#4's:'#255'!'#130'O'#255'c'#130'r'#255#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#255#255#255#0#255
+  +#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255
+  +#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0
+  +#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255
+  +#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255
+  +#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0
+  +#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255
+  +#255#255#0'EP'#191#230'EP'#191#230'EP'#191#230'EP'#191#230'EP'#191#230'EP'
+  +#191#230'EP'#191#230'EP'#191#230'EP'#191#230'EP'#191#230'EP'#191#230'EP'#191
+  +#230#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0'EP'#191#230#209
+  +#212#241#255#204#208#242#255#198#203#242#255#191#197#242#255#183#190#243#255
+  +#174#184#243#255#165#175#244#255#155#168#244#255#145#159#245#255#135#149#246
+  +#255'99'#134#230#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0'EP'
+  +#191#230#204#208#241#255#198#203#241#255#191#197#242#255#183#191#243#255#175
+  +#183#244#255#166#175#245#255#155#168#245#255#145#159#246#255#135#150#246#255
+  +'}'#141#247#255'99'#134#230#255#255#255#0#255#255#255#0#255#255#255#0#255#255
+  +#255#0'EP'#191#230#199#202#241#255#191#197#243#255#183#190#243#255#174#183
+  +#244#255#166#175#244#255#155#167#245#255#146#159#246#255#135#150#246#255'|'
+  +#141#247#255'r'#132#247#255'99'#134#230#255#255#255#0#255#255#255#0#255#255
+  +#255#0#255#255#255#0'EP'#191#230#191#197#242#255#183#190#243#255#175#183#244
+  +#255#165#175#244#255#156#167#245#255#146#159#246#255#135#149#246#255'}'#141
+  +#247#255'r'#132#248#255'h|'#248#255'99'#134#230#255#255#255#0#255#255#255#0
+  +#255#255#255#0#255#255#255#0'EP'#191#230#183#190#243#255#175#183#244#255#166
+  +#176#244#255#155#168#245#255#146#159#246#255#135#150#246#255'|'#141#247#255
+  +'r'#132#248#255'g{'#248#255']s'#249#255'99'#134#230#255#255#255#0#255#255#255
+  +#0#255#255#255#0#255#255#255#0'EP'#191#230#174#183#243#255#165#175#245#255
+  +#156#167#245#255#145#159#245#255#135#150#247#255'|'#141#247#255'r'#132#248
+  +#255'h{'#249#255']s'#249#255'Sk'#250#255'99'#134#230#255#255#255#0#255#255
+  +#255#0#255#255#255#0#255#255#255#0'EP'#191#230#166#175#244#255#156#167#245
+  +#255#145#159#245#255#135#150#246#255'}'#141#247#255'q'#132#247#255'h|'#248
+  +#255']s'#249#255'Tj'#250#255'Jc'#251#255'99'#134#230#255#255#255#0#255#255
+  +#255#0#255#255#255#0#255#255#255#0'EP'#191#230#155#167#245#255#146#159#245
+  +#255#135#150#247#255'|'#141#247#255'r'#132#248#255'g|'#248#255'^s'#249#255'T'
+  +'k'#250#255'Jc'#251#255'A\'#251#255'99'#134#230#255#255#255#0#255#255#255#0
+  ,#255#255#255#0#255#255#255#0'EP'#191#230#146#158#245#255#135#150#246#255'|'
+  +#141#247#255'r'#133#248#255'h|'#249#255'^s'#249#255'Tk'#250#255'Kc'#251#255
+  +'B\'#251#255'9U'#252#255'99'#134#230#255#255#255#0#255#255#255#0#255#255#255
+  +#0#255#255#255#0'EP'#191#230#135#150#246#255'|'#141#247#255'r'#132#248#255'h'
+  +'|'#248#255'^s'#250#255'Sj'#250#255'Jc'#250#255'B\'#251#255':U'#252#255'3O'
+  +#252#255'99'#134#230#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0
+  +'EP'#191#230'99'#134#230'99'#134#230'99'#134#230'99'#134#230'99'#134#230'99'
+  +#134#230'99'#134#230'99'#134#230'99'#134#230'99'#134#230'99'#134#230#255#255
+  +#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0
+  +#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255
+  +#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255
+  +#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0
+  +#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255
+  +#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255
+  +#255#0#255#255#255#0#0#0#10'TPopupMenu'#10'PopupMenu2'#4'left'#3#184#2#3'top'
+  +#3#8#1#0#9'TMenuItem'#9'MenuItem2'#7'Caption'#6#24'Only generate the script'
+  +#7'OnClick'#7#14'MenuItem2Click'#0#0#0#11'TOpenDialog'#6'odWave'#10'DefaultE'
+  +'xt'#6#4'.WAV'#6'Filter'#6'$All files (*.*)|*.*|Wave files|*.WAV'#11'FilterI'
+  +'ndex'#2#2#7'Options'#11#18'ofAllowMultiSelect'#15'ofPathMustExist'#14'ofEna'
+  +'bleSizing'#12'ofViewDetail'#0#4'left'#3#192#1#3'top'#3#240#0#0#0#0
+]);

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Document Version="2">
+    <Protection InputFileName="cheatengine-x86_64.exe" Options="1023944" OutputFileName="DDY360x64.exe">
+        <Messages>
+            <Message Id="0" />
+            <Message Id="1" />
+            <Message Id="2" />
+            <Message Id="3" />
+        </Messages>
+        <Folders />
+        <Procedures>
+            <Procedure MapAddress="EntryPoint" Options="0" CompilationType="2" />
+        </Procedures>
+        <Objects />
+    </Protection>
+    <DLLBox>
+        <Folders />
+    </DLLBox>
+    <Script />
+    <LicenseManager />
+</Document>

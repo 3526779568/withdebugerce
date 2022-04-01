@@ -1,0 +1,4 @@
+{"version":1,"strings":[
+{"hash":94079128,"name":"frmtracerunit.rssearch","sourcebytes":[83,101,97,114,99,104],"value":"Search"},
+{"hash":10893897,"name":"frmtracerunit.rstypetheluaconditionyouwanttosearchforexampleeax0x1","sourcebytes":[84,121,112,101,32,116,104,101,32,40,76,85,65,41,32,99,111,110,100,105,116,105,111,110,32,121,111,117,32,119,97,110,116,32,116,111,32,115,101,97,114,99,104,32,102,111,114,32,40,69,120,97,109,112,108,101,58,32,69,65,88,61,61,48,120,49,50,51,52,41],"value":"Type the (LUA) condition you want to search for (Example: EAX==0x1234)"}
+]}

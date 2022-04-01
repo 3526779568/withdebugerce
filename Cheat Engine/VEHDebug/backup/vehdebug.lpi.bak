@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="10"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <Title Value="ddyveh"/>
+      <ResourceType Value="res"/>
+      <ActiveWindowIndexAtStart Value="1"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="4" Active="release 32">
+      <Item1 Name="release" Default="True"/>
+      <Item2 Name="debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\bin\vehdebug-$(TargetCPU)"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Optimizations>
+              <OptimizationLevel Value="0"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <LinkSmart Value="True"/>
+            <Options>
+              <ExecutableType Value="Library"/>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="release 64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\bin\vehdebug-$(TargetCPU)"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <RelocatableUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <UseLineInfoUnit Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <ExecutableType Value="Library"/>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item3>
+      <Item4 Name="release 32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\bin\32ddyveh"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <RelocatableUnit Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <UseLineInfoUnit Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <ExecutableType Value="Library"/>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item4>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <HostApplicationFilename Value="F:\svn\Cheat Engine\bin\tutorial-x86_64.exe"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <Units Count="41">
+      <Unit0>
+        <Filename Value="vehdebug.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="12" Y="11"/>
+        <UsageCount Value="191"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="init.pas"/>
+        <IsPartOfProject Value="True"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="3" Y="14"/>
+        <UsageCount Value="191"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="DebugHandler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="89"/>
+        <CursorPos X="19" Y="106"/>
+        <UsageCount Value="191"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus\fpc\2.4.1\source\packages\winunits-jedi\src\jwawinnt.pas"/>
+        <TopLine Value="7854"/>
+        <CursorPos X="33" Y="7867"/>
+        <UsageCount Value="34"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus\fpc\2.4.1\source\rtl\win\wininc\struct.inc"/>
+        <TopLine Value="1132"/>
+        <CursorPos X="27" Y="1144"/>
+        <UsageCount Value="34"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\fpc\2.4.1\source\packages\winunits-jedi\src\jwawindows.pas"/>
+        <TopLine Value="672"/>
+        <CursorPos X="3" Y="687"/>
+        <UsageCount Value="34"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\fpc\2.4.1\source\packages\winunits-jedi\src\jwawinbase.pas"/>
+        <TopLine Value="5705"/>
+        <CursorPos Y="5718"/>
+        <UsageCount Value="34"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="VEHDebugSharedMem.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="6" Y="45"/>
+        <UsageCount Value="191"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus\fpc\2.4.1\source\rtl\win\wininc\defines.inc"/>
+        <TopLine Value="1577"/>
+        <CursorPos X="6" Y="1560"/>
+        <UsageCount Value="34"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\fpc\2.4.1\source\packages\winunits-jedi\src\jwatlhelp32.pas"/>
+        <TopLine Value="267"/>
+        <CursorPos Y="280"/>
+        <UsageCount Value="34"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\fpc\2.4.1\source\rtl\inc\dynarrh.inc"/>
+        <TopLine Value="8"/>
+        <CursorPos X="102" Y="32"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="threadpoll.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="1"/>
+        <CursorPos X="7" Y="108"/>
+        <UsageCount Value="151"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\fpc\2.4.1\source\rtl\objpas\classes\classesh.inc"/>
+        <TopLine Value="843"/>
+        <CursorPos X="3" Y="259"/>
+        <UsageCount Value="14"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\packages\winunits-jedi\src\jwawindows.pas"/>
+        <TopLine Value="669"/>
+        <CursorPos X="3" Y="687"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\rtl\win\wininc\struct.inc"/>
+        <TopLine Value="3559"/>
+        <CursorPos X="11" Y="3576"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\rtl\win\wininc\func.inc"/>
+        <TopLine Value="143"/>
+        <CursorPos X="73" Y="159"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\packages\fcl-base\src\syncobjs.pp"/>
+        <TopLine Value="104"/>
+        <CursorPos X="17" Y="106"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\rtl\inc\threadh.inc"/>
+        <TopLine Value="136"/>
+        <CursorPos X="11" Y="153"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\rtl\objpas\classes\classesh.inc"/>
+        <TopLine Value="1496"/>
+        <CursorPos X="14" Y="1512"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\rtl\win\tthread.inc"/>
+        <TopLine Value="99"/>
+        <CursorPos X="3" Y="111"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\rtl\win\wininc\ascdef.inc"/>
+        <TopLine Value="62"/>
+        <CursorPos X="11" Y="78"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="extcont.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="1"/>
+        <CursorPos X="30" Y="6"/>
+        <UsageCount Value="119"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\NewKernelHandler.pas"/>
+        <TopLine Value="127"/>
+        <CursorPos X="63" Y="183"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\lazarus\fpc\2.6.1\source\rtl\win\wininc\func.inc"/>
+        <TopLine Value="147"/>
+        <CursorPos X="10" Y="161"/>
+        <UsageCount Value="23"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="SimpleThread.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="6"/>
+        <CursorPos X="45" Y="6"/>
+        <UsageCount Value="71"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\lazarus\fpc\2.6.1\source\rtl\objpas\classes\classesh.inc"/>
+        <TopLine Value="1540"/>
+        <CursorPos X="21" Y="1548"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\lazarus\fpc\2.6.1\source\rtl\objpas\classes\classes.inc"/>
+        <TopLine Value="79"/>
+        <CursorPos X="10" Y="78"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\fpc\2.6.1\source\rtl\win\tthread.inc"/>
+        <CursorPos X="47" Y="11"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\lazarus\fpc\2.6.1\source\rtl\win\wininc\redef.inc"/>
+        <TopLine Value="343"/>
+        <CursorPos X="10" Y="357"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\wininc\func.inc"/>
+        <TopLine Value="113"/>
+        <CursorPos X="10" Y="128"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\wininc\redef.inc"/>
+        <TopLine Value="603"/>
+        <CursorPos X="10" Y="618"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="E:\lazarus\fpc\2.6.2\source\rtl\win\wininc\struct.inc"/>
+        <TopLine Value="1828"/>
+        <CursorPos X="11" Y="1844"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="E:\lazarus\fpc\2.6.2\source\rtl\win\wininc\defines.inc"/>
+        <TopLine Value="43"/>
+        <CursorPos X="6" Y="59"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\FPC\2.6.2-32\fpcsrc\rtl\win\wininc\struct.inc"/>
+        <TopLine Value="1396"/>
+        <CursorPos X="6" Y="1412"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="C:\FPC\2.6.2-32\fpcsrc\packages\winunits-jedi\src\jwawinbase.pas"/>
+        <TopLine Value="2156"/>
+        <CursorPos X="10" Y="2172"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="C:\FPC\2.6.2-32\fpcsrc\packages\winunits-jedi\src\jwawindows.pas"/>
+        <TopLine Value="350"/>
+        <CursorPos X="3" Y="368"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="C:\FPC\2.6.2-32\fpcsrc\rtl\win\wininc\redef.inc"/>
+        <TopLine Value="602"/>
+        <CursorPos X="10" Y="618"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="C:\FPC\2.6.2-32\fpcsrc\rtl\win\wininc\defines.inc"/>
+        <TopLine Value="5645"/>
+        <CursorPos X="6" Y="5661"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\development\fpc\rtl\win\wininc\defines.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="1576"/>
+        <CursorPos X="6" Y="1591"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="C:\development\fpc\rtl\win\wininc\struct.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="1834"/>
+        <CursorPos X="11" Y="1849"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="C:\development\fpc\rtl\win\wininc\func.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="114"/>
+        <CursorPos X="10" Y="129"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit40>
+    </Units>
+    <JumpHistory Count="23" HistoryIndex="22">
+      <Position1>
+        <Filename Value="init.pas"/>
+        <Caret Line="84" Column="57" TopLine="68"/>
+      </Position1>
+      <Position2>
+        <Filename Value="init.pas"/>
+        <Caret Line="90" Column="15" TopLine="46"/>
+      </Position2>
+      <Position3>
+        <Filename Value="threadpoll.pas"/>
+        <Caret Line="85" Column="3" TopLine="70"/>
+      </Position3>
+      <Position4>
+        <Filename Value="threadpoll.pas"/>
+        <Caret Line="65" Column="7" TopLine="49"/>
+      </Position4>
+      <Position5>
+        <Filename Value="threadpoll.pas"/>
+        <Caret Line="62" Column="61" TopLine="40"/>
+      </Position5>
+      <Position6>
+        <Filename Value="threadpoll.pas"/>
+        <Caret Line="108" Column="9" TopLine="82"/>
+      </Position6>
+      <Position7>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="56" Column="46" TopLine="56"/>
+      </Position7>
+      <Position8>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="37" Column="16" TopLine="33"/>
+      </Position8>
+      <Position9>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="41" Column="25" TopLine="17"/>
+      </Position9>
+      <Position10>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="80" Column="139" TopLine="56"/>
+      </Position10>
+      <Position11>
+        <Filename Value="init.pas"/>
+        <Caret Line="128" Column="48" TopLine="114"/>
+      </Position11>
+      <Position12>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="151" Column="36" TopLine="133"/>
+      </Position12>
+      <Position13>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="152" Column="15" TopLine="139"/>
+      </Position13>
+      <Position14>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="148" Column="82" TopLine="125"/>
+      </Position14>
+      <Position15>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="145" Column="28" TopLine="131"/>
+      </Position15>
+      <Position16>
+        <Filename Value="init.pas"/>
+        <Caret Line="130" Column="18" TopLine="116"/>
+      </Position16>
+      <Position17>
+        <Filename Value="init.pas"/>
+        <Caret Line="130" Column="23" TopLine="106"/>
+      </Position17>
+      <Position18>
+        <Filename Value="init.pas"/>
+        <Caret Line="131" Column="38" TopLine="107"/>
+      </Position18>
+      <Position19>
+        <Filename Value="init.pas"/>
+        <Caret Line="133" Column="107" TopLine="109"/>
+      </Position19>
+      <Position20>
+        <Filename Value="init.pas"/>
+        <Caret Line="180" Column="60" TopLine="166"/>
+      </Position20>
+      <Position21>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="162" Column="15" TopLine="139"/>
+      </Position21>
+      <Position22>
+        <Filename Value="DebugHandler.pas"/>
+        <Caret Line="106" Column="19" TopLine="89"/>
+      </Position22>
+      <Position23>
+        <Filename Value="init.pas"/>
+        <Caret Line="14" Column="3" TopLine="2"/>
+      </Position23>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="..\bin\vehdebug-$(TargetCPU)"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <RelocatableUnit Value="True"/>
+      <Optimizations>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <UseLineInfoUnit Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+      <Options>
+        <ExecutableType Value="Library"/>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

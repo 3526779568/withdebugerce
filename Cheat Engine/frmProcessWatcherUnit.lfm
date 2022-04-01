@@ -1,0 +1,99 @@
+object frmProcessWatcher: TfrmProcessWatcher
+  Left = 676
+  Height = 236
+  Top = 245
+  Width = 264
+  BorderIcons = [biSystemMenu]
+  Caption = 'Process watcher'
+  ClientHeight = 236
+  ClientWidth = 264
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PopupMode = pmAuto
+  Position = poScreenCenter
+  LCLVersion = '1.6.0.4'
+  object tvProcesslist: TTreeView
+    Left = 0
+    Height = 165
+    Top = 0
+    Width = 264
+    Align = alClient
+    DefaultItemHeight = 18
+    Indent = 19
+    PopupMenu = pmthreadid
+    ReadOnly = True
+    ShowRoot = False
+    TabOrder = 0
+    OnDblClick = tvProcesslistDblClick
+    Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoToolTips]
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 71
+    Top = 165
+    Width = 264
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 71
+    ClientWidth = 264
+    TabOrder = 1
+    OnResize = Panel1Resize
+    object Panel2: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel1
+      Left = 73
+      Height = 55
+      Top = 8
+      Width = 118
+      AutoSize = True
+      BorderSpacing.Top = 8
+      BorderSpacing.Bottom = 8
+      BevelOuter = bvNone
+      ClientHeight = 55
+      ClientWidth = 118
+      TabOrder = 0
+      object btnOpen: TButton
+        AnchorSideLeft.Control = Panel2
+        AnchorSideTop.Control = Panel2
+        AnchorSideRight.Control = Panel2
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 25
+        Top = 0
+        Width = 118
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        Caption = 'Open process'
+        OnClick = btnOpenClick
+        TabOrder = 0
+      end
+      object btnAttach: TButton
+        AnchorSideLeft.Control = Panel2
+        AnchorSideTop.Control = btnOpen
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel2
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 25
+        Top = 30
+        Width = 118
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Top = 5
+        Caption = 'Attach to process'
+        OnClick = btnAttachClick
+        TabOrder = 1
+      end
+    end
+  end
+  object pmthreadid: TPopupMenu
+    left = 56
+    top = 48
+    object ShowThreadIDs1: TMenuItem
+      Caption = 'Show ThreadID''s'
+      OnClick = ShowThreadIDs1Click
+    end
+  end
+end

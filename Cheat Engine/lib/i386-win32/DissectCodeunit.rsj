@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":371552,"name":"dissectcodeunit.rsstop","sourcebytes":[83,116,111,112],"value":"Stop"},
+{"hash":5941396,"name":"dissectcodeunit.rsstart","sourcebytes":[83,116,97,114,116],"value":"Start"},
+{"hash":120705358,"name":"dissectcodeunit.rspleaseselectsomethingtoscan","sourcebytes":[80,108,101,97,115,101,32,115,101,108,101,99,116,32,115,111,109,101,116,104,105,110,103,32,116,111,32,115,99,97,110],"value":"Please select something to scan"},
+{"hash":439877,"name":"dissectcodeunit.rsdone","sourcebytes":[100,111,110,101],"value":"done"}
+]}

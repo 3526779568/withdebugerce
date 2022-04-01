@@ -1,0 +1,12 @@
+{"version":1,"strings":[
+{"hash":67815554,"name":"assemblerunit.rsinvalidregister","sourcebytes":[73,110,118,97,108,105,100,32,114,101,103,105,115,116,101,114],"value":"Invalid register"},
+{"hash":6062756,"name":"assemblerunit.rsinvalid","sourcebytes":[73,110,118,97,108,105,100],"value":"Invalid"},
+{"hash":23309266,"name":"assemblerunit.rsinvalidmultiplier","sourcebytes":[73,110,118,97,108,105,100,32,109,117,108,116,105,112,108,105,101,114],"value":"Invalid multiplier"},
+{"hash":141560496,"name":"assemblerunit.rswtfisa","sourcebytes":[87,84,70,32,105,115,32,97,32],"value":"WTF is a "},
+{"hash":5617168,"name":"assemblerunit.rsidontunderstandwhatyoumeanwith","sourcebytes":[73,32,100,111,110,39,116,32,117,110,100,101,114,115,116,97,110,100,32,119,104,97,116,32,121,111,117,32,109,101,97,110,32,119,105,116,104,32],"value":"I don't understand what you mean with "},
+{"hash":81268036,"name":"assemblerunit.rsnegativeregisterscannotbeencoded","sourcebytes":[78,101,103,97,116,105,118,101,32,114,101,103,105,115,116,101,114,115,32,99,97,110,32,110,111,116,32,98,101,32,101,110,99,111,100,101,100],"value":"Negative registers can not be encoded"},
+{"hash":187247251,"name":"assemblerunit.rsinvalidaddress","sourcebytes":[73,110,118,97,108,105,100,32,97,100,100,114,101,115,115],"value":"Invalid address"},
+{"hash":240705320,"name":"assemblerunit.rstheassemblertriedtosetaregistevaluethatistoohigh","sourcebytes":[84,104,101,32,97,115,115,101,109,98,108,101,114,32,116,114,105,101,100,32,116,111,32,115,101,116,32,97,32,114,101,103,105,115,116,101,114,32,118,97,108,117,101,32,116,104,97,116,32,105,115,32,116,111,111,32,104,105,103,104],"value":"The assembler tried to set a register value that is too high"},
+{"hash":229589762,"name":"assemblerunit.rsassemblererror","sourcebytes":[65,115,115,101,109,98,108,101,114,32,101,114,114,111,114],"value":"Assembler error"},
+{"hash":127445463,"name":"assemblerunit.rsoffsettoobig","sourcebytes":[111,102,102,115,101,116,32,116,111,111,32,98,105,103],"value":"offset too big"}
+]}

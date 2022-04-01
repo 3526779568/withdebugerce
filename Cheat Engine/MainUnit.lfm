@@ -1,0 +1,2458 @@
+object MainForm: TMainForm
+  Tag = 2
+  Left = 636
+  Height = 699
+  Hint = ' '
+  Top = 220
+  Width = 701
+  HelpContext = 3
+  HorzScrollBar.Visible = False
+  VertScrollBar.Visible = False
+  AllowDropFiles = True
+  AutoSize = True
+  Caption = 'DDY'
+  ClientHeight = 679
+  ClientWidth = 701
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnDropFiles = FormDropFiles
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 7
+    Top = 441
+    Width = 701
+    Align = alTop
+    AutoSnap = False
+    Beveled = True
+    MinSize = 50
+    OnMoved = Splitter1Moved
+    ResizeAnchor = akTop
+  end
+  object Panel1: TPanel
+    Tag = 777
+    Left = 0
+    Height = 208
+    Top = 448
+    Width = 701
+    Align = alClient
+    BevelOuter = bvNone
+    BorderWidth = 1
+    FullRepaint = False
+    PopupMenu = PopupMenu2
+    TabOrder = 0
+  end
+  object Panel4: TPanel
+    Left = 0
+    Height = 23
+    Top = 656
+    Width = 701
+    Align = alBottom
+    AutoSize = True
+    ClientHeight = 23
+    ClientWidth = 701
+    TabOrder = 1
+    object advancedbutton: TSpeedButton
+      Left = 1
+      Height = 21
+      Hint = 'Codelist and pause'
+      Top = 1
+      Width = 111
+      Align = alLeft
+      AutoSize = True
+      Caption = 'Advanced Options'
+      Flat = True
+      OnClick = advancedbuttonClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object CommentButton: TSpeedButton
+      Left = 625
+      Height = 21
+      Top = 1
+      Width = 75
+      Align = alRight
+      AutoSize = True
+      Caption = 'Table Extras'
+      Flat = True
+      OnClick = CommentButtonClick
+      ParentShowHint = False
+    end
+    object lblSigned: TLabel
+      AnchorSideLeft.Control = Panel4
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel4
+      Left = 335
+      Height = 17
+      Top = 1
+      Width = 31
+      Alignment = taCenter
+      Caption = 'NULL'
+      ParentColor = False
+      Visible = False
+    end
+  end
+  object Panel5: TPanel
+    Left = 0
+    Height = 441
+    Top = 0
+    Width = 701
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 441
+    ClientWidth = 701
+    TabOrder = 2
+    OnResize = Panel5Resize
+    object ProcessLabel: TLabel
+      Left = -24
+      Height = 17
+      Top = 0
+      Width = 758
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'No Process Selected'
+      ParentColor = False
+      WordWrap = True
+      OnDblClick = ProcessLabelDblClick
+      OnMouseDown = ProcessLabelMouseDown
+    end
+    object foundcountlabel: TLabel
+      AnchorSideLeft.Control = Label6
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label6
+      Left = 41
+      Height = 17
+      Hint = 'This shows the amount of addresses found'
+      Top = 33
+      Width = 7
+      BorderSpacing.Left = 2
+      Caption = '0'
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object lblcompareToSavedScan: TLabel
+      AnchorSideLeft.Control = ProgressBar
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = ProgressBar
+      AnchorSideTop.Side = asrBottom
+      Left = 253
+      Height = 17
+      Top = 33
+      Width = 240
+      Anchors = [akTop, akRight]
+      Caption = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+      ParentColor = False
+      Visible = False
+    end
+    object ScanText: TLabel
+      AnchorSideLeft.Control = scanvalue
+      AnchorSideTop.Control = btnNewScan
+      AnchorSideTop.Side = asrBottom
+      Left = 361
+      Height = 17
+      Top = 85
+      Width = 63
+      BorderSpacing.Top = 8
+      Caption = 'Scan Value'
+      Enabled = False
+      ParentBidiMode = False
+      ParentColor = False
+    end
+    object lblScanType: TLabel
+      AnchorSideTop.Control = ScanType
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = ScanType
+      Left = 300
+      Height = 17
+      Top = 139
+      Width = 59
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 2
+      Caption = 'Scan Type'
+      Enabled = False
+      ParentColor = False
+    end
+    object lblValueType: TLabel
+      AnchorSideTop.Control = VarType
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = VarType
+      Left = 295
+      Height = 17
+      Top = 166
+      Width = 64
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 2
+      Caption = 'Value Type'
+      Enabled = False
+      ParentColor = False
+    end
+    object LoadButton: TSpeedButton
+      AnchorSideLeft.Control = Panel7
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel5
+      Left = 31
+      Height = 25
+      Top = 3
+      Width = 25
+      Action = actOpen
+      BorderSpacing.Top = 3
+      Glyph.Data = {
+        D6020000424DD6020000000000003600000028000000100000000E0000000100
+        180000000000A0020000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C000000000000000000000000000000000000000000000
+        0000000000000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000000000
+        008484008484008484008484008484008484008484008484008484000000C0C0
+        C0C0C0C0C0C0C0C0C0C000000000FFFF00000000848400848400848400848400
+        8484008484008484008484008484000000C0C0C0C0C0C0C0C0C0000000FFFFFF
+        00FFFF0000000084840084840084840084840084840084840084840084840084
+        84000000C0C0C0C0C0C000000000FFFFFFFFFF00FFFF00000000848400848400
+        8484008484008484008484008484008484008484000000C0C0C0000000FFFFFF
+        00FFFFFFFFFF00FFFF0000000000000000000000000000000000000000000000
+        0000000000000000000000000000FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF00
+        FFFFFFFFFF00FFFF000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF
+        00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF000000C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C000000000FFFFFFFFFF00FFFF00000000000000000000
+        0000000000000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000
+        000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000
+        00000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000000000C0C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C00000
+        00C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0C0C0C0C0000000000000000000C0C0C0C0C0C0C0C0C0C0C0C0
+      }
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SaveButton: TSpeedButton
+      AnchorSideLeft.Control = LoadButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = LoadButton
+      Left = 56
+      Height = 25
+      Top = 3
+      Width = 25
+      Action = actSave
+      Glyph.Data = {
+        CA020000424DCA0200000000000036000000280000000E0000000F0000000100
+        18000000000094020000C40E0000C40E00000000000000000000C0C0C0C0C0C0
+        C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+        C0C0C0C00000C0C0C00000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000084840084840000000000
+        00000000000000000000000000C6C6C6C6C6C600000000848400000000000000
+        00008484008484000000000000000000000000000000000000C6C6C6C6C6C600
+        0000008484000000000000000000848400848400000000000000000000000000
+        0000000000C6C6C6C6C6C6000000008484000000000000000000848400848400
+        0000000000000000000000000000000000000000000000000000008484000000
+        0000000000008484008484008484008484008484008484008484008484008484
+        0084840084840084840000000000000000008484008484000000000000000000
+        0000000000000000000000000000000084840084840000000000000000008484
+        000000C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C60000000084
+        840000000000000000008484000000C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6
+        C6C6C6C6C6C6C60000000084840000000000000000008484000000C6C6C6C6C6
+        C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C600000000848400000000000000
+        00008484000000C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C600
+        00000084840000000000000000008484000000C6C6C6C6C6C6C6C6C6C6C6C6C6
+        C6C6C6C6C6C6C6C6C6C6C60000000000000000000000000000008484000000C6
+        C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6C6000000C6C6C6000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000
+      }
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object Label6: TLabel
+      AnchorSideLeft.Control = Panel5
+      AnchorSideTop.Control = ProgressBar
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 17
+      Top = 33
+      Width = 39
+      Caption = 'Found:'
+      ParentColor = False
+    end
+    object SpeedButton2: TSpeedButton
+      AnchorSideLeft.Control = Panel5
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideBottom.Control = Panel5
+      AnchorSideBottom.Side = asrBottom
+      Left = 339
+      Height = 22
+      Hint = 'Delete all addresses from the list'
+      Top = 419
+      Width = 23
+      Anchors = [akLeft, akBottom]
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+        3333333777333777FF3333993333339993333377FF3333377FF3399993333339
+        993337777FF3333377F3393999333333993337F777FF333337FF993399933333
+        399377F3777FF333377F993339993333399377F33777FF33377F993333999333
+        399377F333777FF3377F993333399933399377F3333777FF377F993333339993
+        399377FF3333777FF7733993333339993933373FF3333777F7F3399933333399
+        99333773FF3333777733339993333339933333773FFFFFF77333333999999999
+        3333333777333777333333333999993333333333377777333333
+      }
+      NumGlyphs = 2
+      OnClick = SpeedButton2Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SpeedButton3: TSpeedButton
+      AnchorSideLeft.Control = Foundlist3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideBottom.Control = Foundlist3
+      AnchorSideBottom.Side = asrBottom
+      Left = 293
+      Height = 22
+      Hint = 'Copy all selected items to the address list'
+      Top = 391
+      Width = 22
+      Anchors = [akLeft, akBottom]
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333333333333333333333333333333333333FFF3333333333333
+        00333333333333FF77F3333333333300903333333333FF773733333333330099
+        0333333333FF77337F3333333300999903333333FF7733337333333700999990
+        3333333777333337F3333333099999903333333373F333373333333330999903
+        33333333F7F3337F33333333709999033333333F773FF3733333333709009033
+        333333F7737737F3333333709073003333333F77377377F33333370907333733
+        33333773773337333333309073333333333337F7733333333333370733333333
+        3333377733333333333333333333333333333333333333333333
+      }
+      NumGlyphs = 2
+      OnClick = SpeedButton3Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object btnNewScan: TButton
+      AnchorSideLeft.Control = gbScanOptions
+      AnchorSideTop.Control = Foundlist3
+      Left = 348
+      Height = 27
+      Top = 50
+      Width = 81
+      AutoSize = True
+      Caption = 'First Scan'
+      Constraints.MinWidth = 75
+      Enabled = False
+      OnClick = btnNewScanClick
+      ParentShowHint = False
+      TabOrder = 0
+    end
+    object gbScanOptions: TGroupBox
+      AnchorSideLeft.Control = SpeedButton3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = VarType
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel9
+      Left = 348
+      Height = 186
+      Top = 193
+      Width = 213
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Right = 6
+      Caption = 'Memory Scan Options'
+      ClientHeight = 164
+      ClientWidth = 209
+      Color = clBtnFace
+      Constraints.MinWidth = 10
+      Enabled = False
+      ParentColor = False
+      TabOrder = 2
+      object Panel2: TPanel
+        AnchorSideLeft.Control = gbScanOptions
+        AnchorSideTop.Control = Panel3
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = gbScanOptions
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 42
+        Top = 54
+        Width = 209
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 42
+        ClientWidth = 209
+        PopupMenu = pmScanRegion
+        TabOrder = 1
+        object cbCopyOnWrite: TCheckBox
+          AnchorSideTop.Control = cbWritable
+          AnchorSideTop.Side = asrBottom
+          Left = 2
+          Height = 21
+          Hint = 'Unchecked:'#13#10'Do not scan copy-on-write memory'#13#10#13#10'Checked:'#13#10'Only scan copy-on-write memory'#13#10#13#10'Gray:'#13#10'Don''t care if it''s copy-on-write or not'
+          Top = 21
+          Width = 100
+          AllowGrayed = True
+          BorderSpacing.Left = 2
+          Caption = 'CopyOnWrite'
+          ParentShowHint = False
+          PopupMenu = pmScanRegion
+          ShowHint = True
+          TabOrder = 2
+        end
+        object cbWritable: TCheckBox
+          AnchorSideLeft.Control = Panel2
+          AnchorSideTop.Control = Panel2
+          Left = 2
+          Height = 21
+          Hint = 'Unchecked:'#13#10'Do not scan writable memory'#13#10#13#10'Checked:'#13#10'Only scan writable memory'#13#10#13#10'Gray:'#13#10'Don''t care if it''s writable memory or not'
+          Top = 0
+          Width = 71
+          AllowGrayed = True
+          BorderSpacing.Left = 2
+          Caption = 'Writable'
+          Checked = True
+          ParentShowHint = False
+          PopupMenu = pmScanRegion
+          ShowHint = True
+          State = cbChecked
+          TabOrder = 0
+        end
+        object cbExecutable: TCheckBox
+          AnchorSideLeft.Control = Panel2
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = Panel2
+          AnchorSideRight.Control = Panel2
+          AnchorSideRight.Side = asrBottom
+          Left = 123
+          Height = 21
+          Hint = 'Unchecked:'#13#10'Do not scan executable memory'#13#10#13#10'Checked:'#13#10'Only scan executable memory'#13#10#13#10'Gray:'#13#10'Don''t care if it''s executable or not'
+          Top = 0
+          Width = 84
+          AllowGrayed = True
+          Anchors = [akTop, akRight]
+          BorderSpacing.Right = 2
+          Caption = 'Executable'
+          ParentShowHint = False
+          PopupMenu = pmScanRegion
+          ShowHint = True
+          State = cbGrayed
+          TabOrder = 1
+        end
+      end
+      object Panel3: TPanel
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 54
+        Top = 0
+        Width = 209
+        Align = alTop
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 54
+        ClientWidth = 209
+        TabOrder = 0
+        object Label2: TLabel
+          AnchorSideLeft.Control = Panel3
+          AnchorSideTop.Control = ToAddress
+          AnchorSideTop.Side = asrCenter
+          Left = 5
+          Height = 17
+          Top = 33
+          Width = 27
+          BorderSpacing.Left = 5
+          Caption = 'Stop'
+          Enabled = False
+          ParentColor = False
+          PopupMenu = pmResetRange
+        end
+        object Label1: TLabel
+          AnchorSideLeft.Control = Panel3
+          AnchorSideTop.Control = FromAddress
+          AnchorSideTop.Side = asrCenter
+          Left = 5
+          Height = 17
+          Top = 5
+          Width = 27
+          BorderSpacing.Left = 5
+          Caption = 'Start'
+          Enabled = False
+          ParentColor = False
+          PopupMenu = pmResetRange
+        end
+        object ToAddress: TEdit
+          AnchorSideLeft.Control = FromAddress
+          AnchorSideTop.Control = FromAddress
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = FromAddress
+          AnchorSideRight.Side = asrBottom
+          Left = 38
+          Height = 26
+          Top = 28
+          Width = 165
+          Alignment = taRightJustify
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Top = 2
+          Font.CharSet = ANSI_CHARSET
+          Font.Name = 'Courier New'
+          Font.Pitch = fpFixed
+          Font.Quality = fqDraft
+          ParentFont = False
+          TabOrder = 1
+          Text = 'ffffffff'
+        end
+        object FromAddress: TEdit
+          AnchorSideLeft.Control = Label1
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = Panel3
+          AnchorSideRight.Control = Panel3
+          AnchorSideRight.Side = asrBottom
+          Left = 38
+          Height = 26
+          Top = 0
+          Width = 165
+          Alignment = taRightJustify
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Left = 6
+          BorderSpacing.Right = 6
+          Font.Name = 'Courier New'
+          ParentFont = False
+          TabOrder = 0
+          Text = '00000000'
+        end
+      end
+      object Panel6: TPanel
+        AnchorSideLeft.Control = gbScanOptions
+        AnchorSideTop.Control = Panel2
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = gbScanOptions
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 68
+        Top = 96
+        Width = 209
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 68
+        ClientWidth = 209
+        TabOrder = 2
+        object cbFastScan: TCheckBox
+          AnchorSideLeft.Control = Panel6
+          AnchorSideTop.Control = edtAlignment
+          AnchorSideTop.Side = asrCenter
+          Left = 2
+          Height = 21
+          Hint = 'Speeds up the scan and decreases useless results by skipping unaligned memory, or only scans addresses ending with specific digits'
+          Top = 11
+          Width = 76
+          BorderSpacing.Left = 2
+          Caption = 'Fast Scan'
+          Checked = True
+          Enabled = False
+          OnChange = cbFastScanChange
+          ParentShowHint = False
+          ShowHint = True
+          State = cbChecked
+          TabOrder = 0
+        end
+        object edtAlignment: TEdit
+          AnchorSideLeft.Control = cbFastScan
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = Panel8
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = Panel8
+          Left = 78
+          Height = 25
+          Top = 9
+          Width = 45
+          Alignment = taCenter
+          BorderSpacing.Top = 8
+          Constraints.MinWidth = 10
+          Enabled = False
+          OnKeyPress = edtAlignmentKeyPress
+          TabOrder = 1
+          Text = '4'
+        end
+        object cbPauseWhileScanning: TCheckBox
+          AnchorSideLeft.Control = Panel6
+          AnchorSideTop.Control = Panel8
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = Panel6
+          AnchorSideRight.Side = asrBottom
+          Left = 2
+          Height = 21
+          Top = 47
+          Width = 205
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Left = 2
+          BorderSpacing.Top = 5
+          BorderSpacing.Right = 2
+          Caption = 'Pause the game while scanning'
+          Enabled = False
+          OnClick = cbPauseWhileScanningClick
+          TabOrder = 3
+        end
+        object Panel8: TPanel
+          AnchorSideLeft.Control = edtAlignment
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = Panel6
+          AnchorSideRight.Control = Panel6
+          AnchorSideRight.Side = asrBottom
+          Left = 126
+          Height = 42
+          Top = 0
+          Width = 83
+          Anchors = [akTop, akLeft, akRight]
+          AutoSize = True
+          BorderSpacing.Left = 3
+          BevelOuter = bvNone
+          ClientHeight = 42
+          ClientWidth = 83
+          TabOrder = 2
+          object rbfsmLastDigts: TRadioButton
+            AnchorSideLeft.Control = rbFsmAligned
+            AnchorSideTop.Control = rbFsmAligned
+            AnchorSideTop.Side = asrBottom
+            Left = 0
+            Height = 21
+            Hint = 'When set and fastscan is enabled will only scan and return addresses that end with the given digits'
+            Top = 21
+            Width = 82
+            BorderSpacing.Right = 1
+            Caption = 'Last Digits'
+            OnChange = rbFsmAlignedChange
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+          end
+          object rbFsmAligned: TRadioButton
+            AnchorSideLeft.Control = Panel8
+            AnchorSideTop.Control = Panel8
+            Left = 0
+            Height = 21
+            Hint = 'When set and fastscan is enabled will scan the memory address if it is dividable by the given value'
+            Top = 0
+            Width = 80
+            BorderSpacing.Right = 1
+            Caption = 'Alignment'
+            Checked = True
+            OnChange = rbFsmAlignedChange
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 0
+            TabStop = True
+          end
+        end
+      end
+    end
+    object btnNextScan: TButton
+      AnchorSideLeft.Control = btnNewScan
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Foundlist3
+      AnchorSideRight.Control = btnNewScan
+      Left = 439
+      Height = 27
+      Top = 50
+      Width = 84
+      AutoSize = True
+      BorderSpacing.Left = 10
+      Caption = 'Next Scan'
+      Constraints.MinWidth = 75
+      Enabled = False
+      OnClick = btnNextScanClick
+      TabOrder = 1
+    end
+    object ScanType: TComboBox
+      AnchorSideLeft.Control = VarType
+      AnchorSideTop.Control = pnlScanValueOptions
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel9
+      Left = 361
+      Height = 25
+      Top = 135
+      Width = 200
+      HelpContext = 9
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 2
+      DropDownCount = 9
+      Enabled = False
+      ItemHeight = 17
+      Items.Strings = (
+        'Exact value'
+        'Increased value'
+        'Increased value by ...'
+        'Decreased value'
+        'Decreased value by ...'
+        'Value between'
+        'Changed value'
+        'Unchanged value'
+        'Unknown initial value'
+      )
+      OnChange = ScanTypeChange
+      Style = csDropDownList
+      TabOrder = 6
+    end
+    object VarType: TComboBox
+      AnchorSideTop.Control = ScanType
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel9
+      Left = 361
+      Height = 25
+      Top = 162
+      Width = 200
+      HelpContext = 7
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 6
+      DropDownCount = 11
+      Enabled = False
+      ItemHeight = 17
+      Items.Strings = (
+        'Binary'
+        'Byte'
+        '2 Bytes'
+        '4 Bytes'
+        '8 Bytes'
+        'Float'
+        'Double'
+        'Text'
+        'Array of Bytes'
+        'All (Byte to Double)'
+        'Grouped'
+      )
+      OnChange = VarTypeChange
+      OnDropDown = VarTypeDropDown
+      PopupMenu = pmValueType
+      Style = csDropDownList
+      TabOrder = 7
+    end
+    object ProgressBar: TProgressBar
+      AnchorSideLeft.Control = SaveButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = ProcessLabel
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = LogoPanel
+      Left = 86
+      Height = 16
+      Hint = 'This shows how far Cheat Engine is with searching'
+      Top = 17
+      Width = 560
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 5
+      BorderSpacing.Right = 5
+      ParentShowHint = False
+      ShowHint = True
+      Step = 1
+      TabOrder = 9
+    end
+    object UndoScan: TButton
+      AnchorSideTop.Control = btnNextScan
+      AnchorSideRight.Control = LogoPanel
+      Left = 557
+      Height = 27
+      Top = 50
+      Width = 89
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 5
+      Caption = 'Undo Scan'
+      Enabled = False
+      OnClick = UndoScanClick
+      TabOrder = 3
+    end
+    object scanvalue: TEdit
+      AnchorSideLeft.Control = VarType
+      AnchorSideTop.Control = ScanText
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = andlabel
+      Left = 361
+      Height = 25
+      Top = 102
+      Width = 227
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 5
+      Enabled = False
+      OnChange = scanvalueChange
+      OnKeyPress = ScanvalueoldKeyPress
+      PopupMenu = ccpmenu
+      TabOrder = 4
+    end
+    object Panel7: TPanel
+      Left = 0
+      Height = 31
+      Top = 0
+      Width = 31
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 31
+      ClientWidth = 31
+      Color = clRed
+      ParentColor = False
+      TabOrder = 10
+      object sbOpenProcess: TSpeedButton
+        Left = 3
+        Height = 25
+        Hint = 'Select a process to open'
+        Top = 3
+        Width = 25
+        BorderSpacing.Around = 3
+        Glyph.Data = {
+          46050000424D4605000000000000360400002800000010000000110000000100
+          08000000000010010000C40E0000C40E00000001000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FC8300000000
+          FC003F4300000000460000005A000300AA000000570000003700470200003F43
+          370047026000763D770004000000000000009619400000000000010000000A00
+          0000763D10000000000000004C00647AFF003F436000BD3D7700FFFF3F000000
+          00003F435F002CB69C0000000300961940009D9E4F0000000000000001000A00
+          FC005F020000080000005716FC00A5974F005F02D70000005F000000B600F7BF
+          D4008C8178004D5F0300405F88004D5F4000000003000000AC005600AC005600
+          78004D5FA8005600040056003300495FAC005600AC005600EC005600E300495F
+          00000000F80056006700405FAC005600AC00560008005600B500495FFF00FFFF
+          140056000700405F01000000AC005600E4005600C500495FFF00FFFFF0005600
+          B800010138000301200069000000000043005C4D7900446F63006D656E007300
+          00005A85BD0037170100D0857F00420064002CB603000000FC00E48552004F17
+          010000008A00CC050C00183A0200183A5700B7293700420064007C8507008400
+          00000C003B002800FE009A03FF0000001500F8BF300056007600F8BFC4004150
+          4F0042006400183A02005716080000000C006900C40056009F00F7BFF8009081
+          4C004D5FB600F7BF18000200DA00DB034F000000420064000000840018000200
+          E00008864700771600004200640000008400DC05DC0084000000000042006400
+          010000000200ACC6000006008C007716D900F7BF57000700180056005F000700
+          4700F7BFF0006900F0006900600050004C0056004700462D690064656C006E67
+          00002D696E00656C6900670042006400F0006900680056001600405F84000000
+          00000000420064008400000001000000C80056008800405F8400000000000000
+          07000000180056008800000064005600FC000000110000000400000000000000
+          0000000000000000000000001800405F010000006800495F0100000000000000
+          0000000000000000C700DC87BF008F0657000000C700A6385F00000000000000
+          6600808000000000000000000000000000000000050000000000000000000000
+          000000000000000000000000000010980000689101001C87DF003702E2006891
+          01004F025E00E94A370064134F0010980000689101005E875600468756000000
+          0000010047000100000068910100FF034F009F00000000BE5E005C8700000C00
+          01006C919C005600B000000044000000080045019100F7BF0000B6094600A24E
+          0000000092003A64B6002602DE004D4F17000100CA000000C700A88748005705
+          B6000000AE00CA8B7E00A24EA200C706E40099136700121FA200070707070707
+          07070707070707070707071C1C1C1C1C1C1C1C1C1C1C1C1C0707080FEAEAEAEA
+          EAEAEA710E0CEA081C07080F070207070707710E0C0C0708601C080F070A0707
+          07710E0C0C070708081C080F0F0F0F0F710E0C0C0F0F0F60081C07607997633A
+          580C0C1C1C1C1C07081C0760077878633A0807070707EA1C0807600758585858
+          977171717107EA601C0760075896789697F16E6E7107EA081C07600758789678
+          976EF16E7107EA081C0707605896781CF1F16E6E7107EA081C0707601C1C1CF1
+          F16EF16E7107EA601C07076060222222222222222207EA081C07070858585858
+          585858585858EA081C0707070807070707070707070707081C07070707080808
+          08080808080808080707
+        }
+        OnClick = ShowProcessListButtonClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+    end
+    object Button2: TButton
+      Left = 184
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'First Scan2'
+      OnClick = Button2Click
+      TabOrder = 11
+      Visible = False
+    end
+    object Button4: TButton
+      Left = 272
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Next scan 2'
+      OnClick = Button4Click
+      TabOrder = 12
+      Visible = False
+    end
+    object LogoPanel: TPanel
+      AnchorSideTop.Control = Panel5
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      Left = 651
+      Height = 85
+      Top = 0
+      Width = 50
+      Align = alCustom
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 85
+      ClientWidth = 50
+      FullRepaint = False
+      TabOrder = 13
+      object Logo: TImage
+        AnchorSideLeft.Control = LogoPanel
+        AnchorSideTop.Control = LogoPanel
+        AnchorSideRight.Control = LogoPanel
+        AnchorSideRight.Side = asrBottom
+        Cursor = crHandPoint
+        Left = 3
+        Height = 64
+        Top = 0
+        Width = 47
+        AntialiasingMode = amOn
+        Anchors = [akTop, akRight]
+        Center = True
+        OnClick = LogoClick
+        OnMouseDown = LogoMouseDown
+        Picture.Data = {
+          055449636F6EBE1100000000010001002120000001002000A811000016000000
+          2800000021000000400000000100200000000000801000000000000000000000
+          0000000000000000FAE2BAFFFAE2B9FFFBE6BEFFFEECCBFFFCF2D6FFFEF5DCFF
+          FBE5C3FFFDE0B6FFFDDFB6FFFEDFB6FFFDDFB6FFECD1ACFF35302EFF757275FF
+          322F32FF2A262BFF2A262BFF2A262BFF29262AFF29252AFF29252AFF282528FF
+          292628FF1F1F1FFF0D0D0DFF1E1B1EFF292628FF2A2729FF292629FF171717FF
+          8A8589FFF9F1FBFFF7F0F9FFFDDFB2FFFDE1B3FFFEE1B3FFFEE1B4FFFDE0B1FF
+          FBE0B4FFFEDFAFFFFDDEAEFFFEDFAFFFFEDEAEFFFEDEB0FFDDC299FF332D2EFF
+          525051FF7D797CFF2D292DFF29262AFF2A262BFF2A262BFF29252AFF2A262AFF
+          2A2629FF292628FF141415FF101011FF1E1B1EFF292628FF292629FF292628FF
+          252425FFA9A6A9FFFDF9FDFFFBF8FBFFFEDDACFFFBDDAFFFFBE4BDFFFEDDACFF
+          FFDEADFFFEDEADFFFFDEADFFFEDEADFFFEDDACFFFFDCACFFFEDBACFFF8D7A9FF
+          48403AFF525050FF464546FF767376FF2C292CFF29252AFF2A262BFF2A262BFF
+          2A262AFF2A2629FF252225FF1F1E20FF151517FF262325FF292628FF292628FF
+          1F1D1FFF1F1D20FF919092FFFCFBFCFFFBFBFBFFFDDDABFFFDDDABFFFAE0B6FF
+          FEDDACFFFEDDACFFFEDDACFFFEDDACFFFEDCABFFFEDCABFFFEDBABFFFDDBA9FF
+          FDD8A9FF7B6B5AFF615C5CFF351F22FF5D5B5DFF706B6FFF2C292DFF29262AFF
+          29262AFF2A262AFF2A2629FF242124FF232124FF252426FF292629FF2A2629FF
+          292629FF292629FF1F1D1FFFB3B3B5FFFEFEFEFFFEFDFEFFFEDCA6FFFDDBA7FF
+          FDDBA7FFFEDBA7FFFEDBA7FFFEDBA8FFFEDBA8FFFEDBA7FFFEDAA7FFFEDBA7FF
+          FDDCA7FFFEDAAAFFBEA280FF706D6CFF381F21FF322426FF605D60FF807D80FF
+          2F2C2FFF29252AFF29252AFF2A262BFF29252AFF232022FF292628FF29262BFF
+          2A262BFF2A252AFF2A262BFF373435FFF0F1F1FFFDFDFDFFFBF8FBFFFED9A1FF
+          FEDAA3FFFDD9A2FFFED9A1FFFED9A0FFFED99FFFFED9A0FFFDD9A2FFFDDAA2FF
+          FED9A2FFFEDBA2FFFDDDAEFFF3DFBCFF6E6967FF1D181AFF4E282AFF292525FF
+          535053FF858285FF302C30FF2A262BFF2A262BFF29252AFF262326FF282528FF
+          29262AFF2A262BFF2A252AFF2A262BFF2D2A2CFFCFD0D0FFFEFEFEFFFEFCFEFF
+          FDD8A1FFFEDAA4FFFDD9A1FFFDD99DFFFDD99DFFFDD89EFFFDD79EFFFDD6A1FF
+          FCD9A3FFFDDBA5FFFEDAA0FFFCDAA4FFF6D7A9FF625A53FF433C3FFF5B2D2FFF
+          402C2DFF2A262BFF4C494DFF878587FF312E30FF29262AFF2A262AFF292628FF
+          242224FF29262AFF2A262BFF29252AFF2A262BFF2A272AFF999698FFFEFDFEFF
+          FCFCFCFFFDDEA8FFFEDAA3FFFDD9A0FFFBD79BFFFDD99FFFFDDBA4FFFDD9A3FF
+          FDD8A4FFFEDFB1FFFCEBC6FFFDE3BAFFF8E3BAFFFBDDADFF655547FF5D5D5CFF
+          472829FF653D41FF4E484CFF2A272BFF4A474AFF928F91FF343034FF29262AFF
+          292629FF262326FF292529FF2A262AFF29262AFF2A262BFF2A2729FF6C696BFF
+          FCFBFBFFFDFDFCFFFED89DFFFCD59AFFFED69AFFFDD699FFFCD89CFFFEDCA2FF
+          FEE4B6FFFDEED0FFFCF7E2FFFCFAE4FFFDF6DEFFFCE6C4FFFBE1B7FF8E7A68FF
+          727072FF382F32FF582F33FFA39495FF333033FF2D2A2DFF8A878AFF646163FF
+          292629FF2A262BFF29252AFF262326FF292628FF29262AFF2A262BFF292629FF
+          6C6967FFFBF9F2FFFDFCFAFFFED495FFFED596FFFED596FFFED497FFFCD599FF
+          FDD69AFFFCDEACFFFCEEC8FFFAEAC7FFFCF2D5FFFEF7E1FFFCF9E8FFFCF3EEFF
+          C8BCBBFF504F50FF878688FF7D6C6CFF876C6FFF9A9498FF625F62FF807D80FF
+          878486FF3B383BFF2A262BFF29252AFF262325FF272427FF29262AFF2A262AFF
+          2B282CFFA7A199FFFAF5EEFFFCF9F6FFFDD394FFFED395FFFED494FFFED39BFF
+          FDD599FFFCD69AFFFCD79EFFFEDCAAFFFCDFB0FFFDECC6FFFCF1DBFFFCF7EAFF
+          FCFBF8FFFCFBFAFFBFBDBFFF6F6C6EFF706C6FFF573639FFD4C9CDFFA29FA2FF
+          2F2C2EFF373437FF737073FF2A262BFF29262AFF292628FF252225FF282528FF
+          292628FF3C393CFFEAE5E1FFFAEBE7FFFDEAE0FFFBD291FFFED293FFFED39AFF
+          FED7A4FFFCD79DFFFCD69AFFFCD799FFFED89BFFFDDA9FFFFEE1B3FFFDEED7FF
+          FDF3EDFFFBF8F4FFFCFBF9FFFBF9FBFFF2EFF1FFC5C2C5FF80646AFFAD9598FF
+          E5E3E5FF413E41FF2B292BFF7C7A7CFF2C282DFF29262AFF292629FF292628FF
+          262325FF272426FF888181FFFCF8F6FFF9F0F3FFFCF0EDFFFAD59EFFFCD7ABFF
+          FBDBBBFFFBEED8FFFDD8A7FFFDD49BFFFCD599FFFCD69BFFFDD79DFFFEDAA3FF
+          F9E3BCFFFCF0E1FFFBF5E9FFFAF1E5FFFAF6F3FFFEFBFBFFF5F5F9FFD4D0D5FF
+          D5CAD0FFFDFAF9FFBAB6BAFF2F2C2EFF555254FF575356FF2A2629FF2C272CFF
+          363137FF6A6368FFA29699FFF8ECF0FFFCF3F7FFFCF3F5FFFEEFF6FFF9E4CAFF
+          FBFAF4FFF7E6EAFFFAF1EFFFFAE1C1FFFDD39EFFFCD49CFFFCD49EFFFCD69FFF
+          FED9A0FFFDDDADFFF9EBCDFFF9F0E0FFFBF8F6FFFBF9F6FFE7EEF5FFC1DDF4FF
+          B9DAF6FFA0B7E5FFCAD0F0FFFBF7FBFF8D8A8CFF302D30FF8C898CFF665A5EFF
+          A68F9EFFE0CFDFFFFBF0F8FFFDEDF0FFFBE9F2FFFBECF5FFFCF2F8FFFCEDF7FF
+          FAEFE1FFFCFAF6FFFDFBFAFFFAF3F2FFFBDCBCFFFBE0BCFFFBD8AAFFFADBAFFF
+          F9DFB2FFFED8A9FFFCDCB8FFF8EEE4FFFCF5EAFFF9FBF9FFCFD7E9FFB4D7F4FF
+          B4DEFDFFB4DEFEFFACD3F8FF8AA6E3FFCDE2F5FFF3F2F4FF747174FFA89DA7FF
+          F9E2EAFFFCE5F4FFFCEAF9FFFCF2FBFFFCEEF9FFFBE6F3FFFBE5F5FFF9E0F2FF
+          FBF1F8FFFAD9B6FFFBF5EDFFFDFEFBFFFAF5F8FFF8E9E0FFFAF9F6FFFCE7D7FF
+          FBEFE2FFF8E4DAFFFAE3CFFFF7DBC3FFF9E9E8FFFDF3EFFFD3DAEDFFA8CBF0FF
+          B2DBFAFFACD8F7FFB4DEFFFFB5DEFEFFA0C6EFFFABD4F9FFCAD6E9FFEEE3EBFF
+          FBEDF9FFFDF6FCFFFAF3FBFFFCF1FAFFFBF0F6FFF9E6F5FFF9E5F1FFFBE5F5FF
+          F4D7EFFFE2D2E2FFFDCC8DFFFBD9B2FFFBEBE3FFFBF3F2FFFBF3F2FFFAF0EEFF
+          FCF9F9FFF8F7F9FFC8BCD3FFEEDFEAFFD5C8C7FFCDC5CEFFE4D3DBFFB1B3CAFF
+          AFDAF9FFB5DEFDFFB4DEFEFFB4DEFFFFB5DEFEFFB3DBFEFFA0CBECFFD1DDE9FF
+          ECE9EEFFFEF8FCFFF9F2F9FFFCFBFCFFF9F1F6FFFAF8FAFFEBDEEAFFC9B1CCFF
+          B39ABAFFBCA6C5FFBBA5C5FFFDCA86FFF9D7ADFFF9F8F0FFF8F5F3FFF9F3F4FF
+          FAF3F8FFF9F1FAFFC9CADDFFB5B6D5FFA6A5BCFF747189FF7178A1FFA8A8B9FF
+          B5B5D2FF7A98C3FFA8D0F0FFBADCFCFFB4DDFEFFB5DDFFFFB4DDFEFFA6D2F3FF
+          A0C0DAFFB1B4C1FFFDFDFCFFF4EBF5FFF7F3F8FFFBFBFCFFFDFDFDFFEFEBF2FF
+          DED3E4FFEAD7EBFFF2DDEDFFF6E1F4FFFDCB8AFFFAD5B1FFFAE9DFFFFBEEEEFF
+          F9F5F5FFFCFBFBFFF4F0F4FF939ABBFFA5AECBFF7E86A5FF252F4EFF49548DFF
+          5D6CA3FF333B60FF5B7091FFBBD3EDFFDADCE3FFAEB2C4FFB3DCFEFFB4DEFEFF
+          A0C8EFFF91B7EDFFCEE1EFFFFEFDFDFFFBF3FAFFFBF5FAFFFCF7FCFFFCFCFCFF
+          FCFAFBFFFCF7FBFFF7E9F5FFF8E8F5FFDACADEFFFCDBB5FFFCF2ECFFFBFCF9FF
+          FCF2F0FFF9F3F0FFF9F5F6FFD9D9DEFF8691B7FF737897FF8287A7FF172034FF
+          313D6BFF2F3961FF262637FF576293FF636D95FFCCC7CDFFB4ABB2FFB4DCFBFF
+          AED7F8FF86AED5FF7AA0E4FFC6DBF2FFFEF9FDFFFDFCFDFFFBF7FCFFF9EBF9FF
+          F1E4F2FFFCEAFCFFF7E4F7FFFCEDFDFFFDF4FDFFDED1E2FFF9E2CCFFFCF5F3FF
+          FCFDFDFFFBFCFDFFFBF9F8FFFBFBF9FFDBDCE1FF707FA6FF333B5CFF677395FF
+          172033FF293852FF151421FF141316FF181C2EFF2F3853FF414F70FF6E87A9FF
+          6D86ACFF6B81A8FF4D657EFF9EC7ECFFD3E0F1FFFDFAFBFFFAF7FCFFFAF2F9FF
+          FBF6FBFFFAF7FBFFF9EBFAFFFBEBFCFFFCF4FEFFFAF5FBFFC7BACDFFF9F7F0FF
+          FCFDFBFFFBF7F2FFF6F4ECFFF9F4F3FFF8EDE7FFF5EDEBFF868DB7FF334470FF
+          303F65FF181F2BFF13181DFF141114FF151215FF131314FF151118FF1C1C25FF
+          14151AFF171920FF243350FF0E1119FF25324AFFD2D4E4FFFEFBFDFFF9F5FBFF
+          FAF1FAFFF5F1F6FFFDFBFCFFFCF4FCFFFAEBFCFFFDF7FCFFF9F8FAFFF7F2F9FF
+          F7F7F6FFF8ECE5FFF8DDC3FFF6DBC2FFF0E8E1FFC9B6B8FFF4E8E1FFE2E4EBFF
+          596894FF141627FF1C2333FF121315FF131215FF141216FF151215FF131314FF
+          121315FF131316FF1F2336FF1E2537FF0E0E0EFF181C32FFC7CAD8FFFAF2F8FF
+          FAEFF7FFFEFDFCFFF8F7F7FFFAEFFAFFFAECFAFFFDF2FBFFFCF6FCFFF6F4F7FF
+          FDF9FCFFF7DDCAFFF7E3C7FFFACF9BFFFAC484FFF9D1ADFFD1D0DAFF868EB8FF
+          A9ACBBFFBBAFB6FF484C67FF131419FF131214FF131214FF131214FF131215FF
+          141315FF141215FF141318FF12171DFF141314FF101013FF29385BFFCDCEE2FF
+          FEFDFEFFF8F0F7FFFEF9FDFFFBF5F9FFFAF2FAFFFBEDF8FFFDF1F9FFFDF5FCFF
+          FDFBFCFFFBF3FBFFFBC27CFFFDBF75FFFBBB69FFFEB962FFFBBF75FFFAD2ABFF
+          E2CDC6FF9E8A97FF646079FF3C425DFF353F64FF131A24FF110F11FF111012FF
+          131113FF121213FF121212FF121013FF101012FF111113FF1F293FFF4F6199FF
+          E0E0ECFFFCFDFDFFFBFBFCFFFAEEF9FFFBECF4FFFDF8FDFFFDF3FCFFFEF4FCFF
+          FEF4FEFFFCF6FCFFFAF4FBFFFDBB5DFFFDBA5BFFFDB957FFFEB857FFFEB859FF
+          FEB860FFFCBA67FFFCB862FFF4B767FFEDC4A1FF9DA1B8FF384876FF171C30FF
+          0E0C0EFF0B0B0CFF0B0B0BFF0C0B0CFF0C0B0DFF0F0D15FF222D48FF445992FF
+          B0B7D6FFFBFAFBFFFBFBFBFFFDFDFDFFFDF7FCFFFEF2FCFFFBEEFAFFFBEFFAFF
+          FDF6FCFFFCF4FDFFFDF1FCFFE7DFE8FFFDB658FFFEB657FFFEB555FFFEB455FF
+          FBB75DFFFAB85AFFFCB552FFFDB450FFFCB65DFFF2D4AFFFF5F0E8FFA3A3B9FF
+          435387FF202D4DFF070B10FF040405FF050504FF05090DFF233151FF3E538DFF
+          6071A9FFF3F3F5FFFEFCFDFFFDFDFDFFFEFDFDFFFBFEFDFFFAF6FCFFFAEBFBFF
+          FBF5FBFFFCFBFDFFFAF8FBFFFCEFF8FFEDDEEDFFFDB352FFFEB352FFFDB350FF
+          FDB34EFFFBB455FFFCB453FFFDB14EFFFDB14DFFFDB252FFF6C383FFF8D0B0FF
+          F8D9CDFFCFC7D4FF6571A1FF364A7BFF242D4AFF272E4EFF3E4E7DFF55679EFF
+          8E98BBFF6174ACFFDCE0EAFFFEFEFEFFFDFBFBFFFDFAFBFFFBF5FAFFFBF4FAFF
+          F9F2FAFFF7F5F9FFFEFEFEFFFEFEFEFFFDFBFDFFFBF0F8FFFEB34DFFFEB34DFF
+          FEB34DFFFDB24BFFFDB14AFFFEB049FFFEB04AFFFEB04AFFFCB04AFFFAB250FF
+          F8B871FFF7E6D2FFFCF2EEFFF1EDECFFCACDDAFFBCC5D6FFCDD3E3FFD1D8E6FF
+          E9E5E9FFE3E0E7FF53669FFFC7CDE0FFFBFDFDFFFBFDFDFFF7E7E6FFF9E6EFFF
+          F7E7F2FFFCF8FBFFFDF9FDFFFDFDFDFFFEFEFEFFFEFDFDFFFCFAFCFFFEB148FF
+          FDB147FFFDB148FFFDB048FFFDAF47FFFEB046FFFEAF46FFFEAE46FFFCB04CFF
+          F8BA6DFFFABD79FFF8D0AFFFF5D7BFFFF6DBC3FFF8F3F0FFFDFDFEFFFAF9F7FF
+          FBF5EDFFF8E1CEFFEFE5E4FF7E84A7FFE6DCE1FFFAF9F9FFFAF8F8FFF8E4E3FF
+          FAEBF1FFFDEFFAFFFAF0FEFFFBF1FCFFFCFCFCFFFEFEFEFFFBF6FCFFFBF5FCFF
+          FEB044FFFEB043FFFEAF43FFFEAE43FFFEAE43FFFDAE41FFFDAD3FFFFDAD41FF
+          F9B051FFF8D6AEFFF6DBC3FFF9F1E8FFFAF9F4FFF6E8DAFFFAE9DFFFFBF6F1FF
+          FAEADDFFF8E0CFFFF5E2D4FFF9EFE4FFF7E0D4FFF8F0EAFFFCFCFDFFFDFEFEFF
+          FCF8FAFFFAECF4FFFCF1FAFFFEF6FDFFFCF4FAFFF4F1F3FFFBF6FAFFFBF5FBFF
+          F8F2F9FFFEAC3EFFFDAC3EFFFDAC3EFFFFAC3EFFFFAC3DFFFFAB3CFFFDAC3FFF
+          FBAF4FFFFBB659FFF6D09BFFF6E6D3FFFAF4ECFFF2EDE3FFF9C7A1FFF6D4B3FF
+          F9E2D3FFF6EDE4FFF9F1EBFFFDFCFAFFFBFAF9FFF9F4EEFFFBFBF8FFFEFEFEFF
+          FBF9FBFFFDFAFDFFFBF6FCFFFBF8FAFFFBFBFBFFFEFEFEFFFAF9F9FFFAF4F9FF
+          FBF2FBFFFBF2FBFF000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000
+        }
+        Proportional = True
+        Stretch = True
+        Transparent = True
+      end
+      object SettingsButton: TSpeedButton
+        AnchorSideLeft.Control = LogoPanel
+        AnchorSideTop.Control = Logo
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = LogoPanel
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 21
+        Top = 64
+        Width = 50
+        Anchors = [akTop, akRight]
+        AutoSize = True
+        Caption = 'Settings'
+        Flat = True
+        OnClick = SettingsClick
+      end
+    end
+    object pnlScanValueOptions: TPanel
+      AnchorSideLeft.Control = SpeedButton3
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = scanvalue
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = scanvalue
+      Left = 290
+      Height = 42
+      Top = 93
+      Width = 68
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Right = 3
+      BevelOuter = bvNone
+      ClientHeight = 42
+      ClientWidth = 68
+      ParentColor = False
+      TabOrder = 15
+      object rbBit: TRadioButton
+        AnchorSideLeft.Control = pnlScanValueOptions
+        AnchorSideTop.Control = pnlScanValueOptions
+        AnchorSideRight.Control = pnlScanValueOptions
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 21
+        Top = 0
+        Width = 68
+        HelpContext = 7
+        Alignment = taLeftJustify
+        Anchors = [akTop, akLeft, akRight]
+        Caption = 'Bits'
+        OnClick = rbBitClick
+        TabOrder = 0
+        Visible = False
+      end
+      object rbDec: TRadioButton
+        AnchorSideTop.Control = rbBit
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = pnlScanValueOptions
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 21
+        Top = 21
+        Width = 68
+        HelpContext = 7
+        Alignment = taLeftJustify
+        Anchors = [akTop, akRight]
+        Caption = 'Decimal'
+        OnClick = rbDecClick
+        TabOrder = 1
+        Visible = False
+      end
+      object cbHexadecimal: TCheckBox
+        AnchorSideLeft.Control = pnlScanValueOptions
+        AnchorSideTop.Control = pnlScanValueOptions
+        AnchorSideTop.Side = asrCenter
+        AnchorSideRight.Control = pnlScanValueOptions
+        AnchorSideRight.Side = asrBottom
+        Left = 24
+        Height = 21
+        Hint = 'When checked the value you type in is hexadecimal'
+        Top = 11
+        Width = 44
+        HelpContext = 7
+        Alignment = taLeftJustify
+        Anchors = [akTop, akRight]
+        Caption = 'Hex'
+        Enabled = False
+        OnClick = cbHexadecimalClick
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 2
+      end
+    end
+    object Panel9: TPanel
+      AnchorSideTop.Control = ScanType
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      Left = 567
+      Height = 339
+      Top = 135
+      Width = 134
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 339
+      ClientWidth = 134
+      TabOrder = 8
+      object pnlScanOptions: TPanel
+        AnchorSideLeft.Control = Panel9
+        AnchorSideTop.Control = Panel9
+        AnchorSideRight.Control = Panel9
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 189
+        Top = 0
+        Width = 134
+        AutoSize = True
+        BorderSpacing.Bottom = 4
+        BevelOuter = bvNone
+        ClientHeight = 189
+        ClientWidth = 134
+        Constraints.MinHeight = 100
+        TabOrder = 0
+        OnClick = pnlScanOptionsClick
+        OnResize = pnlScanOptionsResize
+        object pnlFloat: TPanel
+          AnchorSideLeft.Control = pnlScanOptions
+          AnchorSideTop.Control = cbCaseSensitive
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Side = asrBottom
+          Left = 0
+          Height = 63
+          Top = 105
+          Width = 134
+          AutoSize = True
+          BevelOuter = bvNone
+          ClientHeight = 63
+          ClientWidth = 134
+          TabOrder = 5
+          object rt3: TRadioButton
+            AnchorSideTop.Control = rt2
+            AnchorSideTop.Side = asrBottom
+            Left = 0
+            Height = 21
+            Top = 42
+            Width = 80
+            Caption = 'Truncated'
+            TabOrder = 2
+          end
+          object rt1: TRadioButton
+            Left = 0
+            Height = 21
+            Top = 0
+            Width = 127
+            Caption = 'Rounded (default)'
+            TabOrder = 0
+          end
+          object rt2: TRadioButton
+            AnchorSideTop.Control = rt1
+            AnchorSideTop.Side = asrBottom
+            Left = 0
+            Height = 21
+            Top = 21
+            Width = 134
+            Caption = 'Rounded (extreme)'
+            Checked = True
+            TabOrder = 1
+            TabStop = True
+          end
+        end
+        object cbUnicode: TCheckBox
+          AnchorSideTop.Control = cbCodePage
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 21
+          Top = 63
+          Width = 63
+          Caption = 'UTF-16'
+          OnChange = cbUnicodeChange
+          TabOrder = 3
+          Visible = False
+        end
+        object cbCaseSensitive: TCheckBox
+          AnchorSideLeft.Control = pnlScanOptions
+          AnchorSideTop.Control = cbUnicode
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 21
+          Top = 84
+          Width = 103
+          Caption = 'Case sensitive'
+          Checked = True
+          Enabled = False
+          OnClick = cbCaseSensitiveClick
+          ParentShowHint = False
+          ShowHint = True
+          State = cbChecked
+          TabOrder = 4
+          Visible = False
+        end
+        object cbFloatSimple: TCheckBox
+          AnchorSideLeft.Control = pnlScanOptions
+          AnchorSideTop.Control = pnlFloat
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Side = asrBottom
+          Left = 0
+          Height = 21
+          Top = 168
+          Width = 129
+          Caption = 'Simple values only'
+          TabOrder = 6
+          Visible = False
+        end
+        object cbpercentage: TCheckBox
+          AnchorSideLeft.Control = pnlScanOptions
+          AnchorSideTop.Control = cbNot
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 21
+          Top = 21
+          Width = 65
+          Caption = 'Percent'
+          TabOrder = 1
+        end
+        object cbNot: TCheckBox
+          AnchorSideLeft.Control = pnlScanOptions
+          AnchorSideTop.Control = pnlScanOptions
+          Left = 0
+          Height = 21
+          Hint = 'When checked CE will find everything EXCEPT the value/range you''ve given'
+          Top = 0
+          Width = 34
+          Caption = '非'
+          Enabled = False
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+          Visible = False
+        end
+        object cbCodePage: TCheckBox
+          AnchorSideLeft.Control = cbpercentage
+          AnchorSideTop.Control = cbpercentage
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 21
+          Top = 42
+          Width = 83
+          Caption = 'Codepage'
+          OnChange = cbCodePageChange
+          TabOrder = 2
+          Visible = False
+        end
+      end
+      object Panel10: TPanel
+        AnchorSideLeft.Control = Panel9
+        AnchorSideTop.Control = pnlScanOptions
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel9
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = Panel9
+        AnchorSideBottom.Side = asrBottom
+        Left = 0
+        Height = 146
+        Top = 193
+        Width = 129
+        Anchors = [akTop, akLeft, akBottom]
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 146
+        ClientWidth = 129
+        TabOrder = 1
+        object cbUnrandomizer: TCheckBox
+          AnchorSideLeft.Control = Panel10
+          AnchorSideTop.Control = Panel10
+          Left = 0
+          Height = 21
+          Top = 0
+          Width = 105
+          Caption = 'Unrandomizer'
+          Enabled = False
+          OnChange = cbUnrandomizerClick
+          OnMouseDown = cbUnrandomizerMouseDown
+          TabOrder = 0
+        end
+        object cbSpeedhack: TCheckBox
+          AnchorSideLeft.Control = Panel10
+          AnchorSideTop.Control = cbUnrandomizer
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Side = asrBottom
+          Left = 0
+          Height = 21
+          Hint = 'Enable speedhack'
+          Top = 21
+          Width = 129
+          Caption = 'Enable Speedhack'
+          Enabled = False
+          OnChange = cbSpeedhackChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+        end
+        object Panel14: TPanel
+          AnchorSideLeft.Control = Panel10
+          AnchorSideTop.Control = cbSpeedhack
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = Panel10
+          AnchorSideRight.Side = asrBottom
+          Left = 0
+          Height = 104
+          Top = 42
+          Width = 129
+          Anchors = [akTop, akLeft, akRight]
+          AutoSize = True
+          BevelOuter = bvNone
+          ClientHeight = 104
+          ClientWidth = 129
+          TabOrder = 2
+          Visible = False
+          object Label54: TLabel
+            AnchorSideLeft.Control = Panel14
+            AnchorSideTop.Control = editSH2
+            AnchorSideTop.Side = asrCenter
+            Left = 5
+            Height = 17
+            Top = 4
+            Width = 37
+            BorderSpacing.Left = 5
+            Caption = 'Speed'
+            ParentColor = False
+          end
+          object lblSH0: TLabel
+            AnchorSideLeft.Control = tbSpeed
+            AnchorSideTop.Control = tbSpeed
+            AnchorSideTop.Side = asrBottom
+            Left = 11
+            Height = 17
+            Top = 60
+            Width = 7
+            BorderSpacing.Left = 6
+            Caption = '0'
+            ParentColor = False
+          end
+          object lblSH20: TLabel
+            AnchorSideTop.Control = tbSpeed
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = tbSpeed
+            AnchorSideRight.Side = asrBottom
+            Left = 105
+            Height = 17
+            Top = 60
+            Width = 21
+            Anchors = [akTop, akRight]
+            BorderSpacing.Right = 3
+            Caption = '500'
+            ParentColor = False
+          end
+          object btnSetSpeedhack2: TButton
+            AnchorSideLeft.Control = lblSH0
+            AnchorSideTop.Control = lblSH0
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = lblSH20
+            AnchorSideRight.Side = asrBottom
+            Left = 11
+            Height = 27
+            Top = 77
+            Width = 115
+            Anchors = [akTop, akLeft, akRight]
+            AutoSize = True
+            Caption = 'Apply'
+            OnClick = btnSetSpeedhack2Click
+            TabOrder = 0
+          end
+          object editSH2: TEdit
+            AnchorSideLeft.Control = Label54
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = Panel14
+            AnchorSideRight.Control = Panel14
+            Left = 45
+            Height = 25
+            Top = 0
+            Width = 40
+            BorderSpacing.Left = 3
+            TabOrder = 1
+            Text = '1'
+          end
+          object tbSpeed: TTrackBar
+            AnchorSideLeft.Control = Label54
+            AnchorSideTop.Control = editSH2
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = Panel14
+            AnchorSideRight.Side = asrBottom
+            Left = 5
+            Height = 33
+            Top = 27
+            Width = 124
+            Max = 11
+            OnChange = tbSpeedChange
+            Position = 3
+            Anchors = [akTop, akLeft, akRight]
+            BorderSpacing.Top = 2
+            TabOrder = 2
+          end
+        end
+      end
+    end
+    object scanvalue2: TEdit
+      AnchorSideLeft.Control = andlabel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = scanvalue
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      Left = 620
+      Height = 25
+      Top = 102
+      Width = 76
+      Anchors = [akTop, akRight]
+      BorderSpacing.Left = 5
+      BorderSpacing.Right = 5
+      Enabled = False
+      OnChange = scanvalueChange
+      OnKeyPress = ScanvalueoldKeyPress
+      PopupMenu = ccpmenu
+      TabOrder = 5
+    end
+    object ScanText2: TLabel
+      AnchorSideLeft.Control = scanvalue2
+      AnchorSideTop.Control = ScanText
+      Left = 620
+      Height = 17
+      Top = 85
+      Width = 63
+      Caption = 'Scan Value'
+      Enabled = False
+      ParentBidiMode = False
+      ParentColor = False
+    end
+    object andlabel: TLabel
+      AnchorSideTop.Control = scanvalue
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = scanvalue2
+      Left = 593
+      Height = 17
+      Top = 106
+      Width = 22
+      Anchors = [akTop, akRight]
+      Caption = 'and'
+      ParentColor = False
+    end
+    object Foundlist3: TListView
+      AnchorSideTop.Control = Label6
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Control = btnMemoryView
+      Left = 1
+      Height = 363
+      Hint = 'This list shows all the found addresses that matched your last scan'
+      Top = 50
+      Width = 292
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Bottom = 5
+      Color = clBtnFace
+      Columns = <      
+        item
+          Caption = 'Address'
+          Width = 54
+        end      
+        item
+          Caption = 'Value'
+          Width = 41
+        end      
+        item
+          Caption = 'Previous'
+          Width = 57
+        end>
+      Constraints.MinWidth = 1
+      DragMode = dmAutomatic
+      Font.Name = 'Courier New'
+      HideSelection = False
+      MultiSelect = True
+      OwnerData = True
+      ParentFont = False
+      ParentShowHint = False
+      PopupMenu = foundlistpopup
+      ReadOnly = True
+      RowSelect = True
+      ShowHint = True
+      TabOrder = 14
+      ViewStyle = vsReport
+      OnCustomDrawItem = Foundlist3CustomDrawItem
+      OnCustomDrawSubItem = Foundlist3CustomDrawSubItem
+      OnData = Foundlist3Data
+      OnDblClick = FoundListDblClick
+      OnKeyDown = Foundlist3KeyDown
+    end
+    object btnAddAddressManually: TButton
+      AnchorSideRight.Control = Panel5
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel5
+      AnchorSideBottom.Side = asrBottom
+      Left = 556
+      Height = 18
+      Top = 418
+      Width = 145
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Bottom = 5
+      Caption = 'Add Address Manually'
+      OnClick = btnAddAddressManuallyClick
+      TabOrder = 16
+    end
+    object btnMemoryView: TButton
+      AnchorSideLeft.Control = Panel5
+      AnchorSideBottom.Control = Panel5
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 18
+      Top = 418
+      Width = 98
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Bottom = 5
+      Caption = 'Memory view'
+      OnClick = btnMemoryViewClick
+      TabOrder = 17
+    end
+  end
+  object UpdateTimer: TTimer
+    Interval = 500
+    OnTimer = UpdateTimerTimer
+    left = 440
+    top = 488
+  end
+  object FreezeTimer: TTimer
+    Interval = 100
+    OnTimer = FreezeTimerTimer
+    left = 328
+    top = 488
+  end
+  object PopupMenu2: TPopupMenu
+    OnPopup = PopupMenu2Popup
+    left = 184
+    top = 376
+    object Deletethisrecord1: TMenuItem
+      Caption = 'Delete this record'
+      ShortCut = 46
+      OnClick = Deletethisrecord1Click
+    end
+    object Change1: TMenuItem
+      Caption = 'Change record'
+      GroupIndex = 2
+      object Description1: TMenuItem
+        Caption = 'Description'
+        ShortCut = 16397
+        OnClick = Description1Click
+      end
+      object Address1: TMenuItem
+        Caption = 'Address'
+        ShortCut = 49165
+        OnClick = Address1Click
+      end
+      object Type1: TMenuItem
+        Caption = 'Type'
+        ShortCut = 32781
+        OnClick = Type1Click
+      end
+      object Value1: TMenuItem
+        Caption = 'Value'
+        ShortCut = 13
+        OnClick = Value1Click
+      end
+      object miUndoValue: TMenuItem
+        Caption = 'Undo last edit'
+        ShortCut = 16474
+        Visible = False
+        OnClick = miUndoValueClick
+      end
+      object Smarteditaddresses1: TMenuItem
+        Caption = 'Smart edit address(es)'
+        GroupIndex = 2
+        ShortCut = 57357
+        OnClick = Smarteditaddresses1Click
+      end
+    end
+    object Browsethismemoryregion1: TMenuItem
+      Caption = 'Browse this memory region'
+      GroupIndex = 2
+      ShortCut = 16450
+      OnClick = Browsethismemoryregion1Click
+    end
+    object miDisassemble: TMenuItem
+      Caption = 'Disassemble this memory region'
+      ShortCut = 16452
+      OnClick = miDisassembleClick
+    end
+    object miShowAsSigned: TMenuItem
+      Caption = 'Show as signed'
+      OnClick = miShowAsSignedClick
+    end
+    object Showashexadecimal1: TMenuItem
+      Caption = 'Show as hexadecimal'
+      GroupIndex = 2
+      OnClick = Showashexadecimal1Click
+    end
+    object miZeroTerminate: TMenuItem
+      Caption = 'Zero-Terminate string'
+      Checked = True
+      GroupIndex = 10
+      OnClick = miZeroTerminateClick
+    end
+    object miShowAsBinary: TMenuItem
+      Caption = 'Show as binary'
+      OnClick = miShowAsBinaryClick
+    end
+    object miChangeColor: TMenuItem
+      Caption = 'Change Color'
+      OnClick = miChangeColorClick
+    end
+    object SetHotkey1: TMenuItem
+      Caption = 'Assign Hotkey'
+      GroupIndex = 2
+      ShortCut = 16456
+      OnClick = SetHotkey1Click
+    end
+    object miSetDropdownOptions: TMenuItem
+      Caption = 'Set/Change dropdown selection options'
+      OnClick = miSetDropdownOptionsClick
+    end
+    object Freezealladdresses2: TMenuItem
+      Caption = 'Toggle Selected Records'
+      GroupIndex = 2
+      ShortCut = 32
+      Visible = False
+      OnClick = Freezealladdresses2Click
+    end
+    object miFreezePositive: TMenuItem
+      Caption = 'Freeze Positive'
+      ShortCut = 107
+      Visible = False
+      OnClick = miFreezePositiveClick
+    end
+    object miFreezeNegative: TMenuItem
+      Caption = 'Freeze Negative'
+      ShortCut = 109
+      Visible = False
+      OnClick = miFreezeNegativeClick
+    end
+    object Changescript1: TMenuItem
+      Caption = 'Change script'
+      GroupIndex = 2
+      Visible = False
+      OnClick = Changescript1Click
+    end
+    object miAsyncScript: TMenuItem
+      AutoCheck = True
+      Caption = 'Execute asynchronous'
+      ShowAlwaysCheckable = True
+      Visible = False
+      OnClick = miAsyncScriptClick
+    end
+    object N5: TMenuItem
+      Caption = '-'
+      GroupIndex = 2
+    end
+    object miGeneratePointermap: TMenuItem
+      Caption = 'Generate pointermap'
+      OnClick = miGeneratePointermapClick
+    end
+    object Pointerscanforthisaddress1: TMenuItem
+      Caption = 'Pointer scan for this address'
+      GroupIndex = 2
+      OnClick = Pointerscanforthisaddress1Click
+    end
+    object Findoutwhataccessesthisaddress1: TMenuItem
+      Caption = 'Find out what accesses this address'
+      GroupIndex = 2
+      ShortCut = 116
+      OnClick = Findoutwhataccessesthisaddress1Click
+    end
+    object Setbreakpoint1: TMenuItem
+      Caption = 'Find out what writes to this address'
+      GroupIndex = 2
+      ShortCut = 117
+      OnClick = Setbreakpoint1Click
+    end
+    object sep1: TMenuItem
+      Caption = '-'
+      GroupIndex = 2
+    end
+    object Calculatenewvaluepart21: TMenuItem
+      Caption = 'Recalculate new addresses'
+      GroupIndex = 2
+      OnClick = Calculatenewvaluepart21Click
+    end
+    object Forcerechecksymbols1: TMenuItem
+      Caption = 'Force recheck symbols'
+      GroupIndex = 2
+      OnClick = Forcerechecksymbols1Click
+    end
+    object N4: TMenuItem
+      Caption = '-'
+      GroupIndex = 2
+    end
+    object Cut1: TMenuItem
+      Caption = 'Cut'
+      GroupIndex = 2
+      ShortCut = 16472
+      OnClick = Cut1Click
+    end
+    object Copy1: TMenuItem
+      Caption = 'Copy'
+      GroupIndex = 2
+      ShortCut = 16451
+      OnClick = Copy1Click
+    end
+    object Paste1: TMenuItem
+      Caption = 'Paste'
+      GroupIndex = 2
+      ShortCut = 16470
+      OnClick = Paste1Click
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Select All'
+      ShortCut = 16449
+      Visible = False
+      OnClick = MenuItem1Click
+    end
+    object N1: TMenuItem
+      Caption = '-'
+      GroupIndex = 2
+    end
+    object CreateGroup: TMenuItem
+      Caption = 'Create Header'
+      OnClick = CreateGroupClick
+    end
+    object miGroupconfig: TMenuItem
+      Caption = 'Group config'
+      object miHideChildren: TMenuItem
+        Caption = 'Hide children when deactivated'
+        OnClick = miHideChildrenClick
+      end
+      object miBindActivation: TMenuItem
+        Caption = 'Activating this entry activates it''s children'
+        OnClick = miBindActivationClick
+      end
+      object miBindDeactivation: TMenuItem
+        Caption = 'Deactivating this entry deactivates it''s children'
+        OnClick = miBindDeactivationClick
+      end
+      object miRecursiveSetValue: TMenuItem
+        Caption = 'Setting a value to this entry sets same value to children'
+        OnClick = miRecursiveSetValueClick
+      end
+      object miAllowCollapse: TMenuItem
+        Caption = 'Allow left and right arrow keys to collapse and expand'
+        OnClick = miAllowCollapseClick
+      end
+      object miManualExpandCollapse: TMenuItem
+        Caption = 'Manual expand/collapse'
+        OnClick = miManualExpandCollapseClick
+      end
+    end
+    object Plugins1: TMenuItem
+      Caption = 'Plugins'
+      GroupIndex = 2
+      Visible = False
+    end
+  end
+  object foundlistpopup: TPopupMenu
+    OnPopup = foundlistpopupPopup
+    left = 24
+    top = 160
+    object miAddAddress: TMenuItem
+      Caption = 'Add selected addresses to the addresslist'
+      Default = True
+      OnClick = miAddAddressClick
+    end
+    object miChangeValue: TMenuItem
+      Caption = 'Change value of selected addresses'
+      ShortCut = 16453
+      OnClick = miChangeValueClick
+    end
+    object Browsethismemoryarrea1: TMenuItem
+      Caption = 'Browse this memory region'
+      ShortCut = 16450
+      OnClick = Browsethismemoryarrea1Click
+    end
+    object Browsethismemoryregioninthedisassembler1: TMenuItem
+      Caption = 'Disassemble this memory region'
+      Enabled = False
+      ShortCut = 16452
+      OnClick = Browsethismemoryregioninthedisassembler1Click
+    end
+    object Removeselectedaddresses1: TMenuItem
+      Caption = 'Remove selected addresses'
+      ShortCut = 16430
+      OnClick = Removeselectedaddresses1Click
+    end
+    object Selectallitems1: TMenuItem
+      Caption = 'Select all items'
+      ShortCut = 16449
+      Visible = False
+      OnClick = Selectallitems1Click
+    end
+    object MenuItem4: TMenuItem
+      Caption = '-'
+    end
+    object miShowPreviousValue: TMenuItem
+      AutoCheck = True
+      Caption = 'Show previous value column'
+      Checked = True
+      OnClick = miShowPreviousValueClick
+    end
+    object MenuItem13: TMenuItem
+      Caption = '-'
+    end
+    object miFlFindWhatAccesses: TMenuItem
+      Caption = 'Find out what accesses this address'
+      ShortCut = 16500
+      OnClick = miFlFindWhatAccessesClick
+    end
+    object miFlFindWhatWrites: TMenuItem
+      Caption = 'Find out what writes to this address'
+      ShortCut = 16501
+      OnClick = miFlFindWhatWritesClick
+    end
+    object MenuItem19: TMenuItem
+      Caption = '-'
+    end
+    object miDisplayHex: TMenuItem
+      Tag = 7
+      AutoCheck = True
+      Caption = 'Hexadecimal'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miChangeDisplayTypeClick
+    end
+    object miDisplayDefault: TMenuItem
+      AutoCheck = True
+      Caption = 'Default'
+      Checked = True
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miChangeDisplayTypeClick
+    end
+    object miDisplayByte: TMenuItem
+      Tag = 1
+      AutoCheck = True
+      Caption = 'Byte'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miChangeDisplayTypeClick
+    end
+    object miDisplay2Byte: TMenuItem
+      Tag = 2
+      AutoCheck = True
+      Caption = '2 Bytes'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miChangeDisplayTypeClick
+    end
+    object miDisplay4Byte: TMenuItem
+      Tag = 3
+      AutoCheck = True
+      Caption = '4 Bytes'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miChangeDisplayTypeClick
+    end
+    object miDisplay8Byte: TMenuItem
+      Tag = 4
+      AutoCheck = True
+      Caption = '8 Bytes'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miChangeDisplayTypeClick
+    end
+    object miDisplayFloat: TMenuItem
+      Tag = 5
+      AutoCheck = True
+      Caption = 'Float'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miChangeDisplayTypeClick
+    end
+    object miDisplayDouble: TMenuItem
+      Tag = 6
+      AutoCheck = True
+      Caption = 'Double'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miChangeDisplayTypeClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.CT'
+    Filter = 'All supported cheat tables|*.CT;*.CETRAINER|Cheat Engine Trainer (*.CETRAINER)|*.CETRAINER|All files (*.*)|*.*|Cheat Engine Tables (*.CT)|*.CT'
+    Options = [ofHideReadOnly, ofFileMustExist, ofEnableSizing, ofAutoPreview]
+    left = 48
+    top = 104
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.CT'
+    Filter = 'Cheat Engine Tables (*.CT)|*.CT|Cheat Engine Trainer (*.CETRAINER)|*.CETRAINER|Cheat Engine Trainer Standalone (*.EXE)|*.EXE'
+    Options = [ofReadOnly, ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing, ofAutoPreview]
+    left = 16
+    top = 104
+  end
+  object TopDisabler: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = TopDisablerTimer
+    left = 40
+    top = 488
+  end
+  object ccpmenu: TPopupMenu
+    OnPopup = ccpmenuPopup
+    left = 616
+    top = 8
+    object Cut2: TMenuItem
+      Caption = 'Cut'
+      ShortCut = 16472
+      OnClick = Cut2Click
+    end
+    object Copy2: TMenuItem
+      Caption = 'Copy'
+      ShortCut = 16451
+      OnClick = Copy2Click
+    end
+    object Paste2: TMenuItem
+      Caption = 'Paste'
+      ShortCut = 16470
+      OnClick = Paste2Click
+    end
+  end
+  object ActionList1: TActionList
+    left = 48
+    top = 72
+    object actSave: TAction
+      Hint = 'Save your current data. Save as .exe to create a standalone trainer'
+      ImageIndex = 0
+      OnExecute = actSaveExecute
+      ShortCut = 49235
+    end
+    object actOpen: TAction
+      Hint = 'Open a cheat table or unprotected cetrainer'
+      ImageIndex = 1
+      OnExecute = actOpenExecute
+      ShortCut = 16463
+    end
+    object actAutoAssemble: TAction
+      Caption = 'actAutoAssemble'
+      OnExecute = actAutoAssembleExecute
+      ShortCut = 49217
+    end
+    object actMemoryView: TAction
+      Caption = 'actMemoryView'
+      OnExecute = btnMemoryViewClick
+      ShortCut = 16461
+    end
+    object actOpenProcesslist: TAction
+      OnExecute = actOpenProcesslistExecute
+      ShortCut = 16464
+    end
+    object actOpenDissectStructure: TAction
+      Caption = 'actOpenDissectStructure'
+      OnExecute = actOpenDissectStructureExecute
+      ShortCut = 49220
+    end
+    object actOpenLuaEngine: TAction
+      Caption = 'actOpenLuaEngine'
+      OnExecute = actOpenLuaEngineExecute
+      ShortCut = 57420
+    end
+  end
+  object UpdateFoundlisttimer: TTimer
+    Interval = 500
+    OnTimer = UpdateFoundlisttimerTimer
+    left = 184
+    top = 488
+  end
+  object AutoAttachTimer: TTimer
+    Interval = 2000
+    OnTimer = AutoAttachTimerTimer
+    left = 416
+    top = 392
+  end
+  object MainMenu1: TMainMenu
+    left = 16
+    top = 72
+    object File1: TMenuItem
+      Caption = '&File'
+      OnClick = File1Click
+      object miAddTab: TMenuItem
+        Caption = 'Add scan tab'
+        ShortCut = 16468
+        OnClick = miAddTabClick
+      end
+      object New1: TMenuItem
+        Caption = 'Clear list'
+        OnClick = New1Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Open Process'
+        OnClick = ShowProcessListButtonClick
+      end
+      object miOpenFile: TMenuItem
+        Caption = 'Open File'
+        ShortCut = 24655
+        OnClick = miOpenFileClick
+      end
+      object miSaveFile: TMenuItem
+        Caption = 'Save File'
+        ShortCut = 24659
+        Visible = False
+        OnClick = miSaveFileClick
+      end
+      object N7: TMenuItem
+        Caption = '-'
+      end
+      object miSave: TMenuItem
+        Caption = 'Save'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000BA6A368FB969
+          35B5B86935EEB76835FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC63
+          32FFAA6232FFA96132FFA86031FFA76031FEA66031F1A86131C4BA6A35DEEBC6
+          ADFFEAC5ADFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+          F8FFFEFBF8FFFEFBF8FFFEFBF8FFC89A7CFFC79879FFA76031EDBA6B37FEEDCA
+          B3FFE0A27AFFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+          88FF62C088FF62C088FFFDF9F6FFCA8D65FFC99B7CFFA76031FEBB6C38FFEECC
+          B6FFE1A27AFFFEFAF7FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDC
+          C2FFBFDCC2FFBFDCC2FFFDF9F6FFCD9068FFCC9E81FFA86132FFBB6B38FFEFCE
+          B8FFE1A279FFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+          88FF62C088FF62C088FFFDF9F6FFCF936AFFCEA384FFAA6132FFBA6A36FFEFD0
+          BBFFE2A27AFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+          F8FFFEFBF8FFFEFBF8FFFEFBF8FFD3966DFFD2A78AFFAB6232FFBB6A36FFF0D2
+          BEFFE2A37AFFE2A37AFFE1A37AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F
+          76FFDC9D74FFD99B72FFD89971FFD69970FFD5AB8EFFAD6333FFBB6A36FFF2D5
+          C2FFE3A37AFFE3A37AFFE2A37BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA0
+          77FFDE9E75FFDC9D74FFDA9B73FFD99B73FFDAB095FFAF6433FFBB6A36FFF2D8
+          C5FFE3A47BFFE3A37AFFE3A47AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA0
+          77FFDE9F76FFDD9E74FFDB9C72FFDC9D74FFDDB59AFFB16534FFBB6B36FFF4D9
+          C7FFE6A67DFFC88C64FFC98D65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C
+          65FFC88C64FFC88C64FFC88C64FFDA9C74FFE1BA9FFFB36634FFBB6B36FEF4DC
+          C9FFE7A77DFFF9ECE1FFF9ECE1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAED
+          E5FFF7E7DBFFF7E5D9FFF6E5D8FFDEA077FFE4BEA4FFB46734FFBC6B36FAF5DD
+          CCFFE7A87EFFFAF0E8FFFAF0E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4
+          EFFFF9E9DFFFF7E7DBFFF7E5D9FFE0A278FFE7C2A9FFB66835FFBC6B36F0F6DF
+          D0FFE8A87EFFFCF6F1FFFCF6F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9
+          F6FFFAF0E8FFF8E8DDFFF7E6DBFFE1A37AFFEFD5C3FFB76935FEBC6B36D8F6DF
+          D1FFE9AA80FFFEFAF6FFFDFAF6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFB
+          F8FFFCF6F1FFF9ECE2FFF8E7DBFFEED0BAFFECD0BDFFBB703EF8BC6B369BF6E0
+          D1FFF7E0D1FFFEFBF8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9
+          F6FFFDFAF7FFFBF1EBFFF8E9DFFEECD0BDFBC9895EECB5693563BC6B3671BC6B
+          3690BC6B36CCBC6B36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C
+          39FFBD6E3BFFBB6D3AFFBB6B38EFBB703ECBB6693554FFFFFF00
+        }
+        ShortCut = 16467
+        OnClick = miSaveClick
+      end
+      object Save1: TMenuItem
+        Action = actSave
+        Caption = 'Save As...'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000BA6A368FB969
+          35B5B86935EEB76835FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC63
+          32FFAA6232FFA96132FFA86031FFA76031FEA66031F1A86131C4BA6A35DEEBC6
+          ADFFEAC5ADFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+          F8FFFEFBF8FFFEFBF8FFFEFBF8FFC89A7CFFC79879FFA76031EDBA6B37FEEDCA
+          B3FFE0A27AFFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+          88FF62C088FF62C088FFFDF9F6FFCA8D65FFC99B7CFFA76031FEBB6C38FFEECC
+          B6FFE1A27AFFFEFAF7FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDC
+          C2FFBFDCC2FFBFDCC2FFFDF9F6FFCD9068FFCC9E81FFA86132FFBB6B38FFEFCE
+          B8FFE1A279FFFEFAF7FF62C088FF62C088FF62C088FF62C088FF62C088FF62C0
+          88FF62C088FF62C088FFFDF9F6FFCF936AFFCEA384FFAA6132FFBA6A36FFEFD0
+          BBFFE2A27AFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+          F8FFFEFBF8FFFEFBF8FFFEFBF8FFD3966DFFD2A78AFFAB6232FFBB6A36FFF0D2
+          BEFFE2A37AFFE2A37AFFE1A37AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F
+          76FFDC9D74FFD99B72FFD89971FFD69970FFD5AB8EFFAD6333FFBB6A36FFF2D5
+          C2FFE3A37AFFE3A37AFFE2A37BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA0
+          77FFDE9E75FFDC9D74FFDA9B73FFD99B73FFDAB095FFAF6433FFBB6A36FFF2D8
+          C5FFE3A47BFFE3A37AFFE3A47AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA0
+          77FFDE9F76FFDD9E74FFDB9C72FFDC9D74FFDDB59AFFB16534FFBB6B36FFF4D9
+          C7FFE6A67DFFC88C64FFC98D65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C
+          65FFC88C64FFC88C64FFC88C64FFDA9C74FFE1BA9FFFB36634FFBB6B36FEF4DC
+          C9FFE7A77DFFF9ECE1FFF9ECE1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAED
+          E5FFF7E7DBFFF7E5D9FFF6E5D8FFDEA077FFE4BEA4FFB46734FFBC6B36FAF5DD
+          CCFFE7A87EFFFAF0E8FFFAF0E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4
+          EFFFF9E9DFFFF7E7DBFFF7E5D9FFE0A278FFE7C2A9FFB66835FFBC6B36F0F6DF
+          D0FFE8A87EFFFCF6F1FFFCF6F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9
+          F6FFFAF0E8FFF8E8DDFFF7E6DBFFE1A37AFFEFD5C3FFB76935FEBC6B36D8F6DF
+          D1FFE9AA80FFFEFAF6FFFDFAF6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFB
+          F8FFFCF6F1FFF9ECE2FFF8E7DBFFEED0BAFFECD0BDFFBB703EF8BC6B369BF6E0
+          D1FFF7E0D1FFFEFBF8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9
+          F6FFFDFAF7FFFBF1EBFFF8E9DFFEECD0BDFBC9895EECB5693563BC6B3671BC6B
+          3690BC6B36CCBC6B36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C
+          39FFBD6E3BFFBB6D3AFFBB6B38EFBB703ECBB6693554FFFFFF00
+        }
+        OnClick = actSaveExecute
+      end
+      object Load1: TMenuItem
+        Action = actOpen
+        Caption = 'Load'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          20000000000000040000640000006400000000000000000000002C86D8D12D88
+          D8F72D87D8F72D88D8F72D88D8F72D88D8F72D88D8F72D88D8F72D88D8F72D88
+          D8F72D88D8F72D87D8F72D88D8F72C86D8D1FFFFFF00FFFFFF00338ED9FBDCF0
+          FAFF98E1F6FF95E0F6FF92DFF6FF8EDEF5FF89DCF5FF85DAF4FF80D9F4FF7AD7
+          F3FF74D5F3FF70D3F2FFC2EAF8FF3594DAFFFFFFFF00FFFFFF003594DAF7EFFA
+          FEFF93E5F8FF8FE4F8FF89E3F8FF82E1F7FF7ADFF7FF71DEF6FF67DBF5FF5BD8
+          F4FF4DD4F3FF40D1F2FFCAF2FBFF3594DAFFFFFFFF00FFFFFF00369ADAF8F2FA
+          FDFF94E6F8FF92E5F8FF90E5F8FF8BE3F8FF86E2F7FF7FE1F7FF77DEF6FF6CDC
+          F6FF5ED9F4FF4FD5F3FFCCF2FBFF3594DAFFFFFFFF00FFFFFF0036A1DAF9F6FC
+          FEFF94E5F8FF93E5F8FF93E5F8FF91E5F8FF93DBE9FF93D7E3FF93D2DCFF90CE
+          D7FF8CC8CFFF86C1C6FFC9D8D6FF3594DAFFC57444E8CA7F53F137A6DAFAFEFF
+          FFFFF8FDFFFFF6FDFFFFF5FCFFFFF3FCFEFF9AE4F4FF9AE6F7FF9BE6F6FF9DE5
+          F5FF9EE5F5FF9FE5F4FFDAF3F8FF3594DAFFFDF4EEFFCA8054F935ABDAFAE8F6
+          FBFF70BCE7FF55AAE2FF4DA5E0FF91C9EBFFFAF3EFFFFDFEFDFFFFFDFCFFFFFD
+          FCFFFEFDFCFFFEFCFBFFFEFEFDFF3594DAFFEFF2E8FFCE8156FF36AADAF2F1FA
+          FDFF94DEF5FF93DCF4FF64BCE9FF3594DAFF3594DAFF3594DAFF3594DAFF3594
+          DAFF3594DAFF3594DAFF3594DAFF3594DAFFFBF6EFFFCC8355FE35AFDAF0F7FC
+          FEFF8EE4F8FF91DEF5FF9FE0F5FFACE1F6FFCA8452FFFFF7F1FFFFE9D9FFFFEA
+          DBFFFFE9D9FFFFE7D7FFFFE5D2FFFFE2CBFFFFF7F1FFCB8555FE36B3DAF8FDFE
+          FEFFFEFFFFFFFEFEFFFFFDFEFFFFFEFFFFFFE4BA91FFFFF7F0FFFFE7D5FFFDE7
+          D6FFFDE6D4FFFCE4D0FFFBE3CBFFFADCC2FFFEF3E8FFCC8656FE34B4D9D05EC2
+          E1FA60C3E2FA60C3E2FA60C3E2FA5FC3E2FAE4BB91FFFFF7F2FFFEE7D5FFFEE7
+          D5FFFDE5D1FFFAE0CAFFF9DEC4FFF7D9BCFFFDF2E7FFCC8757FEFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00E4BB92FFFEF7F1FFFCE5D2FFFCE4
+          D1FFFBE2CCFFF9DDC4FFF6D7BBFFF3D1AFFFFAEFE4FFCC8758FEFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00E4BB92FFFEF6F0FFFCE2CDFFFCE3
+          CDFFFADFC8FFF7D9BCFFF5E9DDFFFAF3EBFFFBF8F3FFCA8353FEFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00E4BB93FFFEF5EDFFFCDEC5FFFBE0
+          C7FFF9DCC2FFF5D3B4FFFEF9F3FFFAE2C4FFECC193FFC37D4893FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00E5BE96FFFFFFFEFFFDF3E9FFFDF3
+          EAFFFCF2E8FFFAEFE3FFFAF2E7FFEABB88FFCF8555B3B4693D0CFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00EAC39DFFE6BF96FFE4BB92FFE4BB
+          92FFD1A06CF5D09E6DF6CC965FDAC479427EB2673C09FFFFFF00
+        }
+        OnClick = actOpenExecute
+      end
+      object miSignTable: TMenuItem
+        Caption = 'Sign table'
+        OnClick = miSignTableClick
+      end
+      object MenuItem3: TMenuItem
+        Caption = '-'
+      end
+      object miSaveScanresults: TMenuItem
+        Caption = 'Save current scanresults'
+        ShortCut = 41043
+        OnClick = miSaveScanresultsClick
+      end
+      object MenuItem6: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Generate generic trainer lua script from table'
+        OnClick = MenuItem9Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'Quit'
+        OnClick = MenuItem7Click
+      end
+    end
+    object Edit3: TMenuItem
+      Caption = '&Edit'
+      object Settings1: TMenuItem
+        Caption = 'Settings'
+        OnClick = SettingsClick
+      end
+    end
+    object miTable: TMenuItem
+      Caption = 'Table'
+      OnClick = miTableClick
+      object miShowLuaScript: TMenuItem
+        Caption = 'Show Cheat Table Lua Script'
+        ShortCut = 49228
+        OnClick = miShowLuaScriptClick
+      end
+      object MenuItem10: TMenuItem
+        Caption = '-'
+      end
+      object miCreateLuaForm: TMenuItem
+        Caption = 'Create form'
+        OnClick = miCreateLuaFormClick
+      end
+      object miResyncFormsWithLua: TMenuItem
+        Caption = 'Resynchronize forms with Lua'
+        OnClick = miResyncFormsWithLuaClick
+      end
+      object miLuaFormsSeperator: TMenuItem
+        Caption = '-'
+      end
+      object miAddFile: TMenuItem
+        Caption = 'Add file'
+        OnClick = miAddFileClick
+      end
+    end
+    object mi3d: TMenuItem
+      Caption = 'D3D'
+      OnClick = mi3dClick
+      object miHookD3D: TMenuItem
+        Caption = 'Hook Direct3D'
+        OnClick = miHookD3DClick
+      end
+      object MenuItem11: TMenuItem
+        Caption = '-'
+      end
+      object miSetCrosshair: TMenuItem
+        Caption = 'Set custom crosshair'
+        Enabled = False
+        OnClick = miSetCrosshairClick
+      end
+      object miWireframe: TMenuItem
+        AutoCheck = True
+        Caption = 'Toggle wireframe mode'
+        Enabled = False
+        Visible = False
+        OnClick = miWireframeClick
+      end
+      object miZbuffer: TMenuItem
+        AutoCheck = True
+        Caption = 'Toggle disabled zbuffer'
+        Enabled = False
+        Visible = False
+        OnClick = miZbufferClick
+      end
+      object miLockMouseInGame: TMenuItem
+        AutoCheck = True
+        Caption = 'Lock mouse in game window'
+        Enabled = False
+        OnClick = miLockMouseInGameClick
+      end
+      object miSetupSnapshotKeys: TMenuItem
+        Caption = 'Start and configure snapshot recording'
+        Visible = False
+        OnClick = miSetupSnapshotKeysClick
+      end
+      object miSnapshothandler: TMenuItem
+        Caption = 'Snapshot handler'
+        OnClick = miSnapshothandlerClick
+      end
+    end
+    object miNetwork: TMenuItem
+      Caption = '网络'
+      Visible = False
+      object miCompression: TMenuItem
+        Caption = 'Compression'
+        OnClick = miCompressionClick
+      end
+      object miScanDirtyOnly: TMenuItem
+        AutoCheck = True
+        Caption = 'Scan changed regions only'
+        Checked = True
+        OnClick = miScanDirtyOnlyClick
+      end
+      object miScanPagedOnly: TMenuItem
+        AutoCheck = True
+        Caption = 'Scan paged (physical) memory only'
+        Checked = True
+        OnClick = miScanPagedOnlyClick
+      end
+    end
+    object miHelp: TMenuItem
+      Caption = '&Help'
+      object Helpindex1: TMenuItem
+        Caption = '帮助'
+        ShortCut = 112
+        OnClick = Helpindex1Click
+      end
+      object miTutorial: TMenuItem
+        Caption = 'x86教程'
+        OnClick = miTutorialClick
+      end
+      object MenuItem12: TMenuItem
+        Caption = 'x64教程'
+        OnClick = MenuItem12Click
+      end
+      object miEnableLCLDebug: TMenuItem
+        Caption = 'Enable LCL Debug'
+        Visible = False
+        OnClick = EnableLCLClick
+      end
+      object N8: TMenuItem
+        Caption = '-'
+      end
+      object miAbout: TMenuItem
+        Caption = 'About'
+        OnClick = miAboutClick
+      end
+    end
+    object Process1: TMenuItem
+      Caption = '&Process'
+      Visible = False
+      OnClick = Process1Click
+      object OpenProcess1: TMenuItem
+        Caption = 'Open Process window'
+        OnClick = ShowProcessListButtonClick
+      end
+      object CreateProcess1: TMenuItem
+        Caption = 'Create Process'
+        OnClick = CreateProcess1Click
+      end
+      object N6: TMenuItem
+        Caption = '-'
+      end
+    end
+  end
+  object pmTablist: TPopupMenu
+    OnPopup = pmTablistPopup
+    left = 32
+    top = 256
+    object miRenameTab: TMenuItem
+      Caption = 'Rename'
+      OnClick = miRenameTabClick
+    end
+    object miTablistSeperator: TMenuItem
+      Caption = '-'
+    end
+    object miCloseTab: TMenuItem
+      Caption = 'Close tab'
+      OnClick = miCloseTabClick
+    end
+  end
+  object pmValueType: TPopupMenu
+    OnPopup = pmValueTypePopup
+    left = 120
+    top = 248
+    object miDefineNewCustomType: TMenuItem
+      Caption = 'Define new custom type (Auto Assembler)'
+      OnClick = miDefineNewCustomTypeClick
+    end
+    object miDefineNewCustomTypeLua: TMenuItem
+      Caption = 'Define new custom type (LUA)'
+      OnClick = miDefineNewCustomTypeLuaClick
+    end
+    object miEditCustomType: TMenuItem
+      Caption = 'Edit selected custom type'
+      OnClick = miEditCustomTypeClick
+    end
+    object miDeleteCustomType: TMenuItem
+      Caption = 'Delete selected custom type'
+      OnClick = miDeleteCustomTypeClick
+    end
+    object miShowCustomTypeDebug: TMenuItem
+      Caption = 'Show custom type debug info'
+      Visible = False
+      OnClick = miShowCustomTypeDebugClick
+    end
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 128
+    top = 72
+  end
+  object pmResetRange: TPopupMenu
+    left = 520
+    top = 8
+    object miResetRange: TMenuItem
+      Caption = 'Reset range'
+      OnClick = miResetRangeClick
+    end
+  end
+  object pmScanRegion: TPopupMenu
+    left = 184
+    top = 192
+    object miPresetAll: TMenuItem
+      Caption = 'Preset: Scan all memory'
+      OnClick = miPresetAllClick
+    end
+    object miPresetWritable: TMenuItem
+      Caption = 'Preset: Scan writable memory'
+      OnClick = miPresetWritableClick
+    end
+  end
+end

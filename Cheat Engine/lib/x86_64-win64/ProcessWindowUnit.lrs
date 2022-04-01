@@ -1,0 +1,79 @@
+LazarusResources.Add('TProcessWindow','FORMDATA',[
+  'TPF0'#14'TProcessWindow'#13'ProcessWindow'#4'Left'#3'@'#1#6'Height'#3#187#1#3
+  +'Top'#3'{'#1#5'Width'#3'%'#1#11'HelpContext'#2#4#8'AutoSize'#9#11'BorderIcon'
+  +'s'#11#12'biSystemMenu'#0#7'Caption'#6#12'Process List'#12'ClientHeight'#3
+  +#167#1#11'ClientWidth'#3'%'#1#4'Menu'#7#9'MainMenu1'#7'OnClose'#7#9'FormClos'
+  +'e'#8'OnCreate'#7#10'FormCreate'#9'OnDestroy'#7#11'FormDestroy'#6'OnShow'#7#8
+  +'FormShow'#9'PopupMode'#7#6'pmAuto'#8'Position'#7#16'poMainFormCenter'#10'LC'
+  +'LVersion'#6#7'1.6.0.4'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'p'#3'T'
+  +'op'#3'7'#1#5'Width'#3'%'#1#5'Align'#7#8'alBottom'#8'AutoSize'#9#10'BevelInn'
+  +'er'#7#9'bvLowered'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2'p'#11'Clie'
+  +'ntWidth'#3'%'#1#8'TabOrder'#2#0#0#6'TPanel'#6'Panel5'#22'AnchorSideLeft.Con'
+  +'trol'#7#6'Panel1'#19'AnchorSideLeft.Side'#7#9'asrCenter'#4'Left'#2';'#6'Hei'
+  +'ght'#2'b'#3'Top'#2#7#5'Width'#3#175#0#8'AutoSize'#9#17'BorderSpacing.Top'#2
+  +#6#20'BorderSpacing.Bottom'#2#6#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2
+  +'b'#11'ClientWidth'#3#175#0#20'Constraints.MinWidth'#3#175#0#8'TabOrder'#2#0
+  +#0#6'TPanel'#6'Panel3'#22'AnchorSideLeft.Control'#7#6'Panel5'#21'AnchorSideT'
+  +'op.Control'#7#6'Panel5'#23'AnchorSideRight.Control'#7#6'Panel5'#20'AnchorSi'
+  +'deRight.Side'#7#9'asrBottom'#4'Left'#2#0#6'Height'#2#30#3'Top'#2#4#5'Width'
+  +#3#175#0#7'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#0#8'AutoSize'#9#17'Bord'
+  +'erSpacing.Top'#2#4#10'BevelOuter'#7#6'bvNone'#29'ChildSizing.HorizontalSpac'
+  +'ing'#2#8#29'ChildSizing.EnlargeHorizontal'#7#14'crsScaleChilds'#18'ChildSiz'
+  +'ing.Layout'#7#29'cclLeftToRightThenTopToBottom'#27'ChildSizing.ControlsPerL'
+  +'ine'#2#2#12'ClientHeight'#2#30#11'ClientWidth'#3#175#0#8'TabOrder'#2#0#0#7
+  +'TButton'#8'OKButton'#4'Left'#2#0#6'Height'#2#30#3'Top'#2#0#5'Width'#2'T'#8
+  +'AutoSize'#9#7'Caption'#6#4'Open'#21'Constraints.MinHeight'#2#30#20'Constrai'
+  +'nts.MinWidth'#2'K'#7'Default'#9#7'OnClick'#7#13'OKButtonClick'#8'TabOrder'#2
+  +#0#0#0#7'TButton'#12'CancelButton'#19'AnchorSideLeft.Side'#7#9'asrBottom'#23
+  +'AnchorSideRight.Control'#7#6'Panel3'#20'AnchorSideRight.Side'#7#9'asrBottom'
+  +#4'Left'#2'\'#6'Height'#2#30#3'Top'#2#0#5'Width'#2'S'#6'Cancel'#9#7'Caption'
+  +#6#6'Cancel'#21'Constraints.MinHeight'#2#30#20'Constraints.MinWidth'#2'K'#7
+  +'OnClick'#7#17'CancelButtonClick'#8'TabOrder'#2#1#0#0#0#7'TButton'#7'Button4'
+  +#22'AnchorSideLeft.Control'#7#6'Panel5'#21'AnchorSideTop.Control'#7#6'Panel3'
+  +#18'AnchorSideTop.Side'#7#9'asrBottom'#4'Left'#2#0#6'Height'#2#25#3'Top'#2'+'
+  +#5'Width'#3#175#0#8'AutoSize'#9#17'BorderSpacing.Top'#2#9#7'Caption'#6#26'At'
+  +'tach debugger to process'#20'Constraints.MinWidth'#3#175#0#7'OnClick'#7#12
+  +'Button4Click'#8'TabOrder'#2#1#0#0#7'TButton'#10'btnNetwork'#22'AnchorSideLe'
+  +'ft.Control'#7#7'Button4'#21'AnchorSideTop.Control'#7#7'Button4'#18'AnchorSi'
+  +'deTop.Side'#7#9'asrBottom'#23'AnchorSideRight.Control'#7#7'Button4'#20'Anch'
+  +'orSideRight.Side'#7#9'asrBottom'#4'Left'#2#0#6'Height'#2#25#3'Top'#2'I'#5'W'
+  +'idth'#3#175#0#7'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#0#8'AutoSize'#9#17
+  +'BorderSpacing.Top'#2#5#7'Caption'#6#7'Network'#7'OnClick'#7#15'btnNetworkCl'
+  +'ick'#8'TabOrder'#2#2#0#0#0#0#11'TTabControl'#11'TabControl1'#22'AnchorSideL'
+  +'eft.Control'#7#5'Owner'#21'AnchorSideTop.Control'#7#5'Owner'#23'AnchorSideR'
+  +'ight.Control'#7#6'Panel1'#20'AnchorSideRight.Side'#7#9'asrBottom'#24'Anchor'
+  +'SideBottom.Control'#7#6'Panel1'#4'Left'#2#0#6'Height'#3'7'#1#3'Top'#2#0#5'W'
+  +'idth'#3'%'#1#8'OnChange'#7#17'TabControl1Change'#8'TabIndex'#2#0#12'Tabs.St'
+  +'rings'#1#6#12'Applications'#6#9'Processes'#6#7'Windows'#0#7'Anchors'#11#5'a'
+  +'kTop'#6'akLeft'#7'akRight'#8'akBottom'#0#8'TabOrder'#2#1#0#8'TListBox'#11'P'
+  +'rocessList'#4'Left'#2#2#6'Height'#3#30#1#3'Top'#2#23#5'Width'#3'!'#1#5'Alig'
+  +'n'#7#8'alClient'#10'ItemHeight'#2#0#10'OnDblClick'#7#13'OKButtonClick'#10'O'
+  +'nDrawItem'#7#19'ProcessListDrawItem'#10'OnKeyPress'#7#19'ProcessListKeyPres'
+  +'s'#9'PopupMenu'#7#10'PopupMenu1'#5'Style'#7#16'lbOwnerDrawFixed'#8'TabOrder'
+  +#2#1#0#0#0#11'TOpenDialog'#11'OpenDialog1'#10'DefaultExt'#6#4'.EXE'#6'Filter'
+  +#6#15'EXE files|*.exe'#0#0#11'TOpenDialog'#11'OpenDialog2'#6'Filter'#6#19'Al'
+  +'l files (*.*)|*.*'#4'left'#3#224#0#0#0#10'TPopupMenu'#10'PopupMenu1'#7'OnPo'
+  +'pup'#7#15'PopupMenu1Popup'#4'left'#2'p'#3'top'#2'8'#0#9'TMenuItem'#17'Input'
+  +'PIDmanually1'#7'Caption'#6#18'Input PID manually'#8'ShortCut'#3'P@'#7'OnCli'
+  +'ck'#7#22'InputPIDmanually1Click'#0#0#9'TMenuItem'#7'Filter1'#7'Caption'#6#6
+  +'Filter'#8'ShortCut'#3'F@'#7'OnClick'#7#12'Filter1Click'#0#0#9'TMenuItem'#20
+  +'miShowInvisibleItems'#9'AutoCheck'#9#7'Caption'#6#22'Show invisible windows'
+  +#8'ShortCut'#3'I@'#7'OnClick'#7#25'miShowInvisibleItemsClick'#0#0#9'TMenuIte'
+  +'m'#18'miOwnProcessesOnly'#9'AutoCheck'#9#7'Caption'#6'''Only show processes'
+  +' of the current user'#7'OnClick'#7#23'miOwnProcessesOnlyClick'#0#0#9'TMenuI'
+  +'tem'#21'miSkipSystemProcesses'#9'AutoCheck'#9#7'Caption'#6#30'Only show non'
+  +'-system processes'#7'OnClick'#7#23'miOwnProcessesOnlyClick'#0#0#9'TMenuItem'
+  ,#2'N1'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#17'miProcessListLong'#7'Caption'#6
+  +#19'Process List (Long)'#7'OnClick'#7#22'miProcessListLongClick'#0#0#9'TMenu'
+  +'Item'#2'N2'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#12'miChangeFont'#7'Caption'#6
+  +#11'Change font'#7'OnClick'#7#17'miChangeFontClick'#0#0#0#9'TMainMenu'#9'Mai'
+  +'nMenu1'#4'left'#2'5'#3'top'#2'm'#0#9'TMenuItem'#9'MenuItem1'#7'Caption'#6#4
+  +'File'#0#9'TMenuItem'#15'miCreateProcess'#7'Caption'#6#14'Create Process'#7
+  +'OnClick'#7#20'btnCreateThreadClick'#0#0#9'TMenuItem'#10'miOpenFile'#7'Capti'
+  +'on'#6#9'Open File'#7'OnClick'#7#16'btnOpenFileClick'#0#0#0#9'TMenuItem'#9'M'
+  +'enuItem4'#7'Caption'#6#4'View'#7'Visible'#8#0#9'TMenuItem'#9'MenuItem5'#7'C'
+  +'aption'#6#11'Preferences'#7'OnClick'#7#14'MenuItem5Click'#0#0#0#0#11'TFontD'
+  +'ialog'#11'FontDialog1'#11'MinFontSize'#2#0#11'MaxFontSize'#2#0#4'left'#3#192
+  +#0#3'top'#2'k'#0#0#6'TTimer'#6'Timer1'#8'Interval'#2'd'#7'OnTimer'#7#11'Time'
+  +'r1Timer'#4'left'#2'V'#3'top'#3#205#0#0#0#0
+]);

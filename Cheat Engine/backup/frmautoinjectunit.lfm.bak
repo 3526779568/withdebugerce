@@ -1,0 +1,246 @@
+object frmAutoInject: TfrmAutoInject
+  Left = 741
+  Height = 331
+  Top = 430
+  Width = 431
+  HelpContext = 1089
+  Caption = 'Auto assemble'
+  ClientHeight = 311
+  ClientWidth = 431
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 35
+    Top = 276
+    Width = 431
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 35
+    ClientWidth = 431
+    TabOrder = 0
+    OnResize = Panel1Resize
+    object Button1: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Side = asrCenter
+      Left = 169
+      Height = 31
+      Top = 2
+      Width = 92
+      AutoSize = True
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 2
+      Caption = 'Execute'
+      Constraints.MinHeight = 31
+      Constraints.MinWidth = 92
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 276
+    Top = 0
+    Width = 431
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 1
+  end
+  object MainMenu1: TMainMenu
+    left = 184
+    top = 120
+    object File1: TMenuItem
+      Caption = 'File'
+      object miNewWindow: TMenuItem
+        Caption = 'New Window'
+        ShortCut = 16462
+        OnClick = miNewWindowClick
+      end
+      object New1: TMenuItem
+        Caption = 'New Tab'
+        Visible = False
+        OnClick = New1Click
+      end
+      object Load1: TMenuItem
+        Caption = 'Open'
+        ShortCut = 16463
+        OnClick = Load1Click
+      end
+      object Save1: TMenuItem
+        Caption = 'Save'
+        ShortCut = 16467
+        OnClick = Save1Click
+      end
+      object SaveAs1: TMenuItem
+        Caption = 'Save As...'
+        OnClick = SaveAs1Click
+      end
+      object Assigntocurrentcheattable1: TMenuItem
+        Caption = 'Assign to current cheat table'
+        OnClick = Assigntocurrentcheattable1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+    object View1: TMenuItem
+      Caption = 'View'
+      object Syntaxhighlighting1: TMenuItem
+        Caption = 'Syntax highlighting'
+        Checked = True
+        OnClick = Syntaxhighlighting1Click
+      end
+      object AAPref1: TMenuItem
+        Caption = 'Preferences'
+        OnClick = AAPref1Click
+      end
+    end
+    object emplate1: TMenuItem
+      Caption = 'Template'
+      object Codeinjection1: TMenuItem
+        Caption = 'Code injection'
+        ShortCut = 16457
+        OnClick = Codeinjection1Click
+      end
+      object APIHook1: TMenuItem
+        Caption = 'API Hook'
+        ShortCut = 49217
+        OnClick = APIHook1Click
+      end
+      object Coderelocation1: TMenuItem
+        Caption = 'Code relocation'
+        ShortCut = 16466
+        OnClick = Coderelocation1Click
+      end
+      object miCallLua: TMenuItem
+        Caption = 'Call CE lua function'
+        ShortCut = 16460
+        OnClick = miCallLuaClick
+      end
+      object menuAOBInjection: TMenuItem
+        Caption = 'AOB Injection'
+        ShortCut = 24641
+        OnClick = menuAOBInjectionClick
+      end
+      object menuFullInjection: TMenuItem
+        Caption = 'Full Injection'
+        ShortCut = 24646
+        OnClick = menuFullInjectionClick
+      end
+      object CheatTablecompliantcodee1: TMenuItem
+        Caption = 'Cheat Table framework code'
+        ShortCut = 49236
+        OnClick = CheatTablecompliantcodee1Click
+      end
+    end
+    object Inject1: TMenuItem
+      Caption = 'Inject'
+      Visible = False
+      object Injectincurrentprocess1: TMenuItem
+        Caption = 'Inject into current process'
+        OnClick = Injectincurrentprocess1Click
+      end
+      object Injectintocurrentprocessandexecute1: TMenuItem
+        Caption = 'Inject into current process and execute'
+        OnClick = Injectintocurrentprocessandexecute1Click
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Title = 'Open CE assembly file'
+    DefaultExt = '.CEA'
+    Filter = 'Cheat Engine Assembly (*.CEA)|*.CEA|All Files (*.*)|*.*'
+    left = 8
+    top = 40
+  end
+  object SaveDialog1: TSaveDialog
+    Title = 'Open CE assembly file'
+    DefaultExt = '.CEA'
+    Filter = 'Cheat Engine Assembly (*.CEA)|*.CEA|All Files (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    left = 40
+    top = 40
+  end
+  object PopupMenu1: TPopupMenu
+    left = 136
+    top = 16
+    object Cut1: TMenuItem
+      Caption = 'Cu&t'
+      ShortCut = 16472
+      OnClick = Cut1Click
+    end
+    object Copy1: TMenuItem
+      Caption = '&Copy'
+      ShortCut = 16451
+      OnClick = Copy1Click
+    end
+    object Paste1: TMenuItem
+      Caption = '&Paste'
+      ShortCut = 16470
+      OnClick = Paste1Click
+    end
+    object Undo1: TMenuItem
+      Caption = '&Undo'
+      ShortCut = 16474
+      OnClick = Undo1Click
+    end
+    object N6: TMenuItem
+      Caption = '-'
+    end
+    object Find1: TMenuItem
+      Caption = '&Find...'
+      ShortCut = 16454
+      OnClick = Find1Click
+    end
+    object mifindNext: TMenuItem
+      Caption = 'Find Next'
+      ShortCut = 114
+      Visible = False
+      OnClick = mifindNextClick
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Replace'
+      ShortCut = 16466
+      OnClick = MenuItem1Click
+    end
+  end
+  object closemenu: TPopupMenu
+    left = 232
+    top = 48
+    object Close1: TMenuItem
+      Caption = 'Close'
+      OnClick = Close1Click
+    end
+  end
+  object FindDialog1: TFindDialog
+    Width = 480
+    Height = 136
+    OnFind = FindDialog1Find
+    left = 332
+    top = 112
+  end
+  object undotimer: TTimer
+    Interval = 250
+    left = 40
+    top = 72
+  end
+  object ReplaceDialog1: TReplaceDialog
+    Width = 495
+    Height = 184
+    Options = [frDown, frReplace, frReplaceAll]
+    OnFind = ReplaceDialog1Find
+    OnReplace = ReplaceDialog1Replace
+    left = 332
+    top = 46
+  end
+end

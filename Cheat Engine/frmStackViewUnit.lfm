@@ -1,0 +1,170 @@
+object frmStackView: TfrmStackView
+  Left = 368
+  Height = 211
+  Top = 522
+  Width = 374
+  BorderStyle = bsSizeToolWin
+  Caption = 'Stack View'
+  ClientHeight = 211
+  ClientWidth = 374
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PopupMode = pmAuto
+  LCLVersion = '1.6.4.0'
+  object lvStack: TListView
+    Left = 0
+    Height = 211
+    Top = 0
+    Width = 374
+    Align = alClient
+    AutoWidthLastColumn = True
+    Columns = <    
+      item
+        Caption = 'Address'
+        MinWidth = 2
+        Width = 70
+      end    
+      item
+        Caption = 'Value'
+        MinWidth = 2
+        Width = 90
+      end    
+      item
+        Caption = 'Secondary'
+        Width = 210
+      end>
+    HideSelection = False
+    MultiSelect = True
+    PopupMenu = PopupMenu1
+    ReadOnly = True
+    RowSelect = True
+    TabOrder = 0
+    ViewStyle = vsReport
+    OnCustomDrawItem = lvStackCustomDrawItem
+    OnDblClick = lvStackDblClick
+  end
+  object PopupMenu1: TPopupMenu
+    OnPopup = PopupMenu1Popup
+    left = 108
+    top = 84
+    object miAddESP: TMenuItem
+      AutoCheck = True
+      Caption = '(esp+*)'
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miAddESPClick
+    end
+    object miAddEBP: TMenuItem
+      AutoCheck = True
+      Caption = '(ebp+*)'
+      Checked = True
+      GroupIndex = 1
+      RadioItem = True
+      OnClick = miAddESPClick
+    end
+    object miAddRef: TMenuItem
+      Caption = '(ref+*) Ref will be %x'
+      GroupIndex = 1
+      RadioItem = True
+      ShortCut = 32
+      OnClick = miAddRefClick
+    end
+    object MenuItem1: TMenuItem
+      Caption = '-'
+    end
+    object miCopyAddress: TMenuItem
+      Caption = 'Copy Address'
+      ShortCut = 24643
+      OnClick = miCopyAddressClick
+    end
+    object miCopyValue: TMenuItem
+      Tag = 1
+      Caption = 'Copy Value'
+      ShortCut = 16451
+      OnClick = miCopyAddressClick
+    end
+    object miCopySecondary: TMenuItem
+      Tag = 2
+      Caption = 'Copy Secondary'
+      ShortCut = 57411
+      OnClick = miCopyAddressClick
+    end
+    object MenuItem6: TMenuItem
+      Tag = 3
+      Caption = 'Copy Line'
+      ShortCut = 49219
+      OnClick = miCopyAddressClick
+    end
+    object MenuItem4: TMenuItem
+      Caption = '-'
+    end
+    object miFind: TMenuItem
+      Caption = 'Find'
+      ShortCut = 16454
+      OnClick = miFindClick
+    end
+    object miFindNext: TMenuItem
+      Caption = 'Find Next...'
+      Enabled = False
+      ShortCut = 114
+      Visible = False
+      OnClick = FindDialog1Find
+    end
+    object MenuItem5: TMenuItem
+      Caption = '-'
+    end
+    object miSetColor: TMenuItem
+      Caption = 'Set background color to address'
+      OnClick = miSetColorClick
+    end
+    object MenuItem2: TMenuItem
+      Caption = '-'
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Lock and add this view to a structure dissect window'
+      OnClick = MenuItem3Click
+    end
+    object miLockAndTrace: TMenuItem
+      Caption = 'Lock and do manual stacktrace'
+      OnClick = miLockAndTraceClick
+    end
+  end
+  object FindDialog1: TFindDialog
+    Width = 480
+    Height = 136
+    Options = [frDown, frHideMatchCase, frHideWholeWord, frHideUpDown, frHideEntireScope, frHidePromptOnReplace]
+    OnFind = FindDialog1Find
+    left = 208
+    top = 88
+  end
+  object ColorDialog1: TColorDialog
+    Color = clWhite
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 104
+    top = 152
+  end
+end

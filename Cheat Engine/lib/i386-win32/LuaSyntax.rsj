@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":243532306,"name":"luasyntax.syns_filterlua","sourcebytes":[76,117,97,32,70,105,108,101,115,32,40,42,46,108,117,97,44,32,42,46,108,112,114,41,124,42,46,108,117,97,59,42,46,108,112,114],"value":"Lua Files (*.lua, *.lpr)|*.lua;*.lpr"},
+{"hash":21425,"name":"luasyntax.syns_langlua","sourcebytes":[76,117,97],"value":"Lua"},
+{"hash":45004071,"name":"luasyntax.syns_attrluamstring","sourcebytes":[76,117,97,77,83,116,114,105,110,103],"value":"LuaMString"},
+{"hash":96701635,"name":"luasyntax.syns_attrnumber","sourcebytes":[78,117,109,98,101,114,115],"value":"Numbers"}
+]}

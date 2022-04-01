@@ -1,0 +1,112 @@
+object frmEnumerateDLLs: TfrmEnumerateDLLs
+  Left = 876
+  Height = 303
+  Top = 424
+  Width = 369
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'Enumerate DLL''s'
+  ClientHeight = 303
+  ClientWidth = 369
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PopupMode = pmAuto
+  Position = poScreenCenter
+  LCLVersion = '1.6.0.4'
+  object Label2: TLabel
+    Left = 0
+    Height = 15
+    Top = 0
+    Width = 369
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Symbols'
+    ParentColor = False
+  end
+  object TreeView1: TTreeView
+    Left = 0
+    Height = 247
+    Top = 15
+    Width = 369
+    Align = alClient
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Courier New'
+    HideSelection = False
+    Indent = 19
+    ParentFont = False
+    PopupMenu = pmSymbol
+    ReadOnly = True
+    RowSelect = True
+    TabOrder = 0
+    OnDblClick = TreeView1DblClick
+    Options = [tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 41
+    Top = 262
+    Width = 369
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 41
+    ClientWidth = 369
+    TabOrder = 1
+    object Button1: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel1
+      Left = 139
+      Height = 25
+      Top = 8
+      Width = 90
+      AutoSize = True
+      BorderSpacing.Top = 8
+      BorderSpacing.Bottom = 8
+      Caption = 'Close'
+      Constraints.MinWidth = 90
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object Button2: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 20
+      Top = 21
+      Width = 92
+      Anchors = [akLeft, akBottom]
+      Caption = 'Cancel Enum'
+      OnClick = Button2Click
+      TabOrder = 1
+    end
+  end
+  object FindDialog1: TFindDialog
+    OnClose = FindDialog1Close
+    Width = 480
+    Height = 136
+    Options = [frDown, frFindNext, frDisableMatchCase, frDisableUpDown, frDisableWholeWord]
+    OnFind = FindDialog1Find
+    left = 8
+    top = 48
+  end
+  object ActionList1: TActionList
+    left = 8
+    top = 16
+    object Find: TAction
+      Caption = 'Find'
+      OnExecute = FindExecute
+      ShortCut = 16454
+    end
+  end
+  object pmSymbol: TPopupMenu
+    left = 184
+    top = 120
+    object Find1: TMenuItem
+      Action = Find
+      OnClick = FindExecute
+    end
+  end
+end

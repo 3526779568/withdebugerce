@@ -1,0 +1,162 @@
+object frmNetworkConfig: TfrmNetworkConfig
+  Left = 329
+  Height = 289
+  Top = 205
+  Width = 442
+  Caption = 'Connect to server'
+  ClientHeight = 289
+  ClientWidth = 442
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PopupMode = pmAuto
+  Position = poOwnerFormCenter
+  LCLVersion = '1.6.0.4'
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 218
+    Top = 0
+    Width = 442
+    Align = alClient
+    Caption = 'Discovered servers'
+    ClientHeight = 198
+    ClientWidth = 438
+    TabOrder = 0
+    object ListView1: TListView
+      Left = 0
+      Height = 198
+      Top = 0
+      Width = 438
+      Align = alClient
+      Columns = <      
+        item
+          Caption = 'IP'
+          Width = 200
+        end      
+        item
+          Caption = 'Port'
+          Width = 81
+        end>
+      PopupMenu = PopupMenu1
+      ReadOnly = True
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnDblClick = ListView1DblClick
+      OnSelectItem = ListView1SelectItem
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 71
+    Top = 218
+    Width = 442
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 71
+    ClientWidth = 442
+    TabOrder = 1
+    object edtHost: TEdit
+      AnchorSideLeft.Control = Label1
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 23
+      Top = 15
+      Width = 216
+      TabOrder = 0
+    end
+    object edtPort: TEdit
+      AnchorSideLeft.Control = edtHost
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = edtHost
+      Left = 230
+      Height = 23
+      Top = 15
+      Width = 48
+      BorderSpacing.Left = 6
+      TabOrder = 1
+      Text = '52736'
+    end
+    object Label1: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 8
+      Height = 15
+      Top = 0
+      Width = 25
+      BorderSpacing.Left = 8
+      Caption = 'Host'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      AnchorSideLeft.Control = edtPort
+      AnchorSideTop.Control = edtPort
+      AnchorSideBottom.Control = edtPort
+      Left = 230
+      Height = 15
+      Top = 0
+      Width = 22
+      Anchors = [akLeft, akBottom]
+      Caption = 'Port'
+      ParentColor = False
+    end
+    object Panel2: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = edtHost
+      AnchorSideTop.Side = asrBottom
+      Left = 143
+      Height = 25
+      Top = 42
+      Width = 157
+      AutoSize = True
+      BorderSpacing.Top = 4
+      BorderSpacing.Bottom = 4
+      BevelOuter = bvNone
+      ClientHeight = 25
+      ClientWidth = 157
+      TabOrder = 2
+      object btnConnect: TButton
+        AnchorSideLeft.Control = Panel2
+        AnchorSideTop.Control = Panel2
+        Left = 0
+        Height = 25
+        Top = 0
+        Width = 75
+        AutoSize = True
+        Caption = 'Connect'
+        Constraints.MinHeight = 25
+        Constraints.MinWidth = 75
+        Default = True
+        OnClick = btnConnectClick
+        TabOrder = 0
+      end
+      object Button2: TButton
+        AnchorSideLeft.Control = btnConnect
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel2
+        Left = 82
+        Height = 25
+        Top = 0
+        Width = 75
+        AutoSize = True
+        BorderSpacing.Left = 7
+        Cancel = True
+        Caption = 'Cancel'
+        Constraints.MinHeight = 25
+        Constraints.MinWidth = 75
+        ModalResult = 2
+        TabOrder = 1
+      end
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    left = 117
+    top = 60
+    object MenuItem1: TMenuItem
+      Caption = 'Refresh list'
+      OnClick = MenuItem1Click
+    end
+  end
+end

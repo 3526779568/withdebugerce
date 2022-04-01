@@ -1,0 +1,817 @@
+object frmStringPointerScan: TfrmStringPointerScan
+  Left = 431
+  Height = 530
+  Top = 242
+  Width = 813
+  AutoSize = True
+  Caption = 'Structure spider'
+  ClientHeight = 510
+  ClientWidth = 813
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnShow = FormShow
+  PopupMode = pmAuto
+  Position = poScreenCenter
+  LCLVersion = '1.6.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 490
+    Top = 0
+    Width = 188
+    Align = alLeft
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 490
+    ClientWidth = 188
+    TabOrder = 0
+    object edtStructsize: TEdit
+      AnchorSideLeft.Control = lblStructsize
+      AnchorSideTop.Control = lblStructsize
+      AnchorSideTop.Side = asrBottom
+      Left = 87
+      Height = 23
+      Top = 23
+      Width = 80
+      TabOrder = 0
+      Text = '4096'
+    end
+    object lblStructsize: TLabel
+      AnchorSideLeft.Control = Panel5
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel5
+      Left = 87
+      Height = 15
+      Top = 8
+      Width = 50
+      BorderSpacing.Left = 3
+      Caption = 'Structsize'
+      ParentColor = False
+    end
+    object edtRegExp: TEdit
+      AnchorSideLeft.Control = lblString
+      AnchorSideTop.Control = lblString
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 20
+      Height = 23
+      Top = 349
+      Width = 164
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 4
+      Enabled = False
+      TabOrder = 9
+    end
+    object cbMustBeStart: TCheckBox
+      AnchorSideLeft.Control = cbRegExp
+      AnchorSideTop.Control = cbCaseSensitive
+      AnchorSideTop.Side = asrBottom
+      Left = 20
+      Height = 19
+      Top = 330
+      Width = 89
+      Caption = 'Must be start'
+      Enabled = False
+      TabOrder = 8
+    end
+    object cbCaseSensitive: TCheckBox
+      AnchorSideLeft.Control = cbRegExp
+      AnchorSideTop.Control = cbRegExp
+      AnchorSideTop.Side = asrBottom
+      Left = 20
+      Height = 19
+      Top = 311
+      Width = 93
+      Caption = 'Case sensitive'
+      Enabled = False
+      TabOrder = 7
+    end
+    object cbRegExp: TCheckBox
+      AnchorSideLeft.Control = rbStringscan
+      AnchorSideTop.Control = cbReuseStringmap
+      AnchorSideTop.Side = asrBottom
+      Left = 20
+      Height = 19
+      Top = 292
+      Width = 164
+      BorderSpacing.Left = 16
+      BorderSpacing.Right = 4
+      Caption = 'Strings must match reg exp'
+      OnChange = cbRegExpChange
+      TabOrder = 6
+    end
+    object rbStringscan: TRadioButton
+      AnchorSideLeft.Control = Panel4
+      AnchorSideTop.Control = Panel4
+      AnchorSideTop.Side = asrBottom
+      Left = 4
+      Height = 19
+      Top = 254
+      Width = 78
+      Caption = 'String scan'
+      OnChange = rbDatascanChange
+      TabOrder = 5
+    end
+    object rbDatascan: TRadioButton
+      AnchorSideLeft.Control = rbStringscan
+      AnchorSideTop.Control = edtRegExp
+      AnchorSideTop.Side = asrBottom
+      Left = 4
+      Height = 19
+      Top = 372
+      Width = 71
+      Caption = 'Data scan'
+      OnChange = rbDatascanChange
+      TabOrder = 10
+    end
+    object edtAlignsize: TEdit
+      AnchorSideLeft.Control = lblAlign
+      AnchorSideTop.Control = lblAlign
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 20
+      Height = 23
+      Top = 406
+      Width = 164
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 4
+      Enabled = False
+      TabOrder = 11
+      Text = '4'
+    end
+    object lblAlign: TLabel
+      AnchorSideLeft.Control = rbDatascan
+      AnchorSideTop.Control = rbDatascan
+      AnchorSideTop.Side = asrBottom
+      Left = 20
+      Height = 15
+      Top = 391
+      Width = 47
+      BorderSpacing.Left = 16
+      Caption = 'Alignsize'
+      Enabled = False
+      ParentColor = False
+    end
+    object edtPointerStart: TEdit
+      AnchorSideLeft.Control = cbPointerInRange
+      AnchorSideTop.Control = cbPointerInRange
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 4
+      Height = 23
+      Top = 67
+      Width = 180
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 4
+      Enabled = False
+      TabOrder = 2
+    end
+    object cbPointerInRange: TCheckBox
+      AnchorSideLeft.Control = Panel5
+      AnchorSideTop.Control = Panel5
+      AnchorSideTop.Side = asrBottom
+      Left = 4
+      Height = 19
+      Top = 48
+      Width = 150
+      BorderSpacing.Top = 2
+      Caption = 'Pointer must be in range'
+      OnChange = cbPointerInRangeChange
+      TabOrder = 1
+    end
+    object lblAnd: TLabel
+      AnchorSideLeft.Control = cbPointerInRange
+      AnchorSideTop.Control = edtPointerStart
+      AnchorSideTop.Side = asrBottom
+      Left = 4
+      Height = 15
+      Top = 90
+      Width = 20
+      Caption = 'and'
+      Enabled = False
+      ParentColor = False
+    end
+    object edtPointerStop: TEdit
+      AnchorSideLeft.Control = cbPointerInRange
+      AnchorSideTop.Control = lblAnd
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 4
+      Height = 23
+      Top = 105
+      Width = 180
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 4
+      Enabled = False
+      TabOrder = 3
+    end
+    object lblString: TLabel
+      AnchorSideLeft.Control = cbMustBeStart
+      AnchorSideTop.Control = cbMustBeStart
+      AnchorSideTop.Side = asrBottom
+      Left = 20
+      Height = 15
+      Top = 349
+      Width = 34
+      Caption = 'String:'
+      Enabled = False
+      ParentColor = False
+    end
+    object Panel4: TPanel
+      AnchorSideLeft.Control = edtPointerStop
+      AnchorSideTop.Control = edtPointerStop
+      AnchorSideTop.Side = asrBottom
+      Left = 4
+      Height = 122
+      Top = 132
+      Width = 148
+      AutoSize = True
+      BorderSpacing.Top = 4
+      BevelOuter = bvNone
+      ClientHeight = 122
+      ClientWidth = 148
+      TabOrder = 4
+      object rbDiffDontCare: TRadioButton
+        AnchorSideLeft.Control = Panel4
+        AnchorSideTop.Control = Panel4
+        Left = 0
+        Height = 19
+        Top = 0
+        Width = 148
+        Caption = 'Don''t care for difference'
+        Checked = True
+        Enabled = False
+        OnChange = rbDiffDontCareChange
+        TabOrder = 0
+        TabStop = True
+      end
+      object rbMustBeDifferent: TRadioButton
+        AnchorSideLeft.Control = Panel4
+        AnchorSideTop.Control = rbDiffDontCare
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 19
+        Top = 19
+        Width = 111
+        Caption = 'Must be different'
+        Enabled = False
+        OnChange = rbDiffDontCareChange
+        TabOrder = 1
+      end
+      object rbMustBeSame: TRadioButton
+        AnchorSideLeft.Control = Panel4
+        AnchorSideTop.Control = rbMustBeDifferent
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 19
+        Top = 38
+        Width = 114
+        Caption = 'Must be the same'
+        Enabled = False
+        OnChange = rbDiffDontCareChange
+        TabOrder = 2
+      end
+      object comboCompareType: TComboBox
+        AnchorSideLeft.Control = Panel4
+        AnchorSideTop.Control = lblCompare
+        AnchorSideTop.Side = asrBottom
+        Left = 16
+        Height = 23
+        Top = 72
+        Width = 124
+        BorderSpacing.Left = 16
+        Enabled = False
+        ItemHeight = 15
+        ItemIndex = 3
+        Items.Strings = (
+          'String'
+          '1 Byte'
+          '2 Bytes'
+          '4 Bytes'
+          '8 Bytes'
+          'Float'
+          'Double'
+          'Pointer (hex)'
+        )
+        OnChange = comboTypeChange
+        Style = csDropDownList
+        TabOrder = 3
+        Text = '4 Bytes'
+      end
+      object lblCompare: TLabel
+        AnchorSideLeft.Control = Panel4
+        AnchorSideTop.Control = rbMustBeSame
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 15
+        Top = 57
+        Width = 75
+        Caption = 'Compare type'
+        Enabled = False
+        ParentColor = False
+      end
+      object cbMapPointerValues: TCheckBox
+        AnchorSideLeft.Control = Panel4
+        AnchorSideTop.Control = comboCompareType
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 19
+        Hint = 'During the scan the values of pointer will be stored in memory for quick lookup when the same address is encountered again'#13#10'If the pointerlist has mostly unique addresses this can cause you to get out of memory errors'#13#10#13#10'Enabled: Fast- Memory gobbler'#13#10'Disabled: Slower- Not too much memory eaten'
+        Top = 103
+        Width = 148
+        BorderSpacing.Top = 8
+        Caption = 'Store values during scan'
+        Checked = True
+        ParentShowHint = False
+        ShowHint = True
+        State = cbChecked
+        TabOrder = 4
+      end
+    end
+    object Panel5: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 4
+      Height = 38
+      Top = 8
+      Width = 80
+      AutoSize = True
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 8
+      BevelOuter = bvNone
+      ClientHeight = 38
+      ClientWidth = 80
+      TabOrder = 12
+      object edtMaxLevel: TEdit
+        AnchorSideLeft.Control = Panel5
+        AnchorSideTop.Control = lblMaxLevel
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 23
+        Top = 15
+        Width = 80
+        TabOrder = 0
+        Text = '2'
+      end
+      object lblMaxLevel: TLabel
+        AnchorSideLeft.Control = Panel5
+        AnchorSideTop.Control = Panel5
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 52
+        Caption = 'Max Level'
+        ParentColor = False
+      end
+    end
+    object Panel8: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel9
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 22
+      Top = 468
+      Width = 188
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 22
+      ClientWidth = 188
+      TabOrder = 13
+      object lblInfo: TLabel
+        Left = 0
+        Height = 15
+        Top = 7
+        Width = 188
+        Align = alBottom
+        Caption = 'Info'
+        ParentColor = False
+      end
+    end
+    object Panel9: TPanel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = edtAlignsize
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 0
+      Height = 39
+      Top = 429
+      Width = 188
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = True
+      BevelOuter = bvNone
+      ChildSizing.LeftRightSpacing = 8
+      ChildSizing.HorizontalSpacing = 8
+      ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 39
+      ClientWidth = 188
+      TabOrder = 14
+      object btnNewScan: TButton
+        AnchorSideLeft.Side = asrCenter
+        Left = 10
+        Height = 25
+        Top = 7
+        Width = 80
+        AutoSize = True
+        BorderSpacing.Top = 7
+        BorderSpacing.Bottom = 7
+        Caption = 'New Scan'
+        Constraints.MinWidth = 80
+        OnClick = miNewScanClick
+        TabOrder = 0
+        Visible = False
+      end
+      object btnScan: TButton
+        AnchorSideLeft.Side = asrCenter
+        Left = 100
+        Height = 25
+        Top = 7
+        Width = 80
+        AutoSize = True
+        BorderSpacing.Left = 7
+        BorderSpacing.Top = 7
+        BorderSpacing.Right = 4
+        BorderSpacing.Bottom = 7
+        Caption = 'Scan'
+        Constraints.MinWidth = 80
+        OnClick = btnScanClick
+        TabOrder = 1
+      end
+    end
+    object cbReuseStringmap: TCheckBox
+      AnchorSideLeft.Control = rbStringscan
+      AnchorSideTop.Control = rbStringscan
+      AnchorSideTop.Side = asrBottom
+      Left = 20
+      Height = 19
+      Top = 273
+      Width = 139
+      BorderSpacing.Left = 16
+      Caption = 'Use existing stringmap'
+      Checked = True
+      State = cbChecked
+      TabOrder = 15
+    end
+  end
+  object Panel2: TPanel
+    Left = 188
+    Height = 490
+    Top = 0
+    Width = 625
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 490
+    ClientWidth = 625
+    TabOrder = 1
+    object ListView1: TListView
+      Left = 0
+      Height = 354
+      Top = 136
+      Width = 625
+      Align = alClient
+      Columns = <>
+      HideSelection = False
+      OwnerData = True
+      PopupMenu = pmPointerfile
+      ReadOnly = True
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnCustomDrawItem = ListView1CustomDrawItem
+      OnData = ListView1Data
+      OnDblClick = ListView1DblClick
+    end
+    object Panel3: TPanel
+      Left = 0
+      Height = 136
+      Top = 0
+      Width = 625
+      Align = alTop
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 136
+      ClientWidth = 625
+      TabOrder = 1
+      OnClick = Panel3Click
+      object lblExtra: TLabel
+        AnchorSideLeft.Control = Panel6
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel6
+        Left = 133
+        Height = 15
+        Top = 8
+        Width = 90
+        BorderSpacing.Left = 6
+        Caption = 'Compare against'
+        ParentColor = False
+      end
+      object edtExtra: TEdit
+        AnchorSideLeft.Control = lblExtra
+        AnchorSideTop.Control = lblExtra
+        AnchorSideTop.Side = asrBottom
+        Left = 133
+        Height = 23
+        Top = 23
+        Width = 127
+        OnChange = edtExtraChange
+        TabOrder = 0
+      end
+      object cbHasShadow2: TCheckBox
+        AnchorSideLeft.Control = lblExtra
+        AnchorSideTop.Control = edtExtra
+        AnchorSideTop.Side = asrBottom
+        Left = 133
+        Height = 19
+        Hint = 'Use this if you''re spidering a previously saved memory region that currently resides in a different location.'#13#10'Most commonly used for stacks where stack pointers point to it''s own structure'
+        Top = 48
+        Width = 85
+        BorderSpacing.Top = 2
+        Caption = 'Has Shadow'
+        OnChange = cbHasShadowChange
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+      end
+      object edtShadowAddress2: TEdit
+        AnchorSideLeft.Control = lblExtra
+        AnchorSideTop.Control = cbHasShadow2
+        AnchorSideTop.Side = asrBottom
+        Left = 133
+        Height = 23
+        Top = 67
+        Width = 127
+        OnChange = edtBaseChange
+        TabOrder = 2
+        Visible = False
+      end
+      object lblsize2: TLabel
+        AnchorSideLeft.Control = lblExtra
+        AnchorSideTop.Control = edtShadowAddress2
+        AnchorSideTop.Side = asrBottom
+        Left = 133
+        Height = 15
+        Top = 90
+        Width = 20
+        Caption = 'Size'
+        ParentColor = False
+        Visible = False
+      end
+      object edtShadowSize2: TEdit
+        AnchorSideLeft.Control = lblExtra
+        AnchorSideTop.Control = lblsize2
+        AnchorSideTop.Side = asrBottom
+        Left = 133
+        Height = 23
+        Top = 105
+        Width = 80
+        BorderSpacing.Bottom = 8
+        OnChange = edtBaseChange
+        TabOrder = 3
+        Visible = False
+      end
+      object Panel6: TPanel
+        AnchorSideLeft.Control = Panel3
+        AnchorSideTop.Control = Panel3
+        Left = 0
+        Height = 120
+        Top = 8
+        Width = 127
+        AutoSize = True
+        BorderSpacing.Top = 8
+        BorderSpacing.Bottom = 8
+        BevelOuter = bvNone
+        ClientHeight = 120
+        ClientWidth = 127
+        TabOrder = 4
+        object edtShadowSize: TEdit
+          AnchorSideLeft.Control = lblSize
+          AnchorSideTop.Control = lblSize
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 23
+          Top = 97
+          Width = 80
+          OnChange = edtBaseChange
+          TabOrder = 0
+          Visible = False
+        end
+        object lblSize: TLabel
+          AnchorSideLeft.Control = Panel6
+          AnchorSideTop.Control = edtShadowAddress
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 15
+          Top = 82
+          Width = 20
+          Caption = 'Size'
+          ParentColor = False
+          Visible = False
+        end
+        object edtShadowAddress: TEdit
+          AnchorSideLeft.Control = cbHasShadow
+          AnchorSideTop.Control = cbHasShadow
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 23
+          Top = 59
+          Width = 127
+          OnChange = edtBaseChange
+          TabOrder = 1
+          Visible = False
+        end
+        object cbHasShadow: TCheckBox
+          AnchorSideLeft.Control = Panel6
+          AnchorSideTop.Control = edtBase
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 19
+          Hint = 'Use this if you''re spidering a previously saved memory region that currently resides in a different location.'#13#10'Most commonly used for stacks where stack pointers point to it''s own structure'
+          Top = 40
+          Width = 85
+          BorderSpacing.Top = 2
+          Caption = 'Has Shadow'
+          OnChange = cbHasShadowChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 2
+        end
+        object edtBase: TEdit
+          AnchorSideLeft.Control = Panel6
+          AnchorSideTop.Control = lblBaseRegion
+          AnchorSideTop.Side = asrBottom
+          Left = 0
+          Height = 23
+          Top = 15
+          Width = 127
+          OnChange = edtBaseChange
+          TabOrder = 3
+        end
+        object lblBaseRegion: TLabel
+          AnchorSideLeft.Control = Panel6
+          AnchorSideTop.Control = Panel6
+          Left = 0
+          Height = 15
+          Top = 0
+          Width = 61
+          Caption = 'Base region'
+          ParentColor = False
+        end
+      end
+      object Panel7: TPanel
+        AnchorSideLeft.Control = edtExtra
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel3
+        AnchorSideRight.Control = Panel3
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = Panel3
+        AnchorSideBottom.Side = asrBottom
+        Left = 268
+        Height = 136
+        Top = 0
+        Width = 357
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        AutoSize = True
+        BorderSpacing.Left = 8
+        BevelOuter = bvNone
+        ClientHeight = 136
+        ClientWidth = 357
+        TabOrder = 5
+        object lblvds: TLabel
+          AnchorSideTop.Control = Panel7
+          AnchorSideRight.Control = Panel7
+          AnchorSideRight.Side = asrBottom
+          Left = 249
+          Height = 15
+          Top = 8
+          Width = 108
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 8
+          Caption = 'Variable display type'
+          ParentColor = False
+        end
+        object comboType: TComboBox
+          AnchorSideTop.Control = lblvds
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = Panel7
+          AnchorSideRight.Side = asrBottom
+          Left = 233
+          Height = 23
+          Top = 23
+          Width = 124
+          Anchors = [akTop, akRight]
+          ItemHeight = 15
+          ItemIndex = 0
+          Items.Strings = (
+            'String'
+            '1 Byte'
+            '2 Bytes'
+            '4 Bytes'
+            '8 Bytes'
+            'Float'
+            'Double'
+            'Pointer (hex)'
+          )
+          OnChange = comboTypeChange
+          Style = csDropDownList
+          TabOrder = 0
+          Text = 'String'
+        end
+      end
+    end
+  end
+  object ProgressBar1: TProgressBar
+    Left = 0
+    Height = 20
+    Top = 490
+    Width = 813
+    Align = alBottom
+    Max = 1000
+    TabOrder = 2
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.sptr'
+    Filter = 'String pointer (*.sptr)|*.sptr'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    left = 480
+    top = 64
+  end
+  object MainMenu1: TMainMenu
+    left = 197
+    top = 168
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object MenuItem7: TMenuItem
+        Caption = 'New Window'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = '-'
+      end
+      object miNewScan: TMenuItem
+        Caption = 'New scan'
+        OnClick = miNewScanClick
+      end
+      object miOpen: TMenuItem
+        Caption = 'Open'
+        OnClick = miOpenClick
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Rescan'
+      Visible = False
+      object MenuItem6: TMenuItem
+        Caption = 'Filter pointerlist'
+        OnClick = MenuItem6Click
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.sptr'
+    Filter = 'String pointer (*.sptr)|*.sptr'
+    left = 552
+    top = 64
+  end
+  object statusupdater: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = statusupdaterTimer
+    left = 464
+    top = 208
+  end
+  object pmPointerfile: TPopupMenu
+    left = 400
+    top = 112
+    object miClearCache: TMenuItem
+      Caption = 'Clear pointer cache'
+      OnClick = miClearCacheClick
+    end
+    object miFind: TMenuItem
+      Caption = 'Find...'
+      ShortCut = 16454
+      OnClick = miFindClick
+    end
+    object miFindNext: TMenuItem
+      Caption = 'Find Next'
+      Enabled = False
+      ShortCut = 114
+      OnClick = FindDialog1Find
+    end
+  end
+  object FindDialog1: TFindDialog
+    Width = 480
+    Height = 136
+    Options = [frDown, frHideWholeWord, frHideUpDown, frDisableUpDown, frHideEntireScope, frHidePromptOnReplace]
+    OnFind = FindDialog1Find
+    left = 268
+    top = 243
+  end
+end

@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":371552,"name":"formchangedaddresses.rsstop","sourcebytes":[83,116,111,112],"value":"Stop"},
+{"hash":4863637,"name":"formchangedaddresses.rsclose","sourcebytes":[67,108,111,115,101],"value":"Close"},
+{"hash":172844206,"name":"formchangedaddresses.rsnodescription","sourcebytes":[78,111,32,68,101,115,99,114,105,112,116,105,111,110],"value":"No Description"},
+{"hash":52081896,"name":"formchangedaddresses.rschangedaddressesby","sourcebytes":[67,104,97,110,103,101,100,32,65,100,100,114,101,115,115,101,115,32,98,121,32,37,120],"value":"Changed Addresses by %x"}
+]}
